@@ -5,7 +5,7 @@ html {
   --natural: #F9F3E4;
   --easeInOutQuint: cubic-bezier(0.22, 1, 0.36, 1);
   --easing: var(--easeInOutQuint);
-  --v: "v1.0.7";
+  --v: "v1.0.8";
 }
 
 @media screen and (min-width: 1920px) {

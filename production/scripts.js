@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.7');
+console.log('version', 'v1.0.8');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -171,47 +171,48 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// Toggle List
+document.addEventListener('DOMContentLoaded', function () {
+  // Select all toggle buttons
+  const toggles = document.querySelectorAll('.i_togglelist__item__toggle');
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   // Select all toggle buttons
-//   const toggles = document.querySelectorAll('.i_togglelist__item__toggle');
+  toggles.forEach(function (toggle) {
+    toggle.addEventListener('click', function () {
+      // Get the parent .togglelist_item element
+      const parentItem = toggle.closest('.i_togglelist__item');
 
-//   toggles.forEach(function (toggle) {
-//     toggle.addEventListener('click', function () {
-//       // Get the parent .togglelist_item element
-//       const parentItem = toggle.closest('.i_togglelist__item');
-
-//       // Get the corresponding .togglelist_item_body and its content
-//       const body = parentItem.querySelector('.i_togglelist__item__body');
-//       const content = parentItem.querySelector('.i_togglelist__item__body__content');
+      // Get the corresponding .togglelist_item_body and its content
+      const body = parentItem.querySelector('.i_togglelist__item__body');
+      const content = parentItem.querySelector('.i_togglelist__item__body__content');
 
 
-//       // Toggle the --open class on the clicked .togglelist_item
-//       parentItem.classList.toggle('--open');
+      // Toggle the --open class on the clicked .togglelist_item
+      parentItem.classList.toggle('--open');
 
-//       if (parentItem.classList.contains('--open')) {
-//         // Open the item
-//         // Set the height to the content's height
-//         body.style.height = `${content.scrollHeight}px`;
+      if (parentItem.classList.contains('--open')) {
+        // Open the item
+        // Set the height to the content's height
+        body.style.height = `${content.scrollHeight}px`;
 
-//         // After a delay, set the height to 'auto' for responsiveness
-//         setTimeout(() => {
-//           body.style.height = 'auto';
-//         }, 300); // assuming the transition in your CSS takes 300ms
-//       } else {
-//         // Close the item
-//         // First set the height to the current px value (in case it's 'auto')
-//         body.style.height = `${body.scrollHeight}px`;
-//         // Force repaint to ensure the next style change gets animated
-//         body.offsetHeight; // no need to store this anywhere, the reference is enough
-//         // Set the height back to zero
-//         body.style.height = '0';
-//       }
-//     });
-//   });
+        // After a delay, set the height to 'auto' for responsiveness
+        setTimeout(() => {
+          body.style.height = 'auto';
+        }, 300); // assuming the transition in your CSS takes 300ms
+      } else {
+        // Close the item
+        // First set the height to the current px value (in case it's 'auto')
+        body.style.height = `${body.scrollHeight}px`;
+        // Force repaint to ensure the next style change gets animated
+        body.offsetHeight; // no need to store this anywhere, the reference is enough
+        // Set the height back to zero
+        body.style.height = '0';
+      }
+    });
+  });
 
-// });
+});
 
+// Restacking Slider
 // document.addEventListener('DOMContentLoaded', function () {
 //   function changeSlide(targetLayer) {
 //     const stack = document.querySelector('.i_restackingslider__stack');
@@ -313,6 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //   })();
 // });
 
+// Cycle Slider
 // document.addEventListener('DOMContentLoaded', function () {
 //   // Initialize variables
 //   let cycleSlideInterval;
