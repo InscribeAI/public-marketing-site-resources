@@ -1,56 +1,56 @@
-// document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
 
-//   const target = document.querySelector('.i_statssection');
+  const target = document.querySelector('.i_statssection');
 
-//   // Exit if the target doesn't exist
-//   if (!target) return;
+  // Exit if the target doesn't exist
+  if (!target) return;
 
 
-//   const startStats = (section) => {
-//     setTimeout(() => {
-//       section.querySelector('.i_statsblock').classList.add('start');
-//     }, 100);
+  const startStats = (section) => {
+    setTimeout(() => {
+      section.querySelector('.i_statsblock').classList.add('start');
+    }, 100);
 
-//     const elems = section.querySelectorAll('.i_statsblock__stat__number');
+    const elems = section.querySelectorAll('.i_statsblock__stat__number');
 
-//     elems.forEach((elem, i) => {
-//       elem.innerHTML = '$0m+';
-//       setTimeout(() => {
-//         if (elem) {
-//           let count = 0;
+    elems.forEach((elem, i) => {
+      elem.innerHTML = '$0m+';
+      setTimeout(() => {
+        if (elem) {
+          let count = 0;
           
-//           const interval = setInterval(() => {
-//             count++;
-//             elem.innerHTML = `$${count}m+`;
+          const interval = setInterval(() => {
+            count++;
+            elem.innerHTML = `$${count}m+`;
             
-//             if (count >= 100) {
-//               clearInterval(interval);
-//             }
-//           }, 22); // Adjust this duration to make the count-up faster or slower
-//         }
-//       }, 550 * i);
-//     });
-//   }
+            if (count >= 100) {
+              clearInterval(interval);
+            }
+          }, 22); // Adjust this duration to make the count-up faster or slower
+        }
+      }, 550 * i);
+    });
+  }
 
-//   // Create an Intersection Observer
-//   const observer = new IntersectionObserver((entries, observer) => {
-//     entries.forEach(entry => {
-//       if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-//         // If the element is intersecting and at least 50% is visible
-//         startStats(entry.target);
-//         console.log(entry.target);
-//         observer.unobserve(entry.target);  // Stop observing since our condition has been met
-//       }
-//     });
-//   }, {
-//     root: null,  // use the viewport as the root
-//     rootMargin: '0px',
-//     threshold: 0.5  // trigger the callback when 50% of the target is visible
-//   });
+  // Create an Intersection Observer
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+        // If the element is intersecting and at least 50% is visible
+        startStats(entry.target);
+        console.log(entry.target);
+        observer.unobserve(entry.target);  // Stop observing since our condition has been met
+      }
+    });
+  }, {
+    root: null,  // use the viewport as the root
+    rootMargin: '0px',
+    threshold: 0.5  // trigger the callback when 50% of the target is visible
+  });
 
-//   // Start observing
-//   observer.observe(target);
-// });
+  // Start observing
+  observer.observe(target);
+});
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -64,18 +64,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sliderNavItems.forEach((item, index) => {
       if(index === slideNumber) {
-        item.classList.add('i--active');
+        item.classList.add('--active');
       } else {
-        item.classList.remove('i--active');
+        item.classList.remove('--active');
       }
     });
 
     sliderItems.forEach((item, index) => {
 
+      if(item.classList.contains('i_testimonialslider__item__first')) {
+        item.classList.remove('i_testimonialSlider__item__first');
+      }
+
       if(index === slideNumber) {
-        item.classList.add('i--active');
+        item.classList.add('--active');
       } else {
-        item.classList.remove('i--active');
+        item.classList.remove('--active');
       }
     });
 
@@ -106,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeSlide = 0;
 
     sliderNavItems.forEach((item, index) => {
-      if(item.classList.contains('i--active')) {
+      if(item.classList.contains('--active')) {
         activeSlide = index;
       }
     });
@@ -152,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navItem.classList.add('i_testimonialslider__nav__item');
       // navItem.textContent = `Item ${index + 1}`;
       if(index === 0) {
-        navItem.classList.add('i--active');
+        navItem.classList.add('--active');
       }
       
       navItem.addEventListener('click', () => {     
