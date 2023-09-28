@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sliderItems.forEach((item, index) => {
 
-      if(item.classList.contains('i_testimonialSlider__item__first')) {
-        item.classList.remove('i_testimonialSlider__item__first');
+      if(item.classList.contains('i_testimonialslider__item__first')) {
+        item.classList.remove('i_testimonialslider__item__first');
       }
 
       if(index === slideNumber) {
