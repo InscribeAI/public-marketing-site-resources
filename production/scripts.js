@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.6');
+console.log('version', 'v1.0.7');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -368,168 +368,171 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // });
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   let lastScrollTop = 0;
-//   let lastTime = 0;
-//   let speed = 0;
-//   let rafId = null;
+document.addEventListener('DOMContentLoaded', function () {
+  const element = document.querySelector('.i_ctasection');
+  if (!element) return;
 
-//   // Array to keep track of each block's current transform distance
-//   let currentTransforms = [];
+  let lastScrollTop = 0;
+  let lastTime = 0;
+  let speed = 0;
+  let rafId = null;
 
-//   // Function to handle scroll
-//   window.addEventListener('scroll', () => {
-//     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//     const currentTime = Date.now();
+  // Array to keep track of each block's current transform distance
+  let currentTransforms = [];
+
+  // Function to handle scroll
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const currentTime = Date.now();
     
-//     // Calculate speed (distance over time)
-//     speed = (scrollTop - lastScrollTop) / (currentTime - lastTime);
+    // Calculate speed (distance over time)
+    speed = (scrollTop - lastScrollTop) / (currentTime - lastTime);
     
-//     // Update for next time
-//     lastScrollTop = scrollTop;
-//     lastTime = currentTime;
+    // Update for next time
+    lastScrollTop = scrollTop;
+    lastTime = currentTime;
 
-//     // Call requestAnimationFrame for smooth animations
-//     if (rafId === null) {
-//       rafId = requestAnimationFrame(() => {
-//         checkElementInViewport();
-//         rafId = null;
-//       });
-//     }
-//   });
+    // Call requestAnimationFrame for smooth animations
+    if (rafId === null) {
+      rafId = requestAnimationFrame(() => {
+        checkElementInViewport();
+        rafId = null;
+      });
+    }
+  });
 
-//   // Function to check if element is in the viewport and handle block transformations
-//   function checkElementInViewport() {
-//     const element = document.querySelector('.i_ctasection');
-//     const rect = element.getBoundingClientRect();
+  // Function to check if element is in the viewport and handle block transformations
+  function checkElementInViewport() {
+    const element = document.querySelector('.i_ctasection');
+    const rect = element.getBoundingClientRect();
     
-//     if (rect.top < window.innerHeight && rect.bottom > 0) {
-//       // Element is in the viewport
-//       const blocks = document.querySelectorAll('.i_ctasection__block--behind');
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      // Element is in the viewport
+      const blocks = document.querySelectorAll('.i_ctasection__block--behind');
       
-//       blocks.forEach((block, index) => {
-//         // Initialize currentTransforms array if necessary
-//         if (typeof currentTransforms[index] === 'undefined') {
-//           currentTransforms[index] = 0;
-//         }
+      blocks.forEach((block, index) => {
+        // Initialize currentTransforms array if necessary
+        if (typeof currentTransforms[index] === 'undefined') {
+          currentTransforms[index] = 0;
+        }
         
-//         // Calculate incremental distance based on speed
-//         const incrementalDistance = (index + 1) * speed;
+        // Calculate incremental distance based on speed
+        const incrementalDistance = (index + 1) * speed;
         
-//         // Update the current transform distance for this block
-//         currentTransforms[index] += incrementalDistance;
+        // Update the current transform distance for this block
+        currentTransforms[index] += incrementalDistance;
 
-//         // Define min and max distances for this block
-//         const maxDistance = index + 1;
-//         const minDistance = -(index + 1);
+        // Define min and max distances for this block
+        const maxDistance = index + 1;
+        const minDistance = -(index + 1);
         
-//         // Apply limits
-//         if (currentTransforms[index] > maxDistance) {
-//           currentTransforms[index] = maxDistance;
-//         } else if (currentTransforms[index] < minDistance) {
-//           currentTransforms[index] = minDistance;
-//         }
+        // Apply limits
+        if (currentTransforms[index] > maxDistance) {
+          currentTransforms[index] = maxDistance;
+        } else if (currentTransforms[index] < minDistance) {
+          currentTransforms[index] = minDistance;
+        }
         
-//         // Apply the new transform
-//         block.style.transform = `translateY(${currentTransforms[index]}rem)`;
-//       });
-//     }
-//   }
+        // Apply the new transform
+        block.style.transform = `translateY(${currentTransforms[index]}rem)`;
+      });
+    }
+  }
 
 
-//   // Initial call
-//   checkElementInViewport();
+  // Initial call
+  checkElementInViewport();
 
 
 
 
 
-// });
+});
+
+// Sticley blocks
+document.addEventListener('DOMContentLoaded', function () {
+  
+  let ticking = false;
+  let observerTriggered = false;
+
+  function adjustStickyBlocks() {
+    if (observerTriggered) {
+      const stickyBlocks = document.querySelectorAll('.sticky .i_stackingblock__wrap');
+      const stickyList = document.querySelector('.i_slideupblocks__list');
+      const stickyListRect = stickyList.getBoundingClientRect();
+
+      stickyBlocks.forEach((block, index) => {
+        const rect = block.getBoundingClientRect();
+        let factor = (window.innerHeight - rect.top) / window.innerHeight;
+
+        // Calculate the remaining viewport size
+        const baseFontSize = parseFloat(window.getComputedStyle(document.documentElement).getPropertyValue('font-size'));
+        const multipliedFontSize = baseFontSize * 3;
+        const remainingViewportSize = window.innerHeight - multipliedFontSize;
+        const remainingViewportRatio = remainingViewportSize / window.innerHeight;
+
+        // Limit the factor to stop scaling once it reaches 3rem from the top
+        if (rect.top <= multipliedFontSize) {
+          factor = Math.max(factor, remainingViewportRatio);
+        }
+
+        // Parallax the mediaAsset slightly down
+        const parallaxOffset = 200 * factor;  // Adjust as needed
+        const mediaAsset = block.querySelector('.insert__clippedgraphic__media__asset');
+        if(mediaAsset) {
+          mediaAsset.style.transform = `translateY(-${parallaxOffset}px)`;
+        }
+
+        // Normalize and limit factor between 0 and 1
+        factor = Math.min(1, Math.max(0, (factor - 0.5) * 2));
+
+        // Additional scaling factor based on the position within the parent
+        const blockPositionInList = rect.top - stickyListRect.top;
+        const blockListFactor = blockPositionInList / stickyListRect.height;
+
+        // Combine the two scaling factors
+        const combinedFactor = factor * blockListFactor;
+
+        // Scale down the block as it reaches the top of the screen
+        let scale = 1 - combinedFactor * (0.2 - index * 0.03);  // Decreased by 0.02 for each subsequent block
+        scale = Math.max(0, scale); // Ensure scale doesn't go below 0.8 (or any other minimum you set)
 
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   // Function to adjust sticky blocks
-//   let ticking = false;
-//   let observerTriggered = false;
-
-//   function adjustStickyBlocks() {
-//     if (observerTriggered) {
-//       const stickyBlocks = document.querySelectorAll('.sticky .i_stackingblock__wrap');
-//       const stickyList = document.querySelector('.i_slideupblocks__list');
-//       const stickyListRect = stickyList.getBoundingClientRect();
-
-//       stickyBlocks.forEach((block, index) => {
-//         const rect = block.getBoundingClientRect();
-//         let factor = (window.innerHeight - rect.top) / window.innerHeight;
-
-//         // Calculate the remaining viewport size
-//         const baseFontSize = parseFloat(window.getComputedStyle(document.documentElement).getPropertyValue('font-size'));
-//         const multipliedFontSize = baseFontSize * 3;
-//         const remainingViewportSize = window.innerHeight - multipliedFontSize;
-//         const remainingViewportRatio = remainingViewportSize / window.innerHeight;
-
-//         // Limit the factor to stop scaling once it reaches 3rem from the top
-//         if (rect.top <= multipliedFontSize) {
-//           factor = Math.max(factor, remainingViewportRatio);
-//         }
-
-//         // Parallax the mediaAsset slightly down
-//         const parallaxOffset = 200 * factor;  // Adjust as needed
-//         const mediaAsset = block.querySelector('.insert__clippedgraphic__media__asset');
-//         if(mediaAsset) {
-//           mediaAsset.style.transform = `translateY(-${parallaxOffset}px)`;
-//         }
-
-//         // Normalize and limit factor between 0 and 1
-//         factor = Math.min(1, Math.max(0, (factor - 0.5) * 2));
-
-//         // Additional scaling factor based on the position within the parent
-//         const blockPositionInList = rect.top - stickyListRect.top;
-//         const blockListFactor = blockPositionInList / stickyListRect.height;
-
-//         // Combine the two scaling factors
-//         const combinedFactor = factor * blockListFactor;
-
-//         // Scale down the block as it reaches the top of the screen
-//         let scale = 1 - combinedFactor * (0.2 - index * 0.03);  // Decreased by 0.02 for each subsequent block
-//         scale = Math.max(0, scale); // Ensure scale doesn't go below 0.8 (or any other minimum you set)
-
-
-//         // Ensuring that the effect doesn't start until the block has reached 50% of the viewport
-//         // if (factor <= 0.5 ) return;
+        // Ensuring that the effect doesn't start until the block has reached 50% of the viewport
+        // if (factor <= 0.5 ) return;
         
-//         block.style.transform = `scale(${scale})`;
-//       });
-//     }
-//     ticking = false;
-//   }
+        block.style.transform = `scale(${scale})`;
+      });
+    }
+    ticking = false;
+  }
 
 
 
 
 
-//   // Intersection Observer to detect when i_slideupblocks is visible
-//   const observer = new IntersectionObserver((entries) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting) {
-//         observerTriggered = true;
-//       } else {
-//         observerTriggered = false;
-//       }
-//     });
-//   });
+  // Intersection Observer to detect when i_slideupblocks is visible
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        observerTriggered = true;
+      } else {
+        observerTriggered = false;
+      }
+    });
+  });
 
-//   observer.observe(document.querySelector('.i_slideupblocks'));
+  observer.observe(document.querySelector('.i_slideupblocks'));
 
-//   // Function to call on scroll
-//   function onScroll() {
-//     if (!ticking) {
-//       window.requestAnimationFrame(adjustStickyBlocks);
-//       ticking = true;
-//     }
-//   }
+  // Function to call on scroll
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(adjustStickyBlocks);
+      ticking = true;
+    }
+  }
 
-//   // Listen to scroll event
-//   window.addEventListener('scroll', onScroll);
+  // Listen to scroll event
+  window.addEventListener('scroll', onScroll);
 
-// });
+});
