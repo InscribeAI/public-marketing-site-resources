@@ -1,5 +1,6 @@
 console.log('version', 'v1.0.8');
 
+// Stats Section
 document.addEventListener('DOMContentLoaded', function() {
 
   const target = document.querySelector('.i_statssection');
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
   observer.observe(target);
 });
 
+// Testimonial Slider
 document.addEventListener('DOMContentLoaded', () => {
 
   let sliderSettings = {};
@@ -65,22 +67,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sliderNavItems.forEach((item, index) => {
       if(index === slideNumber) {
-        item.classList.add('--active');
+        item.classList.add('i--active');
       } else {
-        item.classList.remove('--active');
+        item.classList.remove('i--active');
       }
     });
 
     sliderItems.forEach((item, index) => {
 
-      if(item.classList.contains('i_testimonialslider__item__first')) {
-        item.classList.remove('i_testimonialSlider__item__first');
-      }
-
       if(index === slideNumber) {
-        item.classList.add('--active');
+        item.classList.add('i--active');
       } else {
-        item.classList.remove('--active');
+        item.classList.remove('i--active');
       }
     });
 
