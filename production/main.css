@@ -1,11 +1,11 @@
 html {
+  --v: "v1.0.9";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --yellow: #fdf374;
   --natural: #F9F3E4;
   --easeInOutQuint: cubic-bezier(0.22, 1, 0.36, 1);
   --easing: var(--easeInOutQuint);
-  --v: "v1.0.8";
 }
 
 @media screen and (min-width: 1920px) {
