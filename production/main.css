@@ -1,5 +1,5 @@
-html {
-  --v: "v1.0.9";
+:root {
+  --v: "v1.0.10";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --yellow: #fdf374;
@@ -9,12 +9,12 @@ html {
 }
 
 @media screen and (min-width: 1920px) {
-  html {
+  :root {
     font-size: 10px;
   }
 }
 @media screen and (max-width: 991px) {
-  html {
+  :root {
     font-size: 2.5641025641vw;
   }
 }
