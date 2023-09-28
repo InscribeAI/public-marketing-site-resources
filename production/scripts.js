@@ -64,22 +64,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sliderNavItems.forEach((item, index) => {
       if(index === slideNumber) {
-        item.classList.add('--active');
+        item.classList.add('i--active');
       } else {
-        item.classList.remove('--active');
+        item.classList.remove('i--active');
       }
     });
 
     sliderItems.forEach((item, index) => {
 
-      if(item.classList.contains('i_testimonialslider__item__first')) {
-        item.classList.remove('i_testimonialslider__item__first');
-      }
-
       if(index === slideNumber) {
-        item.classList.add('--active');
+        item.classList.add('i--active');
       } else {
-        item.classList.remove('--active');
+        item.classList.remove('i--active');
       }
     });
 
@@ -110,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeSlide = 0;
 
     sliderNavItems.forEach((item, index) => {
-      if(item.classList.contains('--active')) {
+      if(item.classList.contains('i--active')) {
         activeSlide = index;
       }
     });
@@ -156,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navItem.classList.add('i_testimonialslider__nav__item');
       // navItem.textContent = `Item ${index + 1}`;
       if(index === 0) {
-        navItem.classList.add('--active');
+        navItem.classList.add('i--active');
       }
       
       navItem.addEventListener('click', () => {     
