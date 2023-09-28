@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.11";
+  --v: "v1.0.12";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --yellow: #fdf374;
@@ -1731,9 +1731,8 @@ a {
   padding-top: 2.5rem;
 }
 
-.i_btngroup__secondary,
-.i_btngroup__primary {
-  padding-top: 0;
+.i_btngroup {
+  overflow: hidden;
 }
 
 .i_hero__content__description__wrap {
@@ -1802,7 +1801,7 @@ a {
   transform: translateX(-100%);
 }
 .i--animatesection .i_animate--btn--rise {
-  transform: translateY(calc(100% - 0.1rem));
+  transform: translateY(calc(100% - 2rem - 2px));
 }
 .i--animatesection--in .i_animate--grow {
   transform: scaleX(1);
