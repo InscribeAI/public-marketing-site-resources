@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.12";
+  --v: "v1.0.13";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --yellow: #fdf374;
@@ -1713,10 +1713,6 @@ a {
   position: relative;
   display: block;
   transition: transform 1000ms var(--easing);
-}
-
-.i_hero__title__inner {
-  padding-top: 0;
 }
 
 .i_heading-1 {
