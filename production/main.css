@@ -859,14 +859,14 @@ a {
   padding-top: 4rem;
 }
 
-.i_testimonialslider .i_testimonialslider__item {
+.i_testimonialslider__item {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.i_testimonialslider .i_testimonialslider__item.i--active {
+.i_testimonialslider__item.i--active {
   position: relative;
 }
 
@@ -953,6 +953,7 @@ a {
   transition: transform 250ms var(--easing);
   padding-bottom: 2.5rem;
 }
+
 .i_testimonialslider__item.i--active .i_iconheader [class*=i_icon] {
   transform: translateY(0%);
   transition-delay: 350ms;
