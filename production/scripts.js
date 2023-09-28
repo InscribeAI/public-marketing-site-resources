@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
       if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
         // If the element is intersecting and at least 50% is visible
         startStats(entry.target);
-        console.log(entry.target);
         observer.unobserve(entry.target);  // Stop observing since our condition has been met
       }
     });
