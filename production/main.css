@@ -953,7 +953,7 @@ a {
 
 .i_testimonialslider__item.i--active {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .i_testimonialslider__item.i--active .i_iconheader [class*=i_icon] {
   transform: translateY(0%);
