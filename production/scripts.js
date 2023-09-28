@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.10');
+console.log('version', 'v1.0.11');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeSlide = 0;
 
     sliderNavItems.forEach((item, index) => {
-      if(item.classList.contains('--active')) {
+      if(item.classList.contains('i--active')) {
         activeSlide = index;
       }
     });
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navItem.classList.add('i_testimonialslider__nav__item');
       // navItem.textContent = `Item ${index + 1}`;
       if(index === 0) {
-        navItem.classList.add('--active');
+        navItem.classList.add('i--active');
       }
       
       navItem.addEventListener('click', () => {     
@@ -173,6 +173,8 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', function () {
   // Select all toggle buttons
   const toggles = document.querySelectorAll('.i_togglelist__item__toggle');
+
+  if(!toggles) return;
 
   toggles.forEach(function (toggle) {
     toggle.addEventListener('click', function () {
@@ -368,6 +370,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // });
 
+// CTA Section
 document.addEventListener('DOMContentLoaded', function () {
   const element = document.querySelector('.i_ctasection');
   if (!element) return;
@@ -451,6 +454,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Sticley blocks
 document.addEventListener('DOMContentLoaded', function () {
+
+  const stickyBlocksSection = document.querySelector('.i_slideupblocks');
+
+  if(!stickyBlocksSection) return;
   
   let ticking = false;
   let observerTriggered = false;
@@ -534,5 +541,87 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Listen to scroll event
   window.addEventListener('scroll', onScroll);
+
+});
+
+
+// animate in sections
+document.addEventListener('DOMContentLoaded', function () {
+
+  const childrenDelay = document.querySelectorAll('[class*="i_childrendelay--"]');
+  childrenDelay.forEach(element => {
+    // Extract delay value using a regex match on the element's className
+    const match = element.className.match(/i_childrendelay--(\d+)/);
+
+    if(!match) {
+      return;
+    }
+
+    // find animated children
+    const animatedChildren = element.querySelectorAll('[class*="i_animate--"]');
+    animatedChildren.forEach((child, index) => {
+      // if a class that contains i_animatedelay-- grab the value
+      const childMatch = child.className.match(/i_animatedelay--(\d+)/);
+      let addTo = 0;
+      if(childMatch) {
+        addTo = parseInt(childMatch[1], 10);
+      }
+      // if it doesn't contain i_animatedelay-- add it
+      if(!childMatch) {
+        child.className += ` i_animatedelay--0`;
+      }
+      // replace the value at the end of the animate delay class
+      child.className = child.className.replace(/i_animatedelay--(\d+)/, `i_animatedelay--${addTo +  parseInt(match[1], 10)}`);
+      
+    });
+
+    if (match) {
+      // Set the transition-delay style property
+      const delayValue = match[1] + 'ms';
+      element.style.transitionDelay = delayValue;
+    }
+  });
+
+  // Select only elements that contain the class pattern "transitionDelay--"
+  const elementsWithDelay = document.querySelectorAll('[class*="i_animatedelay--"]');
+
+  elementsWithDelay.forEach(element => {
+    // Extract delay value using a regex match on the element's className
+    const match = element.className.match(/i_animatedelay--(\d+)/);
+
+    if (match) {
+      // Set the transition-delay style property
+      const delayValue = match[1] + 'ms';
+      element.style.transitionDelay = delayValue;
+    }
+  });
+
+
+  // Define the observer callback
+  function handleIntersect(entries, observer) {
+    entries.forEach(entry => {
+      // If the section is intersecting at the specified threshold or more
+      if (entry.intersectionRatio >= 0.25) {
+        entry.target.classList.add('i--animatesection--in');
+      } else {
+        entry.target.classList.remove('i--animatesection--in');
+      }
+    });
+  }
+
+  // Define the observer options
+  let options = {
+    root: null, // Use the viewport as the root
+    rootMargin: '0px',
+    threshold: 0.25
+  };
+
+  // Create a new observer
+  let observer = new IntersectionObserver(handleIntersect, options);
+
+  // Observe all <section> elements
+  document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+  });
 
 });

@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.10";
+  --v: "v1.0.11";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --yellow: #fdf374;
@@ -903,7 +903,7 @@ a {
 
 .i_testimonialslider__nav {
   display: flex;
-  padding: 0 14rem;
+  padding: 3.15rem 14rem 0;
   padding-right: 12.35rem;
 }
 
@@ -1713,4 +1713,109 @@ a {
   position: relative;
   display: block;
   transition: transform 1000ms var(--easing);
+}
+
+.i_hero__title__inner {
+  padding-top: 0;
+}
+
+.i_heading-1 {
+  padding-bottom: 2rem;
+}
+
+.i_hero__content {
+  padding-top: 0;
+}
+
+.herosection__content__media {
+  padding-top: 2.5rem;
+}
+
+.i_btngroup__secondary,
+.i_btngroup__primary {
+  padding-top: 0;
+}
+
+.i_hero__content__description__wrap {
+  padding-bottom: 0;
+}
+
+.i_btngroup {
+  padding-top: 3rem;
+}
+
+.i_bar {
+  height: max(1px, 0.1rem) !important;
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.carousel-component {
+  overflow: hidden;
+}
+
+.logo-carousel-wrap {
+  animation: carousel 10000ms linear infinite;
+}
+
+.i_iconheader {
+  overflow: hidden;
+  gap: 0 !important;
+}
+
+.i_iconheader [class*=i_icon] {
+  padding-bottom: 1.6rem;
+  box-sizing: content-box;
+}
+
+.i_icontextblock__title-w {
+  overflow: hidden;
+  padding-bottom: 0.3em;
+}
+
+.i_icontextblock__content-w {
+  overflow: hidden;
+}
+
+.i--animatesection [class*=i_animate] {
+  transition: transform 550ms var(--easing);
+}
+.i--animatesection:not(.i--animatesection--in) [class*=i_animate] {
+  transition-delay: 0ms !important;
+}
+.i--animatesection .i_animate--grow {
+  transform: scaleX(0);
+}
+.i--animatesection .i_animate--drop {
+  transform: translateY(-100%);
+}
+.i--animatesection .i_animate--rise {
+  transform: translateY(100%);
+}
+.i--animatesection .i_animate--btn--slide {
+  transform: translateX(-100%);
+}
+.i--animatesection .i_animate--btn--rise {
+  transform: translateY(calc(100% - 0.1rem));
+}
+.i--animatesection--in .i_animate--grow {
+  transform: scaleX(1);
+}
+.i--animatesection--in .i_animate--drop {
+  transform: translateY(0);
+}
+.i--animatesection--in .i_animate--rise {
+  transform: translateY(0);
+}
+.i--animatesection--in .i_animate--btn--slide {
+  transform: translateX(0);
+}
+.i--animatesection--in .i_animate--btn--rise {
+  transform: translateY(0);
 }
