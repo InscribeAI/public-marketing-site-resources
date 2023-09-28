@@ -1,3 +1,5 @@
+console.log('version', 'v1.0.6');
+
 document.addEventListener('DOMContentLoaded', function() {
 
   const target = document.querySelector('.i_statssection');
