@@ -867,7 +867,7 @@ a {
   height: 100%;
 }
 .i_testimonialslider .i_testimonialslider__item.i_testimonialslider__item__first, .i_testimonialslider .i_testimonialslider__item.--active {
-  position: relative;
+  position: relative !important;
 }
 
 .i_testimonialslider__nav__bar {
