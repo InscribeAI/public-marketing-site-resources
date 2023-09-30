@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.13";
+  --v: "v1.0.14";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --yellow: #fdf374;
@@ -142,7 +142,7 @@ a {
   aspect-ratio: 2;
 }
 
-.i_icon--lottie * {
+.i_icon--lottie g path {
   stroke: var(--dark);
 }
 
@@ -1778,39 +1778,39 @@ a {
   overflow: hidden;
 }
 
-.i--animatesection [class*=i_animate] {
+html:not(.wf-design-mode) .i--animatesection [class*=i_animate] {
   transition: transform 550ms var(--easing);
 }
-.i--animatesection:not(.i--animatesection--in) [class*=i_animate] {
+html:not(.wf-design-mode) .i--animatesection:not(.i--animatesection--in) [class*=i_animate] {
   transition-delay: 0ms !important;
 }
-.i--animatesection .i_animate--grow {
+html:not(.wf-design-mode) .i--animatesection .i_animate--grow {
   transform: scaleX(0);
 }
-.i--animatesection .i_animate--drop {
+html:not(.wf-design-mode) .i--animatesection .i_animate--drop {
   transform: translateY(-100%);
 }
-.i--animatesection .i_animate--rise {
+html:not(.wf-design-mode) .i--animatesection .i_animate--rise {
   transform: translateY(100%);
 }
-.i--animatesection .i_animate--btn--slide {
+html:not(.wf-design-mode) .i--animatesection .i_animate--btn--slide {
   transform: translateX(-100%);
 }
-.i--animatesection .i_animate--btn--rise {
+html:not(.wf-design-mode) .i--animatesection .i_animate--btn--rise {
   transform: translateY(calc(100% - 2rem - 2px));
 }
-.i--animatesection--in .i_animate--grow {
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--grow {
   transform: scaleX(1);
 }
-.i--animatesection--in .i_animate--drop {
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--drop {
   transform: translateY(0);
 }
-.i--animatesection--in .i_animate--rise {
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--rise {
   transform: translateY(0);
 }
-.i--animatesection--in .i_animate--btn--slide {
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--btn--slide {
   transform: translateX(0);
 }
-.i--animatesection--in .i_animate--btn--rise {
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--btn--rise {
   transform: translateY(0);
 }
