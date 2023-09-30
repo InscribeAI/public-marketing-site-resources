@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.14";
+  --v: "v1.0.15";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --yellow: #fdf374;
@@ -155,687 +155,6 @@ a {
   height: 100%;
 }
 
-@media screen and (min-width: 991px) {
-  .i_statsblock__stat__bar:nth-child(2) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(40 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(3) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(39 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(4) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(38 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(5) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(37 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(6) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(36 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(7) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(35 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(8) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(34 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(9) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(33 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(10) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(32 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(11) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(31 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(12) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(30 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(13) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(29 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(14) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(28 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(15) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(27 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(16) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(26 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(17) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(25 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(18) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(24 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(19) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(23 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(20) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(22 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(21) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(21 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(22) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(20 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(23) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(19 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(24) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(18 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(25) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(17 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(26) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(16 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(27) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(15 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(28) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(14 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(29) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(13 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(30) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(12 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(31) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(11 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(32) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(10 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(33) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(9 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(34) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(8 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(35) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(7 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(36) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(6 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(37) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(5 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(38) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(4 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(39) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(3 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(40) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(2 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(41) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(1 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar:nth-child(42) .i_statsblock__stat__bar__line {
-    transform: scaleY(calc(0 / 42)) translate(0, -50%);
-  }
-  .i_statsblock__stat__bar {
-    transform-origin: top left;
-    transform: scaleX(0);
-    transition: transform var(--easing) 250ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(1) {
-    transition-delay: 50ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(2) {
-    transition-delay: 100ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(3) {
-    transition-delay: 150ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(4) {
-    transition-delay: 200ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(5) {
-    transition-delay: 250ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(6) {
-    transition-delay: 300ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(7) {
-    transition-delay: 350ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(8) {
-    transition-delay: 400ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(9) {
-    transition-delay: 450ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(10) {
-    transition-delay: 500ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(11) {
-    transition-delay: 550ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(12) {
-    transition-delay: 600ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(13) {
-    transition-delay: 650ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(14) {
-    transition-delay: 700ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(15) {
-    transition-delay: 750ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(16) {
-    transition-delay: 800ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(17) {
-    transition-delay: 850ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(18) {
-    transition-delay: 900ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(19) {
-    transition-delay: 950ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(20) {
-    transition-delay: 1000ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(21) {
-    transition-delay: 1050ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(22) {
-    transition-delay: 1100ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(23) {
-    transition-delay: 1150ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(24) {
-    transition-delay: 1200ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(25) {
-    transition-delay: 1250ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(26) {
-    transition-delay: 1300ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(27) {
-    transition-delay: 1350ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(28) {
-    transition-delay: 1400ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(29) {
-    transition-delay: 1450ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(30) {
-    transition-delay: 1500ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(31) {
-    transition-delay: 1550ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(32) {
-    transition-delay: 1600ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(33) {
-    transition-delay: 1650ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(34) {
-    transition-delay: 1700ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(35) {
-    transition-delay: 1750ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(36) {
-    transition-delay: 1800ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(37) {
-    transition-delay: 1850ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(38) {
-    transition-delay: 1900ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(39) {
-    transition-delay: 1950ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(40) {
-    transition-delay: 2000ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(41) {
-    transition-delay: 2050ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(42) {
-    transition-delay: 2100ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__number {
-    transition-delay: 150ms;
-  }
-  .i_statsblock__stat:nth-child(1) .i_statsblock__stat__label__text {
-    transition-delay: 2100ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(1) {
-    transition-delay: 550ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(2) {
-    transition-delay: 600ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(3) {
-    transition-delay: 650ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(4) {
-    transition-delay: 700ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(5) {
-    transition-delay: 750ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(6) {
-    transition-delay: 800ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(7) {
-    transition-delay: 850ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(8) {
-    transition-delay: 900ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(9) {
-    transition-delay: 950ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(10) {
-    transition-delay: 1000ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(11) {
-    transition-delay: 1050ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(12) {
-    transition-delay: 1100ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(13) {
-    transition-delay: 1150ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(14) {
-    transition-delay: 1200ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(15) {
-    transition-delay: 1250ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(16) {
-    transition-delay: 1300ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(17) {
-    transition-delay: 1350ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(18) {
-    transition-delay: 1400ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(19) {
-    transition-delay: 1450ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(20) {
-    transition-delay: 1500ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(21) {
-    transition-delay: 1550ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(22) {
-    transition-delay: 1600ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(23) {
-    transition-delay: 1650ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(24) {
-    transition-delay: 1700ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(25) {
-    transition-delay: 1750ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(26) {
-    transition-delay: 1800ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(27) {
-    transition-delay: 1850ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(28) {
-    transition-delay: 1900ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(29) {
-    transition-delay: 1950ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(30) {
-    transition-delay: 2000ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(31) {
-    transition-delay: 2050ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(32) {
-    transition-delay: 2100ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(33) {
-    transition-delay: 2150ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(34) {
-    transition-delay: 2200ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(35) {
-    transition-delay: 2250ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(36) {
-    transition-delay: 2300ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(37) {
-    transition-delay: 2350ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(38) {
-    transition-delay: 2400ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(39) {
-    transition-delay: 2450ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(40) {
-    transition-delay: 2500ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(41) {
-    transition-delay: 2550ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(42) {
-    transition-delay: 2600ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__number {
-    transition-delay: 650ms;
-  }
-  .i_statsblock__stat:nth-child(2) .i_statsblock__stat__label__text {
-    transition-delay: 2600ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(1) {
-    transition-delay: 1050ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(2) {
-    transition-delay: 1100ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(3) {
-    transition-delay: 1150ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(4) {
-    transition-delay: 1200ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(5) {
-    transition-delay: 1250ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(6) {
-    transition-delay: 1300ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(7) {
-    transition-delay: 1350ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(8) {
-    transition-delay: 1400ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(9) {
-    transition-delay: 1450ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(10) {
-    transition-delay: 1500ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(11) {
-    transition-delay: 1550ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(12) {
-    transition-delay: 1600ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(13) {
-    transition-delay: 1650ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(14) {
-    transition-delay: 1700ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(15) {
-    transition-delay: 1750ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(16) {
-    transition-delay: 1800ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(17) {
-    transition-delay: 1850ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(18) {
-    transition-delay: 1900ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(19) {
-    transition-delay: 1950ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(20) {
-    transition-delay: 2000ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(21) {
-    transition-delay: 2050ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(22) {
-    transition-delay: 2100ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(23) {
-    transition-delay: 2150ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(24) {
-    transition-delay: 2200ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(25) {
-    transition-delay: 2250ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(26) {
-    transition-delay: 2300ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(27) {
-    transition-delay: 2350ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(28) {
-    transition-delay: 2400ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(29) {
-    transition-delay: 2450ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(30) {
-    transition-delay: 2500ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(31) {
-    transition-delay: 2550ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(32) {
-    transition-delay: 2600ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(33) {
-    transition-delay: 2650ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(34) {
-    transition-delay: 2700ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(35) {
-    transition-delay: 2750ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(36) {
-    transition-delay: 2800ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(37) {
-    transition-delay: 2850ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(38) {
-    transition-delay: 2900ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(39) {
-    transition-delay: 2950ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(40) {
-    transition-delay: 3000ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(41) {
-    transition-delay: 3050ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(42) {
-    transition-delay: 3100ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__number {
-    transition-delay: 1150ms;
-  }
-  .i_statsblock__stat:nth-child(3) .i_statsblock__stat__label__text {
-    transition-delay: 3100ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(1) {
-    transition-delay: 1550ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(2) {
-    transition-delay: 1600ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(3) {
-    transition-delay: 1650ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(4) {
-    transition-delay: 1700ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(5) {
-    transition-delay: 1750ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(6) {
-    transition-delay: 1800ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(7) {
-    transition-delay: 1850ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(8) {
-    transition-delay: 1900ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(9) {
-    transition-delay: 1950ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(10) {
-    transition-delay: 2000ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(11) {
-    transition-delay: 2050ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(12) {
-    transition-delay: 2100ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(13) {
-    transition-delay: 2150ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(14) {
-    transition-delay: 2200ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(15) {
-    transition-delay: 2250ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(16) {
-    transition-delay: 2300ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(17) {
-    transition-delay: 2350ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(18) {
-    transition-delay: 2400ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(19) {
-    transition-delay: 2450ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(20) {
-    transition-delay: 2500ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(21) {
-    transition-delay: 2550ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(22) {
-    transition-delay: 2600ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(23) {
-    transition-delay: 2650ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(24) {
-    transition-delay: 2700ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(25) {
-    transition-delay: 2750ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(26) {
-    transition-delay: 2800ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(27) {
-    transition-delay: 2850ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(28) {
-    transition-delay: 2900ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(29) {
-    transition-delay: 2950ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(30) {
-    transition-delay: 3000ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(31) {
-    transition-delay: 3050ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(32) {
-    transition-delay: 3100ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(33) {
-    transition-delay: 3150ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(34) {
-    transition-delay: 3200ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(35) {
-    transition-delay: 3250ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(36) {
-    transition-delay: 3300ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(37) {
-    transition-delay: 3350ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(38) {
-    transition-delay: 3400ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(39) {
-    transition-delay: 3450ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(40) {
-    transition-delay: 3500ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(41) {
-    transition-delay: 3550ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(42) {
-    transition-delay: 3600ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__number {
-    transition-delay: 1650ms;
-  }
-  .i_statsblock__stat:nth-child(4) .i_statsblock__stat__label__text {
-    transition-delay: 3600ms;
-  }
-  .i_statsblock__stat__number-w {
-    overflow: hidden;
-  }
-  .i_statsblock__stat__number-w .i_statsblock__stat__number {
-    position: relative;
-    transform: translateY(100%);
-    transition: transform 250ms var(--easing);
-  }
-  .i_statsblock__stat__label {
-    overflow: hidden;
-  }
-  .i_statsblock__stat__label .i_statsblock__stat__label__text {
-    position: relative;
-    transform: translateY(-100%);
-    transition: transform 450ms var(--easing);
-  }
-  .start .i_statsblock__stat__bar {
-    transform: scaleX(1);
-  }
-  .start .i_statsblock__stat__label__text,
-  .start .i_statsblock__stat__number {
-    transform: translateY(0);
-  }
-}
 .i_testimonialslider {
   position: relative;
 }
@@ -1813,4 +1132,686 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--btn--slide {
 }
 html:not(.wf-design-mode) .i--animatesection--in .i_animate--btn--rise {
   transform: translateY(0);
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat__bar {
+  transform: scaleX(1);
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat__label__text,
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat__number {
+  transform: translateY(0);
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(1) {
+  transition-delay: 50ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(2) {
+  transition-delay: 100ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(3) {
+  transition-delay: 150ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(4) {
+  transition-delay: 200ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(5) {
+  transition-delay: 250ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(6) {
+  transition-delay: 300ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(7) {
+  transition-delay: 350ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(8) {
+  transition-delay: 400ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(9) {
+  transition-delay: 450ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(10) {
+  transition-delay: 500ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(11) {
+  transition-delay: 550ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(12) {
+  transition-delay: 600ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(13) {
+  transition-delay: 650ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(14) {
+  transition-delay: 700ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(15) {
+  transition-delay: 750ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(16) {
+  transition-delay: 800ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(17) {
+  transition-delay: 850ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(18) {
+  transition-delay: 900ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(19) {
+  transition-delay: 950ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(20) {
+  transition-delay: 1000ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(21) {
+  transition-delay: 1050ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(22) {
+  transition-delay: 1100ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(23) {
+  transition-delay: 1150ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(24) {
+  transition-delay: 1200ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(25) {
+  transition-delay: 1250ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(26) {
+  transition-delay: 1300ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(27) {
+  transition-delay: 1350ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(28) {
+  transition-delay: 1400ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(29) {
+  transition-delay: 1450ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(30) {
+  transition-delay: 1500ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(31) {
+  transition-delay: 1550ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(32) {
+  transition-delay: 1600ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(33) {
+  transition-delay: 1650ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(34) {
+  transition-delay: 1700ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(35) {
+  transition-delay: 1750ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(36) {
+  transition-delay: 1800ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(37) {
+  transition-delay: 1850ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(38) {
+  transition-delay: 1900ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(39) {
+  transition-delay: 1950ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(40) {
+  transition-delay: 2000ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(41) {
+  transition-delay: 2050ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__bar:nth-child(42) {
+  transition-delay: 2100ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__number {
+  transition-delay: 150ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(1) .i_statsblock__stat__label__text {
+  transition-delay: 2100ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(1) {
+  transition-delay: 550ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(2) {
+  transition-delay: 600ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(3) {
+  transition-delay: 650ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(4) {
+  transition-delay: 700ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(5) {
+  transition-delay: 750ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(6) {
+  transition-delay: 800ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(7) {
+  transition-delay: 850ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(8) {
+  transition-delay: 900ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(9) {
+  transition-delay: 950ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(10) {
+  transition-delay: 1000ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(11) {
+  transition-delay: 1050ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(12) {
+  transition-delay: 1100ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(13) {
+  transition-delay: 1150ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(14) {
+  transition-delay: 1200ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(15) {
+  transition-delay: 1250ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(16) {
+  transition-delay: 1300ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(17) {
+  transition-delay: 1350ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(18) {
+  transition-delay: 1400ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(19) {
+  transition-delay: 1450ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(20) {
+  transition-delay: 1500ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(21) {
+  transition-delay: 1550ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(22) {
+  transition-delay: 1600ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(23) {
+  transition-delay: 1650ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(24) {
+  transition-delay: 1700ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(25) {
+  transition-delay: 1750ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(26) {
+  transition-delay: 1800ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(27) {
+  transition-delay: 1850ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(28) {
+  transition-delay: 1900ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(29) {
+  transition-delay: 1950ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(30) {
+  transition-delay: 2000ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(31) {
+  transition-delay: 2050ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(32) {
+  transition-delay: 2100ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(33) {
+  transition-delay: 2150ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(34) {
+  transition-delay: 2200ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(35) {
+  transition-delay: 2250ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(36) {
+  transition-delay: 2300ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(37) {
+  transition-delay: 2350ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(38) {
+  transition-delay: 2400ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(39) {
+  transition-delay: 2450ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(40) {
+  transition-delay: 2500ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(41) {
+  transition-delay: 2550ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__bar:nth-child(42) {
+  transition-delay: 2600ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__number {
+  transition-delay: 650ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(2) .i_statsblock__stat__label__text {
+  transition-delay: 2600ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(1) {
+  transition-delay: 1050ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(2) {
+  transition-delay: 1100ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(3) {
+  transition-delay: 1150ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(4) {
+  transition-delay: 1200ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(5) {
+  transition-delay: 1250ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(6) {
+  transition-delay: 1300ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(7) {
+  transition-delay: 1350ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(8) {
+  transition-delay: 1400ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(9) {
+  transition-delay: 1450ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(10) {
+  transition-delay: 1500ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(11) {
+  transition-delay: 1550ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(12) {
+  transition-delay: 1600ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(13) {
+  transition-delay: 1650ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(14) {
+  transition-delay: 1700ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(15) {
+  transition-delay: 1750ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(16) {
+  transition-delay: 1800ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(17) {
+  transition-delay: 1850ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(18) {
+  transition-delay: 1900ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(19) {
+  transition-delay: 1950ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(20) {
+  transition-delay: 2000ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(21) {
+  transition-delay: 2050ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(22) {
+  transition-delay: 2100ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(23) {
+  transition-delay: 2150ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(24) {
+  transition-delay: 2200ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(25) {
+  transition-delay: 2250ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(26) {
+  transition-delay: 2300ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(27) {
+  transition-delay: 2350ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(28) {
+  transition-delay: 2400ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(29) {
+  transition-delay: 2450ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(30) {
+  transition-delay: 2500ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(31) {
+  transition-delay: 2550ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(32) {
+  transition-delay: 2600ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(33) {
+  transition-delay: 2650ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(34) {
+  transition-delay: 2700ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(35) {
+  transition-delay: 2750ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(36) {
+  transition-delay: 2800ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(37) {
+  transition-delay: 2850ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(38) {
+  transition-delay: 2900ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(39) {
+  transition-delay: 2950ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(40) {
+  transition-delay: 3000ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(41) {
+  transition-delay: 3050ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__bar:nth-child(42) {
+  transition-delay: 3100ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__number {
+  transition-delay: 1150ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(3) .i_statsblock__stat__label__text {
+  transition-delay: 3100ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(1) {
+  transition-delay: 1550ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(2) {
+  transition-delay: 1600ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(3) {
+  transition-delay: 1650ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(4) {
+  transition-delay: 1700ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(5) {
+  transition-delay: 1750ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(6) {
+  transition-delay: 1800ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(7) {
+  transition-delay: 1850ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(8) {
+  transition-delay: 1900ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(9) {
+  transition-delay: 1950ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(10) {
+  transition-delay: 2000ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(11) {
+  transition-delay: 2050ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(12) {
+  transition-delay: 2100ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(13) {
+  transition-delay: 2150ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(14) {
+  transition-delay: 2200ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(15) {
+  transition-delay: 2250ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(16) {
+  transition-delay: 2300ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(17) {
+  transition-delay: 2350ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(18) {
+  transition-delay: 2400ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(19) {
+  transition-delay: 2450ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(20) {
+  transition-delay: 2500ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(21) {
+  transition-delay: 2550ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(22) {
+  transition-delay: 2600ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(23) {
+  transition-delay: 2650ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(24) {
+  transition-delay: 2700ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(25) {
+  transition-delay: 2750ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(26) {
+  transition-delay: 2800ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(27) {
+  transition-delay: 2850ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(28) {
+  transition-delay: 2900ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(29) {
+  transition-delay: 2950ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(30) {
+  transition-delay: 3000ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(31) {
+  transition-delay: 3050ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(32) {
+  transition-delay: 3100ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(33) {
+  transition-delay: 3150ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(34) {
+  transition-delay: 3200ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(35) {
+  transition-delay: 3250ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(36) {
+  transition-delay: 3300ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(37) {
+  transition-delay: 3350ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(38) {
+  transition-delay: 3400ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(39) {
+  transition-delay: 3450ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(40) {
+  transition-delay: 3500ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(41) {
+  transition-delay: 3550ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__bar:nth-child(42) {
+  transition-delay: 3600ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__number {
+  transition-delay: 1650ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__label__text {
+  transition-delay: 3600ms;
+}
+
+@media screen and (min-width: 991px) {
+  .i_statsblock__stat__bar:nth-child(2) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(40 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(3) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(39 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(4) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(38 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(5) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(37 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(6) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(36 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(7) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(35 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(8) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(34 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(9) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(33 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(10) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(32 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(11) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(31 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(12) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(30 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(13) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(29 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(14) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(28 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(15) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(27 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(16) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(26 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(17) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(25 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(18) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(24 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(19) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(23 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(20) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(22 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(21) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(21 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(22) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(20 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(23) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(19 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(24) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(18 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(25) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(17 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(26) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(16 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(27) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(15 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(28) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(14 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(29) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(13 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(30) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(12 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(31) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(11 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(32) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(10 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(33) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(9 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(34) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(8 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(35) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(7 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(36) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(6 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(37) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(5 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(38) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(4 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(39) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(3 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(40) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(2 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(41) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(1 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar:nth-child(42) .i_statsblock__stat__bar__line {
+    transform: scaleY(calc(0 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    transform-origin: top left;
+    transform: scaleX(0);
+    transition: transform var(--easing) 250ms;
+  }
+  .i_statsblock__stat__number-w {
+    overflow: hidden;
+  }
+  .i_statsblock__stat__number-w .i_statsblock__stat__number {
+    position: relative;
+    transform: translateY(100%);
+    transition: transform 250ms var(--easing);
+  }
+  .i_statsblock__stat__label {
+    overflow: hidden;
+  }
+  .i_statsblock__stat__label .i_statsblock__stat__label__text {
+    position: relative;
+    transform: translateY(-100%);
+    transition: transform 450ms var(--easing);
+  }
 }

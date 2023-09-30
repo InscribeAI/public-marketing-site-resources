@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.14');
+console.log('version', 'v1.0.15');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -10,9 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   const startStats = (section) => {
-    setTimeout(() => {
-      section.querySelector('.i_statsblock').classList.add('start');
-    }, 100);
 
     const elems = section.querySelectorAll('.i_statsblock__stat__number');
 
@@ -213,162 +210,162 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Restacking Slider
-// document.addEventListener('DOMContentLoaded', function () {
-//   function changeSlide(targetLayer) {
-//     const stack = document.querySelector('.i_restackingslider__stack');
-//     const layers = Array.from(stack.querySelectorAll('.i_restackingslider__stack__layer'));
-//     const contentLayers = Array.from(document.querySelectorAll('.i_restackingslider__content__layer'));
-//     const navItems = Array.from(document.querySelectorAll('.i_restackingslider__nav__item'));
+document.addEventListener('DOMContentLoaded', function () {
+  function changeSlide(targetLayer) {
+    const stack = document.querySelector('.i_restackingslider__stack');
+    const layers = Array.from(stack.querySelectorAll('.i_restackingslider__stack__layer'));
+    const contentLayers = Array.from(document.querySelectorAll('.i_restackingslider__content__layer'));
+    const navItems = Array.from(document.querySelectorAll('.i_restackingslider__nav__item'));
     
-//     // Find the target layer based on the input
-//     const target = layers.find(
-//       layer => layer.classList.contains(`layerorder--${targetLayer}`)
-//     );
+    // Find the target layer based on the input
+    const target = layers.find(
+      layer => layer.classList.contains(`layerorder--${targetLayer}`)
+    );
 
-//     if(target.classList.contains('--active')) {
-//       return;
-//     }
+    if(target.classList.contains('--active')) {
+      return;
+    }
     
-//     // Find the current active layer and add a --reset class to it
-//     const activeLayer = layers.find(layer => layer.classList.contains('--active'));
-//     activeLayer.classList.remove('--active');
+    // Find the current active layer and add a --reset class to it
+    const activeLayer = layers.find(layer => layer.classList.contains('--active'));
+    activeLayer.classList.remove('--active');
     
     
-//     // Create an array with the new order of layers, starting with the target layer
-//     const targetIndex = layers.indexOf(target);
-//     const newLayersOrder = layers.slice(targetIndex).concat(layers.slice(0, targetIndex));
+    // Create an array with the new order of layers, starting with the target layer
+    const targetIndex = layers.indexOf(target);
+    const newLayersOrder = layers.slice(targetIndex).concat(layers.slice(0, targetIndex));
     
-//     // Re-assign classes to layers based on the new order
-//     newLayersOrder.forEach((layer, index) => {
-//       layer.className = `i_restackingslider__stack__layer i_restackingslider__stack__layer--${index + 1}`;
-//     });
+    // Re-assign classes to layers based on the new order
+    newLayersOrder.forEach((layer, index) => {
+      layer.className = `i_restackingslider__stack__layer i_restackingslider__stack__layer--${index + 1}`;
+    });
 
-//     // Add back in layeroder--x
-//     layers.forEach((layer, index) => {
-//       layer.classList.add(`layerorder--${index + 1}`);
-//     });
+    // Add back in layeroder--x
+    layers.forEach((layer, index) => {
+      layer.classList.add(`layerorder--${index + 1}`);
+    });
 
-//     activeLayer.classList.add('--reset');
+    activeLayer.classList.add('--reset');
 
-//     // Remove the active class from all i_restackingslider__content__layer
-//     contentLayers.forEach(layer => {
-//       layer.classList.remove('--active');
-//     });
+    // Remove the active class from all i_restackingslider__content__layer
+    contentLayers.forEach(layer => {
+      layer.classList.remove('--active');
+    });
 
-//     // Add the active class to the corresponding i_restackingslider__content__layer
-//     contentLayers[targetLayer - 1].classList.add('--active');
+    // Add the active class to the corresponding i_restackingslider__content__layer
+    contentLayers[targetLayer - 1].classList.add('--active');
 
-//     // Remove the --active class from all nav items
-//     navItems.forEach(item => {
-//       item.classList.remove('--active');
-//     });
+    // Remove the --active class from all nav items
+    navItems.forEach(item => {
+      item.classList.remove('--active');
+    });
 
-//     // Add the --active class to the corresponding nav item
-//     navItems[targetLayer - 1].classList.add('--active');
+    // Add the --active class to the corresponding nav item
+    navItems[targetLayer - 1].classList.add('--active');
 
-//     setTimeout(() => {
-//       // Remove the --reset class from the previously active layer
-//       activeLayer.classList.remove('--reset');
+    setTimeout(() => {
+      // Remove the --reset class from the previously active layer
+      activeLayer.classList.remove('--reset');
       
-//       setTimeout(() => {
-//         // The new active layer is now layer 1, so add --active class to it
-//         newLayersOrder[0].classList.add('--active');
-//       }, 500);
-//     }, 500);
-//   }
+      setTimeout(() => {
+        // The new active layer is now layer 1, so add --active class to it
+        newLayersOrder[0].classList.add('--active');
+      }, 500);
+    }, 500);
+  }
 
-//   function moveToNextSlide() {
-//     const stack = document.querySelector('.i_restackingslider__stack');
-//     const layers = Array.from(stack.querySelectorAll('.i_restackingslider__stack__layer'));
+  function moveToNextSlide() {
+    const stack = document.querySelector('.i_restackingslider__stack');
+    const layers = Array.from(stack.querySelectorAll('.i_restackingslider__stack__layer'));
     
-//     // Find the current active layer
-//     const activeLayer = layers.find(layer => layer.classList.contains('--active'));
+    // Find the current active layer
+    const activeLayer = layers.find(layer => layer.classList.contains('--active'));
     
-//     // Get its layer number from its class
-//     const activeLayerNum = parseInt(activeLayer.className.match(/layerorder--(\d+)/)[1], 10);
+    // Get its layer number from its class
+    const activeLayerNum = parseInt(activeLayer.className.match(/layerorder--(\d+)/)[1], 10);
 
     
-//     // Calculate the next layer number, and wrap around if necessary
-//     const totalLayers = layers.length;
-//     const nextLayerNum = (activeLayerNum % totalLayers) + 1;
+    // Calculate the next layer number, and wrap around if necessary
+    const totalLayers = layers.length;
+    const nextLayerNum = (activeLayerNum % totalLayers) + 1;
     
-//     // Call changeSlide function to switch to the next slide
-//     changeSlide(nextLayerNum);
-//   }
+    // Call changeSlide function to switch to the next slide
+    changeSlide(nextLayerNum);
+  }
 
-//   window.restacking__int = setInterval(() => {
-//     moveToNextSlide();
-//   }, 5000);
+  window.restacking__int = setInterval(() => {
+    moveToNextSlide();
+  }, 5000);
 
-//   (() => {
-//     const navItems = Array.from(document.querySelectorAll('.i_restackingslider__nav__item'));
+  (() => {
+    const navItems = Array.from(document.querySelectorAll('.i_restackingslider__nav__item'));
 
-//     navItems.forEach((navItem, index) => {
-//       navItem.addEventListener('click', () => {
-//         clearInterval(window.restacking__int);
-//         changeSlide(index + 1);
-//         // add UserEngaged class to parent slider
-//         navItem.closest('.i_restackingslider').classList.add('--userEngaged');
-//       });
-//     });
-//   })();
-// });
+    navItems.forEach((navItem, index) => {
+      navItem.addEventListener('click', () => {
+        clearInterval(window.restacking__int);
+        changeSlide(index + 1);
+        // add UserEngaged class to parent slider
+        navItem.closest('.i_restackingslider').classList.add('--userEngaged');
+      });
+    });
+  })();
+});
 
 // Cycle Slider
-// document.addEventListener('DOMContentLoaded', function () {
-//   // Initialize variables
-//   let cycleSlideInterval;
-//   let userEngaged = false;
+document.addEventListener('DOMContentLoaded', function () {
+  // Initialize variables
+  let cycleSlideInterval;
+  let userEngaged = false;
 
-//   function goToCycleSlide(slideNum) {
-//     // Clear interval if user engaged
-//     if (userEngaged) {
-//       clearInterval(cycleSlideInterval);
-//     }
+  function goToCycleSlide(slideNum) {
+    // Clear interval if user engaged
+    if (userEngaged) {
+      clearInterval(cycleSlideInterval);
+    }
 
-//     // Find and deactivate currently active slides and nav items
-//     const activeSlide = document.querySelector('.i_cycleslider__list__item.--active');
-//     const activeNavItem = document.querySelector('.i_cycleslider__nav__item.--active');
-//     activeSlide.classList.remove('--active');
-//     activeNavItem.classList.remove('--active');
+    // Find and deactivate currently active slides and nav items
+    const activeSlide = document.querySelector('.i_cycleslider__list__item.--active');
+    const activeNavItem = document.querySelector('.i_cycleslider__nav__item.--active');
+    activeSlide.classList.remove('--active');
+    activeNavItem.classList.remove('--active');
 
-//     // Activate the slide and nav item based on the given slide number
-//     const targetSlide = document.querySelector(`.i_cycleslider__list__item:nth-child(${slideNum})`);
-//     const targetNavItem = document.querySelector(`.i_cycleslider__nav__item:nth-child(${slideNum})`);
-//     targetSlide.classList.add('--active');
-//     targetNavItem.classList.add('--active');
-//   }
+    // Activate the slide and nav item based on the given slide number
+    const targetSlide = document.querySelector(`.i_cycleslider__list__item:nth-child(${slideNum})`);
+    const targetNavItem = document.querySelector(`.i_cycleslider__nav__item:nth-child(${slideNum})`);
+    targetSlide.classList.add('--active');
+    targetNavItem.classList.add('--active');
+  }
 
-//   function goToNextCycleSlide() {
-//     const totalSlides = document.querySelectorAll('.i_cycleslider__list__item').length;
-//     const activeSlide = document.querySelector('.i_cycleslider__list__item.--active');
-//     const activeIndex = Array.from(activeSlide.parentElement.children).indexOf(activeSlide);
-//     const nextSlideNum = (activeIndex + 1) % totalSlides + 1;
-//     goToCycleSlide(nextSlideNum);
-//   }
+  function goToNextCycleSlide() {
+    const totalSlides = document.querySelectorAll('.i_cycleslider__list__item').length;
+    const activeSlide = document.querySelector('.i_cycleslider__list__item.--active');
+    const activeIndex = Array.from(activeSlide.parentElement.children).indexOf(activeSlide);
+    const nextSlideNum = (activeIndex + 1) % totalSlides + 1;
+    goToCycleSlide(nextSlideNum);
+  }
 
-//   // Attach click events to cycle list items and nav items
-//   document.querySelectorAll('.i_cycleslider__list__item__box, .i_cycleslider__nav__item').forEach(item => {
-//     item.addEventListener('click', function() {
-//       const parentSlider = this.closest('.i_cycleslider');
-//       parentSlider.classList.add('--userEngaged');
-//       userEngaged = true;
-//       const slideNum = Array.from(this.closest('.i_cycleslider__list, .i_cycleslider__nav').children).indexOf(this.closest('.i_cycleslider__list__item, .i_cycleslider__nav__item')) + 1;
-//       goToCycleSlide(slideNum);
-//     });
-//   });
+  // Attach click events to cycle list items and nav items
+  document.querySelectorAll('.i_cycleslider__list__item__box, .i_cycleslider__nav__item').forEach(item => {
+    item.addEventListener('click', function() {
+      const parentSlider = this.closest('.i_cycleslider');
+      parentSlider.classList.add('--userEngaged');
+      userEngaged = true;
+      const slideNum = Array.from(this.closest('.i_cycleslider__list, .i_cycleslider__nav').children).indexOf(this.closest('.i_cycleslider__list__item, .i_cycleslider__nav__item')) + 1;
+      goToCycleSlide(slideNum);
+    });
+  });
 
-//   // Initialize cycle slide interval
-//   cycleSlideInterval = setInterval(() => {
-//     if (!userEngaged) {
-//       goToNextCycleSlide();
-//     }
-//   }, 1500);
+  // Initialize cycle slide interval
+  cycleSlideInterval = setInterval(() => {
+    if (!userEngaged) {
+      goToNextCycleSlide();
+    }
+  }, 1500);
 
-//   // To manually go to a specific slide, you can use goToCycleSlide function like so:
-//   // goToCycleSlide(2);
+  // To manually go to a specific slide, you can use goToCycleSlide function like so:
+  // goToCycleSlide(2);
 
-// });
+});
 
 // CTA Section
 document.addEventListener('DOMContentLoaded', function () {
