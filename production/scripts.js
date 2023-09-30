@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.15');
+console.log('version', 'v1.0.16');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -313,6 +313,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Cycle Slider
 document.addEventListener('DOMContentLoaded', function () {
+
+  const cycleSlider = document.querySelector('.i_cycleslider');
+
+  if(!cycleSlider) return;
+
   // Initialize variables
   let cycleSlideInterval;
   let userEngaged = false;
