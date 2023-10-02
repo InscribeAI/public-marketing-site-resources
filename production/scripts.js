@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.16');
+console.log('version', 'v1.0.17');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -211,6 +211,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Restacking Slider
 document.addEventListener('DOMContentLoaded', function () {
+
+  const slider = document.querySelector('.i_restackingslider');
+
+  if(!slider) return;
+
   function changeSlide(targetLayer) {
     const stack = document.querySelector('.i_restackingslider__stack');
     const layers = Array.from(stack.querySelectorAll('.i_restackingslider__stack__layer'));
@@ -222,13 +227,13 @@ document.addEventListener('DOMContentLoaded', function () {
       layer => layer.classList.contains(`layerorder--${targetLayer}`)
     );
 
-    if(target.classList.contains('--active')) {
+    if(target.classList.contains('i--active')) {
       return;
     }
     
     // Find the current active layer and add a --reset class to it
-    const activeLayer = layers.find(layer => layer.classList.contains('--active'));
-    activeLayer.classList.remove('--active');
+    const activeLayer = layers.find(layer => layer.classList.contains('i--active'));
+    activeLayer.classList.remove('i--active');
     
     
     // Create an array with the new order of layers, starting with the target layer
@@ -249,19 +254,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Remove the active class from all i_restackingslider__content__layer
     contentLayers.forEach(layer => {
-      layer.classList.remove('--active');
+      layer.classList.remove('i--active');
     });
 
     // Add the active class to the corresponding i_restackingslider__content__layer
-    contentLayers[targetLayer - 1].classList.add('--active');
+    contentLayers[targetLayer - 1].classList.add('i--active');
 
     // Remove the --active class from all nav items
     navItems.forEach(item => {
-      item.classList.remove('--active');
+      item.classList.remove('i--active');
     });
 
     // Add the --active class to the corresponding nav item
-    navItems[targetLayer - 1].classList.add('--active');
+    navItems[targetLayer - 1].classList.add('i--active');
 
     setTimeout(() => {
       // Remove the --reset class from the previously active layer
@@ -269,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function () {
       
       setTimeout(() => {
         // The new active layer is now layer 1, so add --active class to it
-        newLayersOrder[0].classList.add('--active');
+        newLayersOrder[0].classList.add('i--active');
       }, 500);
     }, 500);
   }
@@ -279,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const layers = Array.from(stack.querySelectorAll('.i_restackingslider__stack__layer'));
     
     // Find the current active layer
-    const activeLayer = layers.find(layer => layer.classList.contains('--active'));
+    const activeLayer = layers.find(layer => layer.classList.contains('i--active'));
     
     // Get its layer number from its class
     const activeLayerNum = parseInt(activeLayer.className.match(/layerorder--(\d+)/)[1], 10);
@@ -329,21 +334,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Find and deactivate currently active slides and nav items
-    const activeSlide = document.querySelector('.i_cycleslider__list__item.--active');
-    const activeNavItem = document.querySelector('.i_cycleslider__nav__item.--active');
-    activeSlide.classList.remove('--active');
-    activeNavItem.classList.remove('--active');
+    const activeSlide = document.querySelector('.i_cycleslider__list__item.i--active');
+    const activeNavItem = document.querySelector('.i_cycleslider__nav__item.i--active');
+    activeSlide.classList.remove('i--active');
+    activeNavItem.classList.remove('i--active');
 
     // Activate the slide and nav item based on the given slide number
     const targetSlide = document.querySelector(`.i_cycleslider__list__item:nth-child(${slideNum})`);
     const targetNavItem = document.querySelector(`.i_cycleslider__nav__item:nth-child(${slideNum})`);
-    targetSlide.classList.add('--active');
-    targetNavItem.classList.add('--active');
+    targetSlide.classList.add('i--active');
+    targetNavItem.classList.add('i--active');
   }
 
   function goToNextCycleSlide() {
     const totalSlides = document.querySelectorAll('.i_cycleslider__list__item').length;
-    const activeSlide = document.querySelector('.i_cycleslider__list__item.--active');
+    const activeSlide = document.querySelector('.i_cycleslider__list__item.i--active');
     const activeIndex = Array.from(activeSlide.parentElement.children).indexOf(activeSlide);
     const nextSlideNum = (activeIndex + 1) % totalSlides + 1;
     goToCycleSlide(nextSlideNum);
