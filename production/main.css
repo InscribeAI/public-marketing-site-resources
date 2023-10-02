@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.17";
+  --v: "v1.0.18";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --yellow: #fdf374;
@@ -136,6 +136,7 @@ a {
 
 .i_blogpostsgriditem__image {
   aspect-ratio: 1.73249551;
+  display: block;
 }
 
 .i_blogpostsgriditem__image--ar-1-3 {
@@ -540,7 +541,7 @@ a {
 }
 @media screen and (max-width: 991px) {
   .i_restackingslider__items {
-    display: block;
+    display: flex;
   }
 }
 
@@ -1107,16 +1108,63 @@ html:not(.wf-design-mode) .i--animatesection .i_animate--grow {
   transform: scaleX(0);
 }
 html:not(.wf-design-mode) .i--animatesection .i_animate--drop {
-  transform: translateY(-100%);
+  transform: translateY(calc(-100% - 2px));
 }
 html:not(.wf-design-mode) .i--animatesection .i_animate--rise {
-  transform: translateY(100%);
+  transform: translateY(calc(100% + 2px));
 }
 html:not(.wf-design-mode) .i--animatesection .i_animate--btn--slide {
-  transform: translateX(-100%);
+  transform: translateX(calc(-100% - 2px));
 }
 html:not(.wf-design-mode) .i--animatesection .i_animate--btn--rise {
   transform: translateY(calc(100% - 2rem - 2px));
+}
+html:not(.wf-design-mode) .i--animatesection .i_animate--box {
+  position: relative;
+  width: 100%;
+}
+html:not(.wf-design-mode) .i--animatesection .i_animate--box .i_blogpostsgriditem__image {
+  opacity: 0;
+  z-index: 9;
+  position: relative;
+  transition: opacity 550ms var(--easing);
+}
+html:not(.wf-design-mode) .i--animatesection .i_animate--box .i_animatedboxes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 550ms var(--easing);
+  width: 0;
+  height: 0;
+  transform-origin: top left;
+}
+html:not(.wf-design-mode) .i--animatesection .i_animate--box .i_animatedbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0.2rem solid var(--dark);
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  background-color: white;
+  transition: all 550ms var(--easing);
+}
+html:not(.wf-design-mode) .i--animatesection .i_animate--box .i_animatedbox:first-child {
+  z-index: 8 !important;
+}
+html:not(.wf-design-mode) .i--animatesection .i_animate--box .i_animatedbox:nth-child(1) {
+  z-index: 3;
+}
+html:not(.wf-design-mode) .i--animatesection .i_animate--box .i_animatedbox:nth-child(2) {
+  z-index: 2;
+}
+html:not(.wf-design-mode) .i--animatesection .i_animate--box .i_animatedbox:nth-child(3) {
+  z-index: 1;
+}
+html:not(.wf-design-mode) .i--animatesection .i_animate--box .i_animatedbox:nth-child(4) {
+  z-index: 0;
 }
 html:not(.wf-design-mode) .i--animatesection--in .i_animate--grow {
   transform: scaleX(1);
@@ -1667,6 +1715,93 @@ html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4
 }
 html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__label__text {
   transition-delay: 3600ms;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--box .i_blogpostsgriditem__image {
+  opacity: 1;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--box .i_animatedboxes {
+  width: 100%;
+  height: 100%;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--box .i_animatedbox:nth-child(1) {
+  z-index: 3;
+  left: 0;
+  top: 0;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--box .i_animatedbox:nth-child(2) {
+  z-index: 2;
+  left: 1rem;
+  top: 1rem;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--box .i_animatedbox:nth-child(3) {
+  z-index: 1;
+  left: 2rem;
+  top: 2rem;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--box .i_animatedbox:nth-child(4) {
+  z-index: 0;
+  left: 3rem;
+  top: 3rem;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--topleft .i_animatedbox:nth-child(1) {
+  z-index: 3;
+  left: 0;
+  top: 0;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--topleft .i_animatedbox:nth-child(2) {
+  z-index: 2;
+  left: -1rem;
+  top: -1rem;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--topleft .i_animatedbox:nth-child(3) {
+  z-index: 1;
+  left: -2rem;
+  top: -2rem;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--topleft .i_animatedbox:nth-child(4) {
+  z-index: 0;
+  left: -3rem;
+  top: -3rem;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--topright .i_animatedbox:nth-child(1) {
+  z-index: 3;
+  left: 0;
+  top: 0;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--topright .i_animatedbox:nth-child(2) {
+  z-index: 2;
+  left: 1rem;
+  top: -1rem;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--topright .i_animatedbox:nth-child(3) {
+  z-index: 1;
+  left: 2rem;
+  top: -2rem;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--topright .i_animatedbox:nth-child(4) {
+  z-index: 0;
+  left: 3rem;
+  top: -3rem;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--bottomleft .i_animatedbox:nth-child(1) {
+  z-index: 3;
+  left: 0;
+  top: 0;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--bottomleft .i_animatedbox:nth-child(2) {
+  z-index: 2;
+  left: -1rem;
+  top: 1rem;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--bottomleft .i_animatedbox:nth-child(3) {
+  z-index: 1;
+  left: -2rem;
+  top: 2rem;
+}
+html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--bottomleft .i_animatedbox:nth-child(4) {
+  z-index: 0;
+  left: -3rem;
+  top: 3rem;
 }
 
 @media screen and (min-width: 991px) {
