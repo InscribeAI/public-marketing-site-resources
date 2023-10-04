@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.21";
+  --v: "v1.0.22";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --yellow: #fdf374;
@@ -1950,15 +1950,15 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
     transition: transform 450ms var(--easing);
   }
 }
-.link-list__dropdown-toggle.w--open {
-  background-color: var(--natural);
-}
-
-.navbar__navmenu {
-  max-height: calc(100vh - 6.5rem);
-  overflow: scroll !important;
-}
-
-.navmenu__button-icon svg g path {
-  stroke: var(--dark);
+@media screen and (max-width: 991px) {
+  .link-list__dropdown-toggle.w--open {
+    background-color: var(--natural);
+  }
+  .navbar__navmenu {
+    max-height: calc(100vh - 6.5rem);
+    overflow: scroll !important;
+  }
+  .navmenu__button-icon svg g path {
+    stroke: var(--dark);
+  }
 }
