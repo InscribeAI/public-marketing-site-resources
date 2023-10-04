@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.19";
+  --v: "v1.0.21";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --yellow: #fdf374;
@@ -1955,6 +1955,10 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
 }
 
 .navbar__navmenu {
-  max-height: calc(100vh - 8.5rem);
+  max-height: calc(100vh - 6.5rem);
   overflow: scroll !important;
+}
+
+.navmenu__button-icon svg g path {
+  stroke: var(--dark);
 }
