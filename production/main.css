@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.27";
+  --v: "v1.0.28";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --yellow: #fdf374;
@@ -2099,7 +2099,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
   }
 }
 .i_heading-6--d {
-  font-size: 2.1rem !important;
+  font-size: 2.8rem !important;
   line-height: 0.82em !important;
   letter-spacing: 0 !important;
   color: var(--dark);
@@ -2113,7 +2113,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
 
 @media screen and (max-width: 991px) {
   .i_heading-6--m {
-    font-size: 2.1rem !important;
+    font-size: 2.8rem !important;
     line-height: 0.82em !important;
     letter-spacing: 0 !important;
     color: var(--dark);
