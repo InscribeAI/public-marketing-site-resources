@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.29');
+console.log('version', 'v1.0.30');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -288,6 +288,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	function moveToNextSlide() {
 		const stack = document.querySelector('.i_restackingslider__stack');
+
+    if (!stack) return;
+
 		const layers = Array.from(stack.querySelectorAll('.i_restackingslider__stack__layer'));
 
 		// Find the current active layer

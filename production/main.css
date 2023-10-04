@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.29";
+  --v: "v1.0.30";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --yellow: #fdf374;
@@ -1097,6 +1097,10 @@ a {
 
 .i_icontextblock__content-w {
   overflow: hidden;
+}
+
+.i_statsblock__stat__number {
+  font-feature-settings: "aalt" on;
 }
 
 html:not(.wf-design-mode) .i--animatesection [class*=i_animate] {
