@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.24";
+  --v: "v1.0.25";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --yellow: #fdf374;
@@ -417,7 +417,6 @@ a {
 }
 .i_restackingslider__stack__layer.--reset {
   transform: translate(-6rem, -6rem);
-  transform: translate(-6rem, -6rem) translate(110%, 0%);
   z-index: 99;
 }
 
@@ -2029,12 +2028,12 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
 }
 
 .i_heading-4--d {
-  font-size: 51rem !important;
+  font-size: 5.1rem !important;
   line-height: 1em !important;
 }
 @media screen and (max-width: 991px) {
   .i_heading-4--d.i_heading-4--m {
-    font-size: 51rem !important;
+    font-size: 5.1rem !important;
     line-height: 1em !important;
   }
 }
