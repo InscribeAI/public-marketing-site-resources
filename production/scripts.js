@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.19');
+console.log('version', 'v1.0.20');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -99,6 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const goToNextSlide = (slider) => {
+
+    if(!slider) return;
+    
     const sliderNav = slider.querySelector('.i_testimonialslider__nav');
     const sliderNavItems = sliderNav.querySelectorAll('.i_testimonialslider__nav__item');
     const sliderItems = slider.querySelectorAll('.i_testimonialslider__item');
@@ -120,7 +123,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const goToNextSlideTimeout = () => {
     const slider = document.querySelector('.i_testimonialslider');
-    goToNextSlide(slider);
+    if(slider) {
+      goToNextSlide(slider);
+    }
 
     sliderSettings.timeout = setTimeout(() => {
       goToNextSlideTimeout();
@@ -128,7 +133,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   setTimeout(() => {
-    document.querySelector('.i_testimonialslider').querySelector('.i_testimonialslider__nav__bar__count').classList.add('--countdown');
+    const testimonialSlider = document.querySelector('.i_testimonialslider');
+    if(!testimonialSlider) return;
+    testimonialSlider.querySelector('.i_testimonialslider__nav__bar__count').classList.add('--countdown');
   }, 1000);
 
   sliderSettings.timeout = setTimeout(() => {

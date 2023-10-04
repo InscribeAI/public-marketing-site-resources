@@ -1953,3 +1953,8 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
 .link-list__dropdown-toggle.w--open {
   background-color: var(--natural);
 }
+
+.navbar__navmenu {
+  max-height: calc(100vh - 8.5rem);
+  overflow: scroll !important;
+}
