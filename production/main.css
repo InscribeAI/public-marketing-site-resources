@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.25";
+  --v: "v1.0.26";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --yellow: #fdf374;
@@ -1998,85 +1998,86 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
   font-size: 13rem !important;
   line-height: 1.05em !important;
 }
+
 @media screen and (max-width: 991px) {
-  .i_heading-1--d.i_heading-1--m {
+  .i_heading-1--m {
     font-size: 13rem !important;
     line-height: 1.05em !important;
   }
 }
-
 .i_heading-2--d {
   font-size: 90rem !important;
   line-height: 1em !important;
 }
+
 @media screen and (max-width: 991px) {
-  .i_heading-2--d.i_heading-2--m {
+  .i_heading-2--m {
     font-size: 90rem !important;
     line-height: 1em !important;
   }
 }
-
 .i_heading-3--d {
   font-size: 6.7rem !important;
   line-height: 0.89rem !important;
 }
+
 @media screen and (max-width: 991px) {
-  .i_heading-3--d.i_heading-3--m {
+  .i_heading-3--m {
     font-size: 6.7rem !important;
     line-height: 0.89rem !important;
   }
 }
-
 .i_heading-4--d {
   font-size: 5.1rem !important;
   line-height: 1em !important;
 }
+
 @media screen and (max-width: 991px) {
-  .i_heading-4--d.i_heading-4--m {
+  .i_heading-4--m {
     font-size: 5.1rem !important;
     line-height: 1em !important;
   }
 }
-
 .i_heading-5--d {
   font-size: 3.8rem !important;
   line-height: 0.86em !important;
 }
+
 @media screen and (max-width: 991px) {
-  .i_heading-5--d.i_heading-5--m {
+  .i_heading-5--m {
     font-size: 3.8rem !important;
     line-height: 0.86em !important;
   }
 }
-
 .i_heading-6--d {
   font-size: 2.1rem !important;
   line-height: 0.82em !important;
 }
+
 @media screen and (max-width: 991px) {
-  .i_heading-6--d.i_heading-6--m {
+  .i_heading-6--m {
     font-size: 2.1rem !important;
     line-height: 0.82em !important;
   }
 }
-
 .i_heading-7--d {
   font-size: 2.1rem !important;
   line-height: 0.77em !important;
 }
+
 @media screen and (max-width: 991px) {
-  .i_heading-7--d.i_heading-7--m {
+  .i_heading-7--m {
     font-size: 2.1rem !important;
     line-height: 0.77em !important;
   }
 }
-
 .i_heading-8--d {
   font-size: 1.6rem !important;
   line-height: 0.8em !important;
 }
+
 @media screen and (max-width: 991px) {
-  .i_heading-8--d.i_heading-8--m {
+  .i_heading-8--m {
     font-size: 1.6rem !important;
     line-height: 0.8em !important;
   }
