@@ -1,13 +1,16 @@
 :root {
-  --v: "v1.0.30";
+  --v: "v1.0.31";
   font-size: 0.5208333333vw;
   --dark: #39075B;
+  --light: #fff;
+  --white: #fff;
   --yellow: #fdf374;
   --natural: #F9F3E4;
   --natural--100: #fdfbf6;
   --natural--200: #F9F3E4;
   --easeInOutQuint: cubic-bezier(0.22, 1, 0.36, 1);
   --easing: var(--easeInOutQuint);
+  -webkit-font-smoothing: antialiased;
 }
 
 @media screen and (min-width: 1920px) {
@@ -293,6 +296,10 @@ a {
 
 .i_testimonialslider-w-w {
   display: flex;
+}
+
+.i_testimonialblock {
+  border: none !important;
 }
 
 .i_testimonialslider-w {
@@ -1810,125 +1817,289 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
 }
 
 @media screen and (min-width: 991px) {
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(2) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(40 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(3) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(39 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(4) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(38 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(5) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(37 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(6) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(36 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(7) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(35 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(8) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(34 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(9) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(33 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(10) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(32 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(11) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(31 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(12) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(30 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(13) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(29 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(14) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(28 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(15) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(27 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(16) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(26 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(17) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(25 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(18) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(24 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(19) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(23 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(20) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(22 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(21) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(21 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(22) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(20 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(23) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(19 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(24) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(18 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(25) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(17 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(26) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(16 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(27) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(15 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(28) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(14 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(29) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(13 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(30) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(12 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(31) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(11 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(32) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(10 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(33) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(9 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(34) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(8 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(35) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(7 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(36) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(6 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(37) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(5 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(38) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(4 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(39) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(3 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(40) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(2 / 42)) translate(0, -50%);
   }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
+  }
   .i_statsblock__stat__bar:nth-child(41) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(1 / 42)) translate(0, -50%);
+  }
+  .i_statsblock__stat__bar {
+    border: 0.1rem solid transparent;
+    margin: -0.1rem 0;
   }
   .i_statsblock__stat__bar:nth-child(42) .i_statsblock__stat__bar__line {
     transform: scaleY(calc(0 / 42)) translate(0, -50%);
@@ -2247,8 +2418,101 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
     background-color: var(--dark); /* Active dot color */
   }
 }
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  overflow-y: visible;
+.i_customerstorysection {
+  position: relative;
+  --section-height: 57.6rem;
+}
+.i_customerstorysection .i_bar {
+  height: 1px !important;
+}
+.i_customerstorysection::before, .i_customerstorysection::after {
+  position: sticky;
+  top: auto;
+  left: 0;
+  min-width: 100%;
+  width: 100%;
+  content: "";
+  background-color: var(--white);
+  bottom: 0;
+  z-index: 2;
+  display: block;
+  height: calc(100vh - 12rem - var(--section-height));
+}
+.i_customerstorysection::before {
+  top: 0;
+  bottom: auto;
+  height: 12rem;
+}
+
+.i_customerstorysection__sections-w {
+  position: relative;
+  flex-grow: 1;
+  position: sticky;
+  top: 12rem;
+}
+.i_customerstorysection__sections-w > .i_bar {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  height: 1px;
+  top: calc(12rem + var(--section-height) - 1px);
+  margin-top: -1px;
+}
+.i_customerstorysection__inner {
+  position: relative;
+  display: flex;
+  justify-content: stretch;
+  width: 100%;
+  min-width: 100%;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.i_customerstorysection__bars {
+  width: 84rem;
+  height: var(--section-height);
+  min-height: var(--section-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  top: 12rem;
+  background-color: var(--white);
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.i_customerstorysection__bars > .i_bar:last-child {
+  position: relative;
+  transform: translateY(-0.1rem);
+  margin-bottom: -0.1rem;
+}
+
+.i_customerstorysection__sections {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+  min-width: 100%;
+}
+
+.i_customerstorysection__section {
+  position: sticky;
+  top: 12rem;
+  left: 0;
+  background: var(--white);
+  height: var(--section-height);
+}
+
+.i_customerstorysection__quote-w {
+  position: sticky;
+  top: 100vh;
+  width: 100%;
+  z-index: 3;
+  padding-top: 24rem;
+}
+
+.i_customerstorysection__quote {
+  background-color: var(--natural--100);
+  height: var(--section-height);
 }

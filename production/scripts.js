@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.30');
+console.log('version', 'v1.0.31');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -463,10 +463,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Initial call
 	checkElementInViewport();
 
-
-
-
-
 });
 
 // Sticley blocks
@@ -643,6 +639,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+// Use Case Slider on Mobile
 document.addEventListener('DOMContentLoaded', function() {
 	let container = document.querySelector('.i_usecasessection__list-w');
 	let slider = container.querySelector('.i_usecasessection__list');
@@ -678,12 +675,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	const items = slider.querySelectorAll('.i_icontextblock');
 
 	function start(e) {
-		isDragging = true;
+		cancelAnimationFrame(snapAnimationId);
+		clearInterval(momentumId);
+		
+    isDragging = true;
 		lastX = startX = e.pageX || e.touches[0].pageX;
 		initialScrollLeft = slider.scrollLeft;
 		lastTime = Date.now();
-		clearInterval(momentumId);
-		cancelAnimationFrame(snapAnimationId);
 	}
 
 	function move(e) {
@@ -711,6 +709,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	function translateSlider(deltaX) {
 		slider.scrollLeft = initialScrollLeft - deltaX;
+
+    // uodate the dots
+    // let minDistance = Infinity;
+    // let closestItem;
+    // const center = slider.scrollLeft + (slider.offsetWidth / 2);
+
+    // items.forEach((item) => {
+    //   const itemCenter = item.offsetLeft + (item.offsetWidth / 2);
+    //   const distance = Math.abs(itemCenter - center);
+    //   if (distance < minDistance) {
+    //     minDistance = distance;
+    //     closestItem = item;
+    //   }
+    // });
+
+    // // get the index of the closest item
+    // const closestIndex = Array.from(items).indexOf(closestItem);
+
+    // // remove active class from all dots
+    // dots.forEach(dot => {
+    //   dot.classList.remove('active');
+    // });
+
+    // // add active class to the closest dot
+    // dots[closestIndex].classList.add('active');
+
 	}
 
 	function momentumScrolling() {
