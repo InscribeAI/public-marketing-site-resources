@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.33";
+  --v: "v1.0.35";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -2418,10 +2418,16 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
     background-color: var(--dark); /* Active dot color */
   }
 }
+section {
+  position: relative;
+  z-index: 3;
+}
+
 .i_customerstorysection {
   position: relative;
   --section-height: 57.6rem;
   margin-bottom: var(--section-height);
+  padding-bottom: 0 !important;
 }
 .i_customerstorysection + section {
   position: relative;
@@ -2430,21 +2436,27 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
 .i_customerstorysection .i_bar {
   height: 1px !important;
 }
+.i_customerstorysection .i_sectionheaders {
+  position: sticky;
+  top: 10rem;
+}
 .i_customerstorysection .i_customerstorysection__cover--b {
   border: none;
   position: sticky;
-  bottom: -12rem;
+  top: 0;
   left: 0;
   content: "";
   background-color: white;
+  background-color: red;
   width: 100%;
   z-index: 2;
   display: block;
-  height: 100vh;
-  transform: translateY(calc(var(--section-height) + 1px));
-  margin-bottom: -100vh;
-  margin-top: calc(var(--section-height) * -1);
+  height: calc(var(--section-height));
+  transform: translateY(47.5rem);
+  margin-bottom: calc(var(--section-height));
   z-index: 3;
+  user-select: none;
+  display: none;
 }
 
 .i_customerstorysection__inner {
@@ -2455,12 +2467,13 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
   min-width: 100%;
   gap: 4rem;
   flex-wrap: wrap;
+  position: sticky;
+  top: 12rem;
+  margin-bottom: 12rem;
 }
 
 .i_customerstorysection__sections-w {
   flex-grow: 1;
-  position: sticky;
-  top: 12rem;
 }
 .i_customerstorysection__sections-w > .i_bar {
   position: sticky;
@@ -2482,15 +2495,26 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
   flex-direction: column;
   justify-content: space-between;
   position: sticky;
-  top: 12rem;
+  top: 47.5rem;
   background-color: var(--white);
   flex-grow: 0;
   flex-shrink: 0;
+  z-index: 3;
 }
 .i_customerstorysection__bars > .i_bar:last-child {
-  position: relative;
-  transform: translateY(-0.1rem);
-  margin-bottom: -0.1rem;
+  position: absolute;
+  left: calc(100% + 4rem);
+  bottom: 0;
+}
+.i_customerstorysection__bars:after {
+  position: absolute;
+  width: 100vw;
+  background-color: white;
+  display: block;
+  top: 100%;
+  height: 100vh;
+  content: "";
+  z-index: 5;
 }
 
 .i_customerstorysection__sections {
@@ -2504,28 +2528,32 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
 
 .i_customerstorysection__section {
   position: sticky;
-  top: 12rem;
+  top: 47.5rem;
   left: 0;
   background: var(--white);
   height: var(--section-height);
 }
 
 .i_customerstorysection__quote-w {
-  position: sticky;
-  top: 100vh;
+  position: relative;
+  bottom: 0rem;
   width: 100%;
   z-index: 5;
-  margin-top: calc(var(--section-height) * -1);
+  margin-top: calc((var(--section-height)) * -1);
+  height: var(--section-height);
 }
 
-.i_customerstorysection__quote {
-  background-color: var(--natural--100);
-  height: var(--section-height);
+.i_customerstorysection__quote__inner {
+  background-color: var(--natural--200);
 }
 
 @media screen and (max-width: 991px) {
   .i_customerstorysection::before {
     display: none;
+  }
+  .i_customerstorysection .i_sectionheaders {
+    position: relative;
+    top: 0;
   }
   .i_customerstorysection__inner {
     flex-direction: column;
@@ -2533,11 +2561,21 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
   }
   .i_customerstorysection__bars {
     position: relative;
+    top: 0;
     width: 100%;
+    height: 31.5rem;
+    min-height: 31.5rem;
+  }
+  .i_customerstorysection__bars:after {
+    display: none;
+  }
+  .i_customerstorysection__inner {
+    position: relative;
+    top: 0;
   }
   .i_customerstorysection__sections-w {
-    top: 0;
     position: relative;
+    top: 0;
   }
   .i_customerstorysection__sections-w > .i_bar {
     display: none;
@@ -2568,5 +2606,9 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
     position: relative;
     padding: 0;
     top: 0;
+  }
+  .i_customerstorysection__quote-w {
+    margin: 0;
+    height: auto;
   }
 }
