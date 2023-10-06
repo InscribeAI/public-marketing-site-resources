@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.31');
+console.log('version', 'v1.0.32');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -296,8 +296,12 @@ document.addEventListener('DOMContentLoaded', function() {
 		// Find the current active layer
 		const activeLayer = layers.find(layer => layer.classList.contains('i--active'));
 
-		// Get its layer number from its class
-		const activeLayerNum = parseInt(activeLayer.className.match(/layerorder--(\d+)/)[1], 10);
+    let activeLayerNum = 0;
+
+    if( activeLayer ) {
+      // Get its layer number from its class
+      activeLayerNum = parseInt(activeLayer.className.match(/layerorder--(\d+)/)[1], 10);
+    }
 
 
 		// Calculate the next layer number, and wrap around if necessary

@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.31";
+  --v: "v1.0.32";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -2425,7 +2425,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
 .i_customerstorysection .i_bar {
   height: 1px !important;
 }
-.i_customerstorysection::before, .i_customerstorysection::after {
+.i_customerstorysection::before {
   position: sticky;
   top: auto;
   left: 0;
@@ -2437,15 +2437,22 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
   z-index: 2;
   display: block;
   height: calc(100vh - 12rem - var(--section-height));
+  top: 12rem;
+  transform: translateY(calc(var(--section-height) + 1px));
+  margin-bottom: calc((100vh - 12rem - var(--section-height)) * -1);
 }
-.i_customerstorysection::before {
-  top: 0;
-  bottom: auto;
-  height: 12rem;
+
+.i_customerstorysection__inner {
+  position: relative;
+  display: flex;
+  justify-content: stretch;
+  width: 100%;
+  min-width: 100%;
+  gap: 4rem;
+  flex-wrap: wrap;
 }
 
 .i_customerstorysection__sections-w {
-  position: relative;
   flex-grow: 1;
   position: sticky;
   top: 12rem;
@@ -2455,17 +2462,11 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
   left: 0;
   z-index: 3;
   height: 1px;
-  top: calc(12rem + var(--section-height) - 1px);
-  margin-top: -1px;
 }
-.i_customerstorysection__inner {
-  position: relative;
-  display: flex;
-  justify-content: stretch;
-  width: 100%;
-  min-width: 100%;
-  gap: 4rem;
-  flex-wrap: wrap;
+.i_customerstorysection__sections-w > .i_bar--b {
+  top: 12rem;
+  transform: translateY(var(--section-height));
+  margin-bottom: -1px;
 }
 
 .i_customerstorysection__bars {
@@ -2515,4 +2516,52 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
 .i_customerstorysection__quote {
   background-color: var(--natural--100);
   height: var(--section-height);
+}
+
+@media screen and (max-width: 991px) {
+  .i_customerstorysection::before {
+    display: none;
+  }
+  .i_customerstorysection__inner {
+    flex-direction: column;
+    gap: 2.2rem;
+  }
+  .i_customerstorysection__bars {
+    position: relative;
+    width: 100%;
+  }
+  .i_customerstorysection__sections-w {
+    top: 0;
+    position: relative;
+  }
+  .i_customerstorysection__sections-w > .i_bar {
+    display: none;
+  }
+  .i_customerstorysection__section {
+    position: relative;
+    top: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .i_customerstorysection__section:last-child(1) {
+    opacity: 0.5;
+  }
+  .i_customerstorysection__section:last-child(1) .i_bar {
+    display: none !important;
+  }
+  .i_customerstorysection__section .i_bar {
+    order: 3;
+  }
+  .i_customerstorysection__section .i_customerstorysection__section__stat {
+    order: 1;
+  }
+  .i_customerstorysection__section .i_customerstorysection__section__text {
+    order: 2;
+  }
+  .i_customerstorysection__quote-w {
+    position: relative;
+    padding: 0;
+    top: 0;
+  }
 }
