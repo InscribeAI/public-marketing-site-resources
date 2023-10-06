@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.38";
+  --v: "v1.0.39";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -2153,7 +2153,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
   padding-bottom: 0.1em;
   background-color: transparent;
 }
-.i_heading-1--d.txt--light {
+.i_heading-1--d.i_txt--light {
   color: var(--natural--100);
 }
 
@@ -2167,7 +2167,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
     padding-bottom: 0.1em;
     background-color: transparent;
   }
-  .i_heading-1--m.txt--light {
+  .i_heading-1--m.i_txt--light {
     color: var(--natural--100);
   }
 }
@@ -2180,7 +2180,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
   padding-bottom: 0.1em;
   background-color: transparent;
 }
-.i_heading-2--d.txt--light {
+.i_heading-2--d.i_txt--light {
   color: var(--natural--100);
 }
 
@@ -2194,7 +2194,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
     padding-bottom: 0.1em;
     background-color: transparent;
   }
-  .i_heading-2--m.txt--light {
+  .i_heading-2--m.i_txt--light {
     color: var(--natural--100);
   }
 }
@@ -2207,7 +2207,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
   padding-bottom: 0.1em;
   background-color: transparent;
 }
-.i_heading-3--d.txt--light {
+.i_heading-3--d.i_txt--light {
   color: var(--natural--100);
 }
 
@@ -2221,7 +2221,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
     padding-bottom: 0.1em;
     background-color: transparent;
   }
-  .i_heading-3--m.txt--light {
+  .i_heading-3--m.i_txt--light {
     color: var(--natural--100);
   }
 }
@@ -2234,7 +2234,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
   padding-bottom: 0.1em;
   background-color: transparent;
 }
-.i_heading-4--d.txt--light {
+.i_heading-4--d.i_txt--light {
   color: var(--natural--100);
 }
 
@@ -2248,7 +2248,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
     padding-bottom: 0.1em;
     background-color: transparent;
   }
-  .i_heading-4--m.txt--light {
+  .i_heading-4--m.i_txt--light {
     color: var(--natural--100);
   }
 }
@@ -2261,7 +2261,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
   padding-bottom: 0.1em;
   background-color: transparent;
 }
-.i_heading-5--d.txt--light {
+.i_heading-5--d.i_txt--light {
   color: var(--natural--100);
 }
 
@@ -2275,7 +2275,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
     padding-bottom: 0.1em;
     background-color: transparent;
   }
-  .i_heading-5--m.txt--light {
+  .i_heading-5--m.i_txt--light {
     color: var(--natural--100);
   }
 }
@@ -2288,7 +2288,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
   padding-bottom: 0.1em;
   background-color: transparent;
 }
-.i_heading-6--d.txt--light {
+.i_heading-6--d.i_txt--light {
   color: var(--natural--100);
 }
 
@@ -2302,7 +2302,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
     padding-bottom: 0.1em;
     background-color: transparent;
   }
-  .i_heading-6--m.txt--light {
+  .i_heading-6--m.i_txt--light {
     color: var(--natural--100);
   }
 }
@@ -2315,7 +2315,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
   padding-bottom: 0.1em;
   background-color: transparent;
 }
-.i_heading-7--d.txt--light {
+.i_heading-7--d.i_txt--light {
   color: var(--natural--100);
 }
 
@@ -2329,7 +2329,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
     padding-bottom: 0.1em;
     background-color: transparent;
   }
-  .i_heading-7--m.txt--light {
+  .i_heading-7--m.i_txt--light {
     color: var(--natural--100);
   }
 }
@@ -2342,7 +2342,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
   padding-bottom: 0.1em;
   background-color: transparent;
 }
-.i_heading-8--d.txt--light {
+.i_heading-8--d.i_txt--light {
   color: var(--natural--100);
 }
 
@@ -2356,7 +2356,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
     padding-bottom: 0.1em;
     background-color: transparent;
   }
-  .i_heading-8--m.txt--light {
+  .i_heading-8--m.i_txt--light {
     color: var(--natural--100);
   }
 }
