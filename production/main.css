@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.35";
+  --v: "v1.0.36";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -2194,7 +2194,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
 }
 .i_heading-3--d {
   font-size: 6.7rem !important;
-  line-height: 0.89rem !important;
+  line-height: 0.89em !important;
   letter-spacing: 0 !important;
   color: var(--dark);
   margin: 0;
@@ -2208,7 +2208,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
 @media screen and (max-width: 991px) {
   .i_heading-3--m {
     font-size: 6.7rem !important;
-    line-height: 0.89rem !important;
+    line-height: 0.89em !important;
     letter-spacing: 0 !important;
     color: var(--dark);
     margin: 0;
