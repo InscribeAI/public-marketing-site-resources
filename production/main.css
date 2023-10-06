@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.32";
+  --v: "v1.0.33";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -2421,25 +2421,30 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
 .i_customerstorysection {
   position: relative;
   --section-height: 57.6rem;
+  margin-bottom: var(--section-height);
+}
+.i_customerstorysection + section {
+  position: relative;
+  z-index: 3;
 }
 .i_customerstorysection .i_bar {
   height: 1px !important;
 }
-.i_customerstorysection::before {
+.i_customerstorysection .i_customerstorysection__cover--b {
+  border: none;
   position: sticky;
-  top: auto;
+  bottom: -12rem;
   left: 0;
-  min-width: 100%;
-  width: 100%;
   content: "";
-  background-color: var(--white);
-  bottom: 0;
+  background-color: white;
+  width: 100%;
   z-index: 2;
   display: block;
-  height: calc(100vh - 12rem - var(--section-height));
-  top: 12rem;
+  height: 100vh;
   transform: translateY(calc(var(--section-height) + 1px));
-  margin-bottom: calc((100vh - 12rem - var(--section-height)) * -1);
+  margin-bottom: -100vh;
+  margin-top: calc(var(--section-height) * -1);
+  z-index: 3;
 }
 
 .i_customerstorysection__inner {
@@ -2509,8 +2514,8 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
   position: sticky;
   top: 100vh;
   width: 100%;
-  z-index: 3;
-  padding-top: 24rem;
+  z-index: 5;
+  margin-top: calc(var(--section-height) * -1);
 }
 
 .i_customerstorysection__quote {
