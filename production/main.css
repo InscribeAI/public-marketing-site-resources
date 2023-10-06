@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.36";
+  --v: "v1.0.37";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -2611,4 +2611,67 @@ section {
     margin: 0;
     height: auto;
   }
+}
+.i_circleslideout {
+  display: flex;
+  flex-direction: row;
+  gap: 25rem;
+  align-items: center;
+  position: relative;
+}
+
+.i_circleslideout_math {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 250ms var(--easing) !important;
+}
+
+.i_circleslideout_math--equals {
+  left: 10rem;
+}
+
+.i_circleslideout_math--plus {
+  left: auto;
+  right: 10rem;
+}
+
+.i_circleblock {
+  width: 40rem;
+  transition: transform 1000ms ease-out;
+}
+
+.i_circleblock__description {
+  overflow: hidden;
+}
+
+.i_circleblock__title {
+  overflow: hidden;
+}
+
+.i_circleblock:nth-child(2) {
+  transform: translateX(calc((1 * -40rem) - (25rem * 1)));
+}
+
+.i_circleblock:nth-child(3) {
+  transform: translateX(calc((2 * -40rem) - (25rem * 2)));
+}
+
+.i--animatesection--in .i_circleblock {
+  transform: translateX(0) !important;
+}
+.i--animatesection--in .i_circleslideout_math {
+  opacity: 1;
+  transition-delay: 1000ms !important;
+}
+
+.i_circleblock__circle {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 100%;
+  background-color: red;
 }
