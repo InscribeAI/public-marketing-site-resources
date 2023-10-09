@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.39";
+  --v: "v1.0.40";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -963,9 +963,6 @@ a {
   }
 }
 
-.i_slideupblocks .insert__clippedgraphic {
-  background: #DBB86F;
-}
 .i_slideupblocks .i_slideupblocks__list {
   gap: 0;
 }
