@@ -967,7 +967,7 @@ a {
   gap: 0;
 }
 .i_slideupblocks .sticky {
-  top: 0;
+  top: 8rem;
 }
 .i_slideupblocks .sticky:nth-child(1) .i_stackingblock__wrap {
   position: relative;
