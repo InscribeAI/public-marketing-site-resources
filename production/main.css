@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.41";
+  --v: "v1.0.43";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -449,8 +449,6 @@ a {
 
 .i_restackingslider__stack__layer__box {
   position: absolute;
-  border: 0.2rem solid var(--dark);
-  border-radius: 0.4rem;
   transition: transform 550ms var(--easing) !important;
 }
 .i_restackingslider__stack__layer__box--1 {
