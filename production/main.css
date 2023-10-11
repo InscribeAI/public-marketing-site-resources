@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.49";
+  --v: "v1.0.50";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -25,6 +25,17 @@
 }
 html * {
   box-sizing: border-box;
+}
+
+.stick {
+  position: sticky;
+  top: 0;
+}
+@media screen and (max-width: 991px) {
+  .stick {
+    position: relative;
+    top: 0 !important;
+  }
 }
 
 ul {

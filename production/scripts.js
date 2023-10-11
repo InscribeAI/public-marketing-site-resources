@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.49');
+console.log('version', 'v1.0.50');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -930,3 +930,33 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 
 });
+
+function adjustStickyTop() {
+  // Get all .i_stickysections elements
+  const stickySections = document.querySelectorAll('.i_stickysections');
+  
+  for (let section of stickySections) {
+    // Find the first .stick class within the current section
+    const stickElement = section.querySelector('.stick');
+    if (!stickElement) continue;
+    
+    // Calculate the difference between the element's height and the viewport height
+    const difference = stickElement.offsetHeight - window.innerHeight;
+
+    // Convert difference to rems
+    const differenceInRem = difference / 10;
+
+    // If the .stick element's height is greater than the viewport, adjust its top
+    if (difference > 0) {
+      stickElement.style.top = `-${differenceInRem}rem`;
+    } else {
+      stickElement.style.top = '0';
+    }
+  }
+}
+
+// Run the function once the content is loaded
+document.addEventListener('DOMContentLoaded', adjustStickyTop);
+
+// Run the function on window resize
+window.addEventListener('resize', adjustStickyTop);
