@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.52');
+console.log('version', 'v1.0.53');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -960,3 +960,32 @@ document.addEventListener('DOMContentLoaded', adjustStickyTop);
 
 // Run the function on window resize
 window.addEventListener('resize', adjustStickyTop);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+	const scrollers = document.querySelectorAll(".scroller");
+
+	if(scrollers.length === 0) return;
+
+  addAnimation();
+
+	function addAnimation() {
+		scrollers.forEach((scroller) => {
+			// add data-animated="true" to every `.scroller` on the page
+			scroller.setAttribute("data-animated", true);
+
+			// Make an array from the elements within `.scroller-inner`
+			const scrollerInner = scroller.querySelector(".scroller__inner");
+			const scrollerContent = Array.from(scrollerInner.children);
+
+			// For each item in the array, clone it
+			// add aria-hidden to it
+			// add it into the `.scroller-inner`
+			scrollerContent.forEach((item) => {
+				const duplicatedItem = item.cloneNode(true);
+				duplicatedItem.setAttribute("aria-hidden", true);
+				scrollerInner.appendChild(duplicatedItem);
+			});
+		});
+	}
+});
