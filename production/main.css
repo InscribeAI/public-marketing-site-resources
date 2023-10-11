@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.45";
+  --v: "v1.0.47";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -2400,6 +2400,7 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
     width: 100%;
     white-space: normal;
     user-select: none;
+    box-sizing: content-box;
   }
   .i_usecasessection__list-w .dot-navigation {
     position: absolute;
