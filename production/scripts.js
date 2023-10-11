@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.51');
+console.log('version', 'v1.0.52');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-			elem.innerHTML = '$0m+';
+			elem.innerHTML = countTemplate.replace('[n]', '0');
 			setTimeout(() => {
 				if (elem) {
 					let count = 0;
