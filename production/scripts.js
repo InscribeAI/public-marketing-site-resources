@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.44');
+console.log('version', 'v1.0.45');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -14,18 +14,47 @@ document.addEventListener('DOMContentLoaded', function() {
 		const elems = section.querySelectorAll('.i_statsblock__stat__number');
 
 		elems.forEach((elem, i) => {
+
+			// get count-to attr from element
+			let countTo = parseInt(elem.getAttribute('count-to'), 10);
+			// get count-template attr from element
+			const countTemplate = elem.getAttribute('count-template');
+			// get count-by attr from element
+			const countBy = parseInt(elem.getAttribute('count-by'), 10);
+
+			if( !countTo )  {
+				countTo = 100;
+			}
+
+
+
+
 			elem.innerHTML = '$0m+';
 			setTimeout(() => {
 				if (elem) {
 					let count = 0;
 
 					const interval = setInterval(() => {
-						count++;
-						elem.innerHTML = `$${count}m+`;
+						
+						if (countBy) {
+							count += countBy;
+						} else {
+							count++;
+						}
 
-						if (count >= 100) {
+						let countOutput = count;
+
+						// replace [n] with the current count
+						if (countTemplate) {
+							countOutput = countTemplate.replace('[n]', count);
+						}
+						
+						elem.innerHTML = countOutput;
+
+						if (count >= countTo) {
 							clearInterval(interval);
 						}
+
 					}, 22); // Adjust this duration to make the count-up faster or slower
 				}
 			}, 550 * i);
