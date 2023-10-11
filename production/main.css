@@ -2400,9 +2400,6 @@ html:not(.wf-design-mode) .i--animatesection--in .i_animate--box.i_animatedbox--
     width: 100%;
     white-space: normal;
     user-select: none;
-    padding: 0 2rem;
-    max-width: 28rem;
-    min-width: 28rem;
   }
   .i_usecasessection__list-w .dot-navigation {
     position: absolute;
