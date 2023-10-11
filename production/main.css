@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.47";
+  --v: "v1.0.48";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -1010,7 +1010,6 @@ a {
   top: 40%;
   display: block;
   transition: transform 1000ms var(--easing);
-  margin-bottom: 0 !important;
 }
 
 @media screen and (max-width: 991px) {
@@ -1036,7 +1035,6 @@ a {
     top: 0;
     transform: none !important;
     overflow: hidden;
-    margin-bottom: -50% !important;
   }
   .i_stackingblock__wrap {
     transform: none !important;
