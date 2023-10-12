@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.53');
+console.log('version', 'v1.0.54');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -988,4 +988,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		});
 	}
+});
+
+
+// js for links
+document.addEventListener('DOMContentLoaded', function() {
+	const labels = document.querySelectorAll('.i_link__label');
+
+	labels.forEach(label => {
+			const parentRowInner = label.closest('.i_link__row__inner');
+			if (parentRowInner) {
+					parentRowInner.setAttribute('data-label', label.innerText.trim());
+			}
+	});
 });
