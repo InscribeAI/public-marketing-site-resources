@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.55";
+  --v: "v1.0.56";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -2386,7 +2386,7 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
 .i_heading-7--d {
   font-size: 2.1rem !important;
   line-height: 1.28em !important;
-  letter-spacing: 0.2em !important;
+  letter-spacing: 0.02em !important;
   color: var(--dark);
   margin: 0;
   padding-bottom: 0.1em;
@@ -2400,7 +2400,7 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   .i_heading-7--m {
     font-size: 2.1rem !important;
     line-height: 1.28em !important;
-    letter-spacing: 0.2em !important;
+    letter-spacing: 0.02em !important;
     color: var(--dark);
     margin: 0;
     padding-bottom: 0.1em;
@@ -2413,7 +2413,7 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
 .i_heading-8--d {
   font-size: 1.6rem !important;
   line-height: 1.25em !important;
-  letter-spacing: 0.3em !important;
+  letter-spacing: 0.03em !important;
   color: var(--dark);
   margin: 0;
   padding-bottom: 0.1em;
@@ -2427,7 +2427,7 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   .i_heading-8--m {
     font-size: 1.6rem !important;
     line-height: 1.25em !important;
-    letter-spacing: 0.3em !important;
+    letter-spacing: 0.03em !important;
     color: var(--dark);
     margin: 0;
     padding-bottom: 0.1em;
