@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.54";
+  --v: "v1.0.55";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -121,10 +121,11 @@ a {
   display: inline-flex;
   flex-direction: column;
 }
-.i_link:hover .i_link__row__inner:after {
+
+html:not(.wf-design-mode) .i_link:hover .i_link__row__inner:after {
   transform: translateY(0);
 }
-.i_link:hover .i_link__label {
+html:not(.wf-design-mode) .i_link:hover .i_link__label {
   transform: translateY(-100%);
 }
 .i_link__row {
