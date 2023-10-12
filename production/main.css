@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.56";
+  --v: "v1.0.57";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -329,15 +329,21 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
 
 .i_testimonialslider__item .i_iconheader {
   overflow: hidden;
+  position: relative;
 }
 .i_testimonialslider__item .i_iconheader .i_bar {
-  position: relative;
+  position: absolute;
   transform: translateY(-0.1rem);
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
-.i_testimonialslider__item .i_iconheader [class*=i_icon] {
+.i_testimonialslider__item .i_iconheader .i_testimonial__logo {
   position: relative;
   transform: translateY(100%);
+  padding-bottom: 2.4rem;
   transition: transform 250ms var(--easing);
+  box-sizing: content-box;
 }
 .i_testimonialslider__item .i_testimonial__footer-w {
   overflow: hidden;
@@ -353,7 +359,7 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   position: relative;
   z-index: 2;
 }
-.i_testimonialslider__item.i--active .i_iconheader [class*=i_icon] {
+.i_testimonialslider__item.i--active .i_iconheader .i_testimonial__logo {
   transform: translateY(0%);
   transition-delay: 350ms;
 }

@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.56');
+console.log('version', 'v1.0.57');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -1002,3 +1002,36 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 	});
 });
+
+
+// js for testimonial slider quote heights
+function setQuoteHeight() {
+	// Get all sliders
+	const sliders = document.querySelectorAll('.i_testimonialslider');
+
+	sliders.forEach(slider => {
+			let maxHeight = 0;
+
+			// Find all .i_quote-w inside the current slider
+			const quotes = slider.querySelectorAll('.i_quote-w');
+
+			// Reset heights to auto for accurate calculation and find the max height
+			quotes.forEach(quote => {
+					quote.style.height = 'auto';
+					if (quote.offsetHeight > maxHeight) {
+							maxHeight = quote.offsetHeight;
+					}
+			});
+
+			// Set all .i_quote-w inside this slider to the max height
+			quotes.forEach(quote => {
+					quote.style.height = `${maxHeight}px`;
+			});
+	});
+}
+
+// Run the function on page load
+document.addEventListener('DOMContentLoaded', setQuoteHeight);
+
+// Run the function on window resize
+window.addEventListener('resize', setQuoteHeight);
