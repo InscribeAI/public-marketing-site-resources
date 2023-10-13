@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.60";
+  --v: "v1.0.61";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -2896,4 +2896,7 @@ section {
 .wf-design-mode .i_testimonialslider__item .i_iconheader .i_testimonial__logo,
 .wf-design-mode .i_testimonialslider__item .i_testimonial__footer {
   transform: none !important;
+}
+.wf-design-mode .i_togglelist .i_togglelist__item__body {
+  height: auto !important;
 }
