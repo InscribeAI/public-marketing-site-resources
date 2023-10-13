@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.57";
+  --v: "v1.0.59";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -402,7 +402,7 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
 .i_togglelist .i_togglelist__item .i_togglelist__item__arrow {
   transition: transform 450ms var(--easing);
 }
-.i_togglelist .i_togglelist__item.--open .i_togglelist__item__arrow {
+.i_togglelist .i_togglelist__item.i--open .i_togglelist__item__arrow {
   transform: rotate(-180deg);
 }
 .i_togglelist .i_togglelist__item__toggle {
@@ -1005,11 +1005,23 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   transform-origin: top center;
   transition: transform 1000ms var(--easing);
 }
+@media screen and (max-width: 991px) {
+  .i_slideupblocks .sticky:nth-child(1) .i_stackingblock__wrap {
+    top: 0 !important;
+    padding-top: 0;
+  }
+}
 .i_slideupblocks .sticky:nth-child(2) .i_stackingblock__wrap {
   position: relative;
   top: 2rem !important;
   transform-origin: top center;
   transition: transform 1000ms var(--easing);
+}
+@media screen and (max-width: 991px) {
+  .i_slideupblocks .sticky:nth-child(2) .i_stackingblock__wrap {
+    top: 0 !important;
+    padding-top: 0;
+  }
 }
 .i_slideupblocks .sticky:nth-child(3) .i_stackingblock__wrap {
   position: relative;
@@ -1017,11 +1029,23 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   transform-origin: top center;
   transition: transform 1000ms var(--easing);
 }
+@media screen and (max-width: 991px) {
+  .i_slideupblocks .sticky:nth-child(3) .i_stackingblock__wrap {
+    top: 0 !important;
+    padding-top: 0;
+  }
+}
 .i_slideupblocks .sticky:nth-child(4) .i_stackingblock__wrap {
   position: relative;
   top: 4rem !important;
   transform-origin: top center;
   transition: transform 1000ms var(--easing);
+}
+@media screen and (max-width: 991px) {
+  .i_slideupblocks .sticky:nth-child(4) .i_stackingblock__wrap {
+    top: 0 !important;
+    padding-top: 0;
+  }
 }
 .i_slideupblocks .sticky:nth-child(5) .i_stackingblock__wrap {
   position: relative;
@@ -1029,11 +1053,23 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   transform-origin: top center;
   transition: transform 1000ms var(--easing);
 }
+@media screen and (max-width: 991px) {
+  .i_slideupblocks .sticky:nth-child(5) .i_stackingblock__wrap {
+    top: 0 !important;
+    padding-top: 0;
+  }
+}
 .i_slideupblocks .sticky:nth-child(6) .i_stackingblock__wrap {
   position: relative;
   top: 6rem !important;
   transform-origin: top center;
   transition: transform 1000ms var(--easing);
+}
+@media screen and (max-width: 991px) {
+  .i_slideupblocks .sticky:nth-child(6) .i_stackingblock__wrap {
+    top: 0 !important;
+    padding-top: 0;
+  }
 }
 .i_slideupblocks .sticky:nth-child(7) .i_stackingblock__wrap {
   position: relative;
@@ -1041,11 +1077,23 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   transform-origin: top center;
   transition: transform 1000ms var(--easing);
 }
+@media screen and (max-width: 991px) {
+  .i_slideupblocks .sticky:nth-child(7) .i_stackingblock__wrap {
+    top: 0 !important;
+    padding-top: 0;
+  }
+}
 .i_slideupblocks .sticky:nth-child(8) .i_stackingblock__wrap {
   position: relative;
   top: 8rem !important;
   transform-origin: top center;
   transition: transform 1000ms var(--easing);
+}
+@media screen and (max-width: 991px) {
+  .i_slideupblocks .sticky:nth-child(8) .i_stackingblock__wrap {
+    top: 0 !important;
+    padding-top: 0;
+  }
 }
 .i_slideupblocks .sticky:nth-child(9) .i_stackingblock__wrap {
   position: relative;
@@ -1053,11 +1101,23 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   transform-origin: top center;
   transition: transform 1000ms var(--easing);
 }
+@media screen and (max-width: 991px) {
+  .i_slideupblocks .sticky:nth-child(9) .i_stackingblock__wrap {
+    top: 0 !important;
+    padding-top: 0;
+  }
+}
 .i_slideupblocks .sticky:nth-child(10) .i_stackingblock__wrap {
   position: relative;
   top: 10rem !important;
   transform-origin: top center;
   transition: transform 1000ms var(--easing);
+}
+@media screen and (max-width: 991px) {
+  .i_slideupblocks .sticky:nth-child(10) .i_stackingblock__wrap {
+    top: 0 !important;
+    padding-top: 0;
+  }
 }
 .i_slideupblocks .sticky::last-child {
   top: auto;

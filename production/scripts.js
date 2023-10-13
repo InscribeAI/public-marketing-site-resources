@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.58');
+console.log('version', 'v1.0.59');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -220,9 +220,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 			// Toggle the --open class on the clicked .togglelist_item
-			parentItem.classList.toggle('--open');
+			parentItem.classList.toggle('i--open');
 
-			if (parentItem.classList.contains('--open')) {
+			if (parentItem.classList.contains('i--open')) {
 				// Open the item
 				// Set the height to the content's height
 				body.style.height = `${content.scrollHeight}px`;
