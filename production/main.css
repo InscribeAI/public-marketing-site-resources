@@ -1182,6 +1182,7 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   overflow: hidden;
 }
 
+.i--font--alt,
 .i_statsblock__stat__number {
   font-feature-settings: "aalt" on;
 }
@@ -2516,6 +2517,11 @@ section {
   margin-bottom: var(--section-height);
   padding-bottom: 0 !important;
 }
+@media screen and (max-width: 991px) {
+  .i_customerstorysection {
+    margin-bottom: 0;
+  }
+}
 .i_customerstorysection + section {
   position: relative;
   z-index: 3;
@@ -2781,6 +2787,11 @@ section {
   flex-wrap: wrap;
   gap: 16rem;
 }
+@media screen and (max-width: 991px) {
+  .scroller__inner {
+    gap: 6rem;
+  }
+}
 
 .scroller[data-animated=true] {
   overflow: hidden;
@@ -2813,10 +2824,8 @@ section {
 @keyframes scroll {
   to {
     transform: translate(calc(-50% - 8rem));
+    @media screen and (max-width: 991px) {
+      transform: translate(calc(-50% - 3rem));
+    }
   }
-}
-/* general styles */
-/* for testing purposed to ensure the animation lined up correctly */
-.test {
-  background: red !important;
 }
