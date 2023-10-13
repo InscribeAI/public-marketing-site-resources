@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.61";
+  --v: "v1.0.62";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -995,6 +995,11 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
 
 .i_slideupblocks .i_slideupblocks__list {
   gap: 0;
+}
+@media screen and (max-width: 991px) {
+  .i_slideupblocks .i_slideupblocks__list {
+    gap: 6.2rem;
+  }
 }
 .i_slideupblocks .sticky {
   top: 8rem;
