@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.59";
+  --v: "v1.0.60";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -2888,4 +2888,12 @@ section {
       transform: translate(calc(-50% - 3rem));
     }
   }
+}
+.wf-design-mode .i_testimonialslider__item {
+  position: relative;
+}
+.wf-design-mode .i_testimonialslider__item .i_quote,
+.wf-design-mode .i_testimonialslider__item .i_iconheader .i_testimonial__logo,
+.wf-design-mode .i_testimonialslider__item .i_testimonial__footer {
+  transform: none !important;
 }
