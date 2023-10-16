@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.63";
+  --v: "v1.0.64";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -2913,9 +2913,6 @@ section {
 
 .i_form {
   background-color: white;
-  padding: 8rem;
-  border-radius: 0.4rem;
-  border: 0.1rem solid var(--dark);
   width: 100%;
   height: 100%;
   flex-grow: 1;
