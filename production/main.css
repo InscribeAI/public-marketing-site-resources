@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.62";
+  --v: "v1.0.63";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -2904,4 +2904,115 @@ section {
 }
 .wf-design-mode .i_togglelist .i_togglelist__item__body {
   height: auto !important;
+}
+
+.i_hero__content__form {
+  background-color: transparent;
+  flex-grow: 1;
+}
+
+.i_form {
+  background-color: white;
+  padding: 8rem;
+  border-radius: 0.4rem;
+  border: 0.1rem solid var(--dark);
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  min-width: 100%;
+}
+.i_form .mktoForm {
+  text-align: left;
+}
+.i_form .mktoForm select,
+.i_form .mktoForm input[type=email],
+.i_form .mktoForm input[type=tel],
+.i_form .mktoForm input[type=text] {
+  box-shadow: none !important;
+  background-color: transparent;
+  outline: none;
+  border: none !important;
+  border-bottom: 0.1rem solid var(--dark) !important;
+  border-radius: 0 !important;
+  color: var(--dark) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: Monasans Slnt Wdth Wght, sans-serif;
+  font-size: 2.4rem !important;
+  line-height: 1em;
+}
+.i_form .mktoForm .mktoFormCol,
+.i_form .mktoForm .mktoFormRow {
+  margin: 0;
+  padding: 0;
+  float: none;
+  min-height: 0;
+}
+.i_form .mktoForm .mktoFormCol {
+  margin-bottom: 4.8rem !important;
+}
+.i_form .mktoForm .mktoFieldWrap {
+  padding: 0 !important;
+}
+.i_form .mktoForm label {
+  color: var(--dark) !important;
+  font-family: Monasans Slnt Wdth Wght, sans-serif;
+  font-size: 2.1rem;
+  line-height: 1em;
+  display: flex;
+  align-items: center;
+  line-height: 1em;
+  padding: 0 !important;
+}
+.i_form .mktoForm label .mktoAsterix {
+  float: none;
+  order: 2;
+}
+.i_form .mktoForm .mktoHtmlText {
+  font-family: Monasans Slnt Wdth Wght, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.25em;
+  color: var(--dark);
+  text-align: left !important;
+}
+.i_form .mktoForm .mktoHtmlText > * {
+  text-align: left !important;
+}
+.i_form .mktoForm .mktoHtmlText a {
+  color: var(--dark);
+  text-decoration: underline;
+  font-weight: normal;
+}
+.i_form .mktoForm .mktoClear {
+  display: none;
+}
+.i_form .mktoForm .mktoButtonRow {
+  margin-top: -2.8rem;
+}
+.i_form .mktoForm .mktoButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center left;
+  background-color: var(--dark) !important;
+  border-radius: 0.4rem !important;
+  font-family: Monasans Slnt Wdth Wght, sans-serif;
+  font-variation-settings: "wdth" 125, "slnt" 0, "wght" 625;
+  font-weight: 600;
+  line-height: 1em;
+  z-index: 2;
+  height: 7rem;
+  grid-column-gap: 0.8rem;
+  grid-row-gap: 0.8rem;
+  background-color: #39075b;
+  border: 1px solid #39075b;
+  border-radius: 0.4rem;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  padding-left: 2.8rem;
+  padding-right: 2.8rem;
+  display: flex;
+  position: relative;
 }
