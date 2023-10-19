@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.64";
+  --v: "v1.0.67";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -2785,7 +2785,6 @@ section {
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
-  opacity: 0;
   transition: opacity 250ms var(--easing) !important;
 }
 
@@ -2811,12 +2810,14 @@ section {
   overflow: hidden;
 }
 
-.i_circleblock:nth-child(2) {
+body:not(.wf-design-mode) .i_circleblock:nth-child(2) {
   transform: translateX(calc((1 * -40rem) - (25rem * 1)));
 }
-
-.i_circleblock:nth-child(3) {
+body:not(.wf-design-mode) .i_circleblock:nth-child(3) {
   transform: translateX(calc((2 * -40rem) - (25rem * 2)));
+}
+body:not(.wf-design-mode) .i_circleslideout_math {
+  opacity: 0;
 }
 
 .i--animatesection--in .i_circleblock {

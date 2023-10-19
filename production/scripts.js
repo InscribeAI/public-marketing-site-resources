@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.64');
+console.log('version', 'v1.0.67');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			let countTo = parseInt(elem.getAttribute('count-to'), 10);
 			// get count-template attr from element
 			const countTemplate = elem.getAttribute('count-template');
-			// get count-by attr from element
+			// get count-by attr from element 
 			const countBy = parseInt(elem.getAttribute('count-by'), 10);
 
 			if( !countTo )  {
