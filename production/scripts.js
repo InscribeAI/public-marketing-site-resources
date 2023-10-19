@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.67');
+console.log('version', 'v1.0.68');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
