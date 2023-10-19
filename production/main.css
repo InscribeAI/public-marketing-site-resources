@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.72";
+  --v: "v1.0.73";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -638,29 +638,31 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   display: flex;
   position: relative;
   margin-top: -1.6rem;
+  flex-grow: 0;
+  max-width: max-content;
 }
 .i_cycleslider__list .i_cycleslider__list__item:nth-child(1) {
   padding-left: 0;
   z-index: 5;
 }
 .i_cycleslider__list .i_cycleslider__list__item:nth-child(2) {
-  padding-left: 8rem;
+  padding-left: 12rem;
   z-index: 4;
 }
 .i_cycleslider__list .i_cycleslider__list__item:nth-child(3) {
-  padding-left: 16rem;
+  padding-left: 24rem;
   z-index: 3;
 }
 .i_cycleslider__list .i_cycleslider__list__item:nth-child(4) {
-  padding-left: 24rem;
+  padding-left: 36rem;
   z-index: 2;
 }
 .i_cycleslider__list .i_cycleslider__list__item:nth-child(5) {
-  padding-left: 32rem;
+  padding-left: 48rem;
   z-index: 1;
 }
 .i_cycleslider__list .i_cycleslider__list__item:nth-child(6) {
-  padding-left: 40rem;
+  padding-left: 60rem;
   z-index: 0;
 }
 .i_cycleslider__list .i_cycleslider__list__item:first-child {
@@ -668,6 +670,7 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
 }
 .i_cycleslider__list .i_cycleslider__list__item:last-child {
   left: 8rem;
+  padding-left: 24rem;
 }
 .i_cycleslider__list .i_cycleslider__list__item:last-child .i_cycleslider__list__item__box {
   margin-left: auto;
@@ -714,10 +717,10 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   height: 3.3rem;
 }
 .i_cycleslider__list .i_cycleslider__list__item:nth-child(1) .i_cycleslider__list__item__arrow--down {
-  transform: translateX(-32rem);
+  transform: translateX(-32.5rem);
 }
 .i_cycleslider__list .i_cycleslider__list__item:nth-child(2) .i_cycleslider__list__item__arrow--down {
-  transform: translateX(-16rem);
+  transform: translateX(-26rem);
 }
 .i_cycleslider__list .i_cycleslider__list__item:nth-child(3) .i_cycleslider__list__item__arrow--down {
   transform: translateX(-8rem);
@@ -2999,3 +3002,5 @@ html:not(.wf-design-mode) .i_circleslideout_math {
   display: flex;
   position: relative;
 }
+
+/*# sourceMappingURL=main.css.map */
