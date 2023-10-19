@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.71";
+  --v: "v1.0.72";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -2816,7 +2816,7 @@ html:not(.wf-design-mode) .i_circleslideout_math {
   transform: translateX(0) !important;
 }
 .i--animatesection--in .i_circleslideout_math {
-  opacity: 1;
+  opacity: 1 !important;
   transition-delay: 1000ms !important;
 }
 
