@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.73";
+  --v: "v1.0.74";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -668,10 +668,6 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
 .i_cycleslider__list .i_cycleslider__list__item:first-child {
   margin-top: 0;
 }
-.i_cycleslider__list .i_cycleslider__list__item:last-child {
-  left: 8rem;
-  padding-left: 24rem;
-}
 .i_cycleslider__list .i_cycleslider__list__item:last-child .i_cycleslider__list__item__box {
   margin-left: auto;
 }
@@ -715,20 +711,12 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   bottom: 3rem;
   width: 12.6rem;
   height: 3.3rem;
-}
-.i_cycleslider__list .i_cycleslider__list__item:nth-child(1) .i_cycleslider__list__item__arrow--down {
-  transform: translateX(-32.5rem);
-}
-.i_cycleslider__list .i_cycleslider__list__item:nth-child(2) .i_cycleslider__list__item__arrow--down {
-  transform: translateX(-26rem);
-}
-.i_cycleslider__list .i_cycleslider__list__item:nth-child(3) .i_cycleslider__list__item__arrow--down {
-  transform: translateX(-8rem);
+  transform: translateX(-7rem);
 }
 .i_cycleslider__list .i_cycleslider__list__item__arrow--up {
   left: 0;
   bottom: 0;
-  transform: translate(-5.5rem, -6.5rem);
+  transform: translate(-4.5rem, -6.5rem);
   width: 38rem;
   height: 26rem;
 }
