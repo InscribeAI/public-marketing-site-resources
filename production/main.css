@@ -716,7 +716,7 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
 .i_cycleslider__list .i_cycleslider__list__item__arrow--up {
   left: 0;
   bottom: 0;
-  transform: translate(-4.5rem, -6.5rem);
+  transform: translate(4.5rem, -6.5rem);
   width: 38rem;
   height: 26rem;
 }
