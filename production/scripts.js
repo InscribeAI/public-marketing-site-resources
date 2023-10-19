@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.70');
+console.log('version', 'v1.0.71');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -675,7 +675,9 @@ document.addEventListener('DOMContentLoaded', function() {
 // Use Case Slider on Mobile
 document.addEventListener('DOMContentLoaded', function() {
 	let container = document.querySelector('.i_usecasessection__list-w');
+	if (!container) return;
 	let slider = container.querySelector('.i_usecasessection__list');
+	if (!slider) return;
 	let isDragging = false;
 	let startX;
 	let lastX;
