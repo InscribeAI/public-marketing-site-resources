@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.75');
+console.log('version', 'v1.0.76');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -604,7 +604,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 
 		// find animated children
-		const animatedChildren = element.querySelectorAll('[class*="i_animate--"]');
+		const animatedChildren = element.querySelectorAll('[class*="i_animate"]');
 		animatedChildren.forEach((child, index) => {
 			// if a class that contains i_animatedelay-- grab the value
 			const childMatch = child.className.match(/i_animatedelay--(\d+)/);

@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.74";
+  --v: "v1.0.76";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -1244,10 +1244,10 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
 }
 
 @media screen and (min-width: 991px) {
-  html:not(.wf-design-mode) .i--animatesection [class*=i_animate] {
+  html:not(.wf-design-mode) .i--animatesection [class*=i_animate--] {
     transition: transform 550ms var(--easing);
   }
-  html:not(.wf-design-mode) .i--animatesection:not(.i--animatesection--in) [class*=i_animate] {
+  html:not(.wf-design-mode) .i--animatesection:not(.i--animatesection--in) [class*=i_animate--] {
     transition-delay: 0ms !important;
   }
   html:not(.wf-design-mode) .i--animatesection .i_animate--slide {
