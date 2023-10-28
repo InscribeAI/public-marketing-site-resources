@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.77";
+  --v: "v1.0.78";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -25,6 +25,14 @@
 }
 html * {
   box-sizing: border-box;
+}
+
+body {
+  background-color: var(--natural--100) !important;
+}
+
+body.state--scrolled .i_navbar-w {
+  background-color: var(--natural--100) !important;
 }
 
 .stick {
