@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.80');
+console.log('version', 'v1.0.81');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -647,11 +647,15 @@ document.addEventListener('DOMContentLoaded', function() {
 	function handleIntersect(entries, observer) {
 		entries.forEach(entry => {
 			// If the section is intersecting at the specified threshold or more
+
 			if (entry.intersectionRatio >= 0.25) {
 				entry.target.classList.add('i--animatesection--in');
-			} else {
-				entry.target.classList.remove('i--animatesection--in');
+				observer.unobserve(entry.target); // Stop observing since our condition has been met
 			}
+			// Scroll up and down animation
+			// } else {
+			// 	entry.target.classList.remove('i--animatesection--in');
+			// }
 		});
 	}
 
