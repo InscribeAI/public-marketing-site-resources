@@ -302,7 +302,7 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   width: 100%;
   height: 0.5rem;
   background-color: var(--dark);
-  transform-origin: left;
+  transform-origin: right;
   transform: translate(0, -50%) scaleX(1);
 }
 .i_testimonialslider__nav__bar .i_testimonialslider__nav__bar__count.--countdown {
