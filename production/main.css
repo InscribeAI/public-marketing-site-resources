@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.78";
+  --v: "v1.0.80";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -29,6 +29,10 @@ html * {
 
 body {
   background-color: var(--natural--100) !important;
+}
+
+.i_navbar-w {
+  transition: all 500ms var(--easeInOutQuint);
 }
 
 body.state--scrolled .i_navbar-w {
@@ -123,6 +127,10 @@ a {
 .i_btn__icon svg {
   display: block;
   width: 100%;
+}
+
+.i_navbar-w .i_btn:hover .i_btn__content {
+  transform: none !important;
 }
 
 .i_link {
@@ -1209,6 +1217,14 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
 
 .i_bar {
   height: max(1px, 0.1rem) !important;
+}
+
+.i_bar--large {
+  height: max(1px, 0.6rem) !important;
+}
+
+.i_bar--medium {
+  height: max(1px, 0.2rem) !important;
 }
 
 @keyframes carousel {
