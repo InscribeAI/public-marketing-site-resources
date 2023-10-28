@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.81');
+console.log('version', 'v1.0.82');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -1058,4 +1058,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Initial check (in case the user has already scrolled when the page loads)
 	checkScrollPosition();
+});
+
+// Patch for link hover fx
+document.addEventListener('DOMContentLoaded', function() {
+	// Get a NodeList of all elements with class 'i_link__label'
+	const labels = document.querySelectorAll('.i_link__label');
+
+	labels.forEach(function(label) {
+			// Get computed styles for the label
+			const computedStyles = window.getComputedStyle(label);
+			
+			// Get the parent wrapper with class 'i_link__row'
+			const parentWrapper = label.closest('.i_link__row');
+			if (parentWrapper) {
+					// Set the font properties for the parent wrapper
+					parentWrapper.style.fontFamily = computedStyles.fontFamily;
+					parentWrapper.style.fontSize = computedStyles.fontSize;
+					parentWrapper.style.fontWeight = computedStyles.fontWeight;
+					parentWrapper.style.fontStyle = computedStyles.fontStyle;
+					parentWrapper.style.textTransform = computedStyles.textTransform;
+					parentWrapper.style.letterSpacing = computedStyles.letterSpacing;
+					parentWrapper.style.fontVariationSettings = computedStyles.fontVariationSettings;
+					// Add any other font properties as needed
+			}
+	});
 });
