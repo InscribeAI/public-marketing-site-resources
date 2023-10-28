@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.76');
+console.log('version', 'v1.0.77');
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
@@ -1037,3 +1037,21 @@ document.addEventListener('DOMContentLoaded', setQuoteHeight);
 
 // Run the function on window resize
 window.addEventListener('resize', setQuoteHeight);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+	// Function to check scroll position and update body class
+	function checkScrollPosition() {
+			if (window.scrollY > 0 && !document.body.classList.contains('state--scrolled')) {
+					document.body.classList.add('state--scrolled');
+			} else if (window.scrollY === 0 && document.body.classList.contains('state--scrolled')) {
+					document.body.classList.remove('state--scrolled');
+			}
+	}
+
+	// Listen to scroll events
+	window.addEventListener('scroll', checkScrollPosition);
+
+	// Initial check (in case the user has already scrolled when the page loads)
+	checkScrollPosition();
+});
