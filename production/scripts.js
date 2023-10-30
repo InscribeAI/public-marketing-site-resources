@@ -1,4 +1,30 @@
-console.log('version', 'v1.0.83');
+console.log('version', 'v1.0.84');
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+	// Get a NodeList of all elements with class 'i_slideupblocks__list'
+	const slideupLists = document.querySelectorAll('.i_slideupblocks__list');
+
+	slideupLists.forEach(function(list) {
+			let maxHeight = 0;
+			
+			// Find the tallest block within the list
+			const blocks = list.querySelectorAll('.i_slideupblock');
+			blocks.forEach(function(block) {
+					const blockHeight = block.offsetHeight;
+					if (blockHeight > maxHeight) {
+							maxHeight = blockHeight;
+					}
+			});
+
+			// Set all blocks within the list to the maxHeight
+			blocks.forEach(function(block) {
+					block.style.height = `${maxHeight}px`;
+			});
+	});
+});
+
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
