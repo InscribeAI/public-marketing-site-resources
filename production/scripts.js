@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.86');
+console.log('version', 'v1.0.87');
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -9,11 +9,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 			slideupLists.forEach(function(list) {
 					let maxHeight = 0;
+					let stickyTop = 0;
 					
 					// Find the tallest block within the list
 					const blocks = list.querySelectorAll('.i_slideupblock');
 					blocks.forEach(function(block) {
 							const blockHeight = block.offsetHeight;
+
+							// Retrieve the top position of the parent .sticky class
+							const stickyParent = block.closest('.sticky');
+							stickyTop = parseFloat(window.getComputedStyle(stickyParent).top);
+
 							if (blockHeight > maxHeight) {
 									maxHeight = blockHeight;
 							}
@@ -24,11 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
 							block.style.height = `${maxHeight}px`;
 					});
 
-					// Check if the list's top position + maxHeight exceeds the viewport height
 					const viewportHeight = window.innerHeight;
-					const listTopPosition = list.getBoundingClientRect().top;
 
-					if (listTopPosition + maxHeight > viewportHeight) {
+					if (stickyTop + maxHeight > viewportHeight) {
 							list.classList.add('i_slideupblocks__list__unstuck');
 					} else {
 							list.classList.remove('i_slideupblocks__list__unstuck');
@@ -58,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 	});
 });
+
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
