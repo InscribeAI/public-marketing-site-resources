@@ -1,30 +1,63 @@
-console.log('version', 'v1.0.84');
+console.log('version', 'v1.0.86');
 
 
 document.addEventListener('DOMContentLoaded', function() {
 
-	// Get a NodeList of all elements with class 'i_slideupblocks__list'
-	const slideupLists = document.querySelectorAll('.i_slideupblocks__list');
+	function adjustSlideUpBlocks() {
+			// Get a NodeList of all elements with class 'i_slideupblocks__list'
+			const slideupLists = document.querySelectorAll('.i_slideupblocks__list');
 
-	slideupLists.forEach(function(list) {
-			let maxHeight = 0;
-			
-			// Find the tallest block within the list
-			const blocks = list.querySelectorAll('.i_slideupblock');
-			blocks.forEach(function(block) {
-					const blockHeight = block.offsetHeight;
-					if (blockHeight > maxHeight) {
-							maxHeight = blockHeight;
+			slideupLists.forEach(function(list) {
+					let maxHeight = 0;
+					
+					// Find the tallest block within the list
+					const blocks = list.querySelectorAll('.i_slideupblock');
+					blocks.forEach(function(block) {
+							const blockHeight = block.offsetHeight;
+							if (blockHeight > maxHeight) {
+									maxHeight = blockHeight;
+							}
+					});
+
+					// Set all blocks within the list to the maxHeight
+					blocks.forEach(function(block) {
+							block.style.height = `${maxHeight}px`;
+					});
+
+					// Check if the list's top position + maxHeight exceeds the viewport height
+					const viewportHeight = window.innerHeight;
+					const listTopPosition = list.getBoundingClientRect().top;
+
+					if (listTopPosition + maxHeight > viewportHeight) {
+							list.classList.add('i_slideupblocks__list__unstuck');
+					} else {
+							list.classList.remove('i_slideupblocks__list__unstuck');
 					}
 			});
+	}
 
-			// Set all blocks within the list to the maxHeight
-			blocks.forEach(function(block) {
-					block.style.height = `${maxHeight}px`;
-			});
+	// Run the function once on page load
+	if (window.innerWidth > 991) {
+			adjustSlideUpBlocks();
+	}
+
+	// Attach a resize event listener to the window
+	window.addEventListener('resize', function() {
+			if (window.innerWidth > 991) {
+					adjustSlideUpBlocks();
+			} else {
+					// If the viewport width is 991px or below, remove adjustments
+					const slideupLists = document.querySelectorAll('.i_slideupblocks__list');
+					slideupLists.forEach(function(list) {
+							const blocks = list.querySelectorAll('.i_slideupblock');
+							blocks.forEach(function(block) {
+									block.style.height = ''; // Reset height
+							});
+							list.classList.remove('i_slideupblocks__list__unstuck'); // Remove the class
+					});
+			}
 	});
 });
-
 
 // Stats Section
 document.addEventListener('DOMContentLoaded', function() {
