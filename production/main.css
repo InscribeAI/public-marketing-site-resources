@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.88";
+  --v: "v1.0.89";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -1901,6 +1901,18 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   html:not(.wf-design-mode) .i--animatesection--in .i_statsblock__stat:nth-child(4) .i_statsblock__stat__label__text {
     transition-delay: 2250ms;
   }
+  html:not(.wf-design-mode) .i--animatesection--in .i_animatedbox--topleft {
+    margin-left: 2rem;
+    max-width: calc(100% - 2rem);
+  }
+  html:not(.wf-design-mode) .i--animatesection--in .i_animatedbox--topright {
+    margin-right: 2em;
+    max-width: calc(100% - 2rem);
+  }
+  html:not(.wf-design-mode) .i--animatesection--in .i_animatedbox--bottomleft {
+    max-width: calc(100% - 2rem);
+    margin-left: 2rem;
+  }
   html:not(.wf-design-mode) .i--animatesection--in .i_animate--box .i_blogpostsgriditem__image {
     opacity: 1;
   }
@@ -2605,9 +2617,6 @@ section {
 .i_customerstorysection + section {
   position: relative;
   z-index: 3;
-}
-.i_customerstorysection .i_bar {
-  height: 1px !important;
 }
 .i_customerstorysection .i_sectionheaders {
   position: sticky;
