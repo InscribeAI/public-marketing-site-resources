@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.89";
+  --v: "v1.0.90";
   font-size: 0.5208333333vw;
   --dark: #39075B;
   --light: #fff;
@@ -285,6 +285,7 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   position: relative;
   width: 85rem;
   margin: 0 auto;
+  max-width: 100vw;
 }
 .i_testimonialslider__nav__bar .i_testimonialslider__nav__bar__main {
   position: absolute;
