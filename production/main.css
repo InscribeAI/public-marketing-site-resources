@@ -1,9 +1,9 @@
 :root {
-  --v: "v1.0.92";
+  --v: "v1.0.93";
   font-size: 0.5208333333vw;
   --dark: #39075B;
-  --light: #fff;
-  --white: #fff;
+  --light: #fdfbf6;
+  --white: #fdfbf6;
   --yellow: #fdf374;
   --natural: #F9F3E4;
   --natural--100: #fdfbf6;
@@ -472,7 +472,7 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   top: 0;
   left: 0;
   border-radius: 0.4rem;
-  background-color: white;
+  background-color: var(--white);
   transform-origin: bottom right;
   transition: transform 500ms ease-in-out;
 }
@@ -1322,7 +1322,7 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
     top: 0;
     left: 0;
     border-radius: inherit;
-    background-color: white;
+    background-color: var(--white);
     transition: all 550ms var(--easing);
   }
   html:not(.wf-design-mode) .i--animatesection .i_animate--box .i_animatedbox:first-child {
@@ -2629,8 +2629,7 @@ section {
   top: 0;
   left: 0;
   content: "";
-  background-color: white;
-  background-color: red;
+  background-color: var(--white);
   width: 100%;
   z-index: 2;
   display: block;
@@ -2871,8 +2870,8 @@ html:not(.wf-design-mode) .i_circleslideout_math {
 
 .scroller[data-animated=true] {
   overflow: hidden;
-  -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
-  mask: linear-gradient(90deg, transparent, white 10%, white 20%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, var(--white) 10%, var(--white) 90%, transparent);
+  mask: linear-gradient(90deg, transparent, var(--white) 10%, var(--white) 20%, transparent);
 }
 
 .scroller[data-animated=true] .scroller__inner {
@@ -2923,7 +2922,7 @@ html:not(.wf-design-mode) .i_circleslideout_math {
 }
 
 .i_form {
-  background-color: white;
+  background-color: var(--white);
   width: 100%;
   height: 100%;
   flex-grow: 1;
