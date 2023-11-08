@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.97";
+  --v: "v1.0.98";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -1913,6 +1913,7 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   html:not(.wf-design-mode) .i--animatesection--in .i_animatedbox--bottomleft {
     max-width: calc(100% - 2rem);
     margin-left: 2rem;
+    margin-bottom: 1.5rem;
   }
   html:not(.wf-design-mode) .i--animatesection--in .i_animate--box .i_blogpostsgriditem__image {
     opacity: 1;
