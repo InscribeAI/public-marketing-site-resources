@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.98";
+  --v: "v1.0.99";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -1903,9 +1903,20 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
     transition-delay: 2250ms;
   }
   html:not(.wf-design-mode) .i--animatesection--in .i_animatedbox--topleft {
-    margin-left: 2rem;
     max-width: calc(100% - 2rem);
   }
+  html:not(.wf-design-mode) .i--animatesection--in .i_animatedbox--hasBoxes.i_animatedbox--topleft {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (min-width: 991px) and (max-width: 991px) {
+  html:not(.wf-design-mode) .i--animatesection--in .i_animatedbox--hasBoxes.i_animatedbox--topleft {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 991px) {
   html:not(.wf-design-mode) .i--animatesection--in .i_animatedbox--topright {
     margin-right: 2em;
     max-width: calc(100% - 2rem);
