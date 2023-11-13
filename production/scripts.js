@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.100');
+console.log('version', 'v1.0.101');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1029,6 +1029,10 @@ document.addEventListener('DOMContentLoaded', adjustStickyTop);
 
 // Run the function on window resize
 window.addEventListener('resize', adjustStickyTop);
+
+setTimeout(() => {
+	adjustStickyTop();
+}, 1000);
 
 
 document.addEventListener('DOMContentLoaded', () => {
