@@ -1,120 +1,184 @@
-console.log('version', 'v1.0.103');
+console.log('version', 'v1.0.104');
 
-// document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
 
-// 	function adjustSlideUpBlocks(list) {
+	function adjustSlideUpBlocks(_list) {
 
-// 			console.log('running adjust slideup');
-
-// 			// verify that list is a NodeList
-// 			if (list && !list.forEach) {
-// 				list = [list];
-// 			}
+		// verify that list is a NodeList
+		if (_list && !_list.forEach) {
+			_list = [_list];
+		}
 
 
-// 			// Get a NodeList of all elements with class 'i_slideupblocks__list'
-// 			const slideupLists = list || document.querySelectorAll('.i_slideupblocks__list');
+		// Get a NodeList of all elements with class 'i_slideupblocks__list'
+		const slideupLists = _list || document.querySelectorAll('.i_slideupblocks__list');
 
-// 			slideupLists.forEach(function(list) {
-// 				let maxHeight = 0;
-// 				let stickyTop = 0;
+		slideupLists.forEach(function(list) {
+			// Find the tallest block within the list
+			const blocks = list.querySelectorAll('.i_slideupblock');
+			let maxHeight = 0;
+			let stickyTop = 0;
 
-// 				// check to see if this list has any images
-// 				const images = list.querySelectorAll('img');
-// 				const hasImages = images.length > 0;
-// 				let allLoaded = true;
+			blocks.forEach(function(block) {
 
-// 				// if there are images, check to see if they are all loaded
-// 				if (hasImages) {
-// 					images.forEach(function(img) {
-// 						if (!img.complete) {
-// 							allLoaded = false;
-// 						}
-// 					});
+				const blockHeight = block.offsetHeight;
 
-// 					// if they are not all loaded, wait until they are
-// 					if (!allLoaded) {
-// 						// console.log('not all loaded');
-// 						return;
-// 					}
-// 				}
+				// Retrieve the top position of the parent .sticky class
+
+				if( stickyTop === 0 ) {
+					const stickyParent = block.closest('.sticky');
+					stickyTop = parseFloat(window.getComputedStyle(stickyParent).top);
+				}
+
+				if (blockHeight > maxHeight) {
+					maxHeight = blockHeight;
+				}
+			});
+
+			const viewportHeight = window.innerHeight;
+			const spaceNeeded = stickyTop + maxHeight;
+
+			console.log(spaceNeeded);
+
+			if (spaceNeeded > viewportHeight) {
+					list.classList.add('i_slideupblocks__list__unstuck');
+			} else {
+					list.classList.remove('i_slideupblocks__list__unstuck');
+			}
+		});
+	}
+
+	// // Run the function once on page load
+	if (window.innerWidth > 991) {
+			adjustSlideUpBlocks();
+	}
+
+	// // Attach a resize event listener to the window
+	window.addEventListener('resize', function() {
+			if (window.innerWidth > 991) {
+					adjustSlideUpBlocks();
+			} else {
+					// If the viewport width is 991px or below, remove adjustments
+					const slideupLists = document.querySelectorAll('.i_slideupblocks__list');
+					slideupLists.forEach(function(list) {
+							list.classList.remove('i_slideupblocks__list__unstuck'); // Remove the class
+					});
+			}
+	});
+
+	// function adjustSlideUpBlocks(list) {
+
+	// 		console.log('running adjust slideup');
+
+	// 		// verify that list is a NodeList
+	// 		if (list && !list.forEach) {
+	// 			list = [list];
+	// 		}
+
+
+	// 		// Get a NodeList of all elements with class 'i_slideupblocks__list'
+	// 		const slideupLists = list || document.querySelectorAll('.i_slideupblocks__list');
+
+	// 		slideupLists.forEach(function(list) {
+	// 			let maxHeight = 0;
+	// 			let stickyTop = 0;
+
+	// 			// check to see if this list has any images
+	// 			const images = list.querySelectorAll('img');
+	// 			const hasImages = images.length > 0;
+	// 			let allLoaded = true;
+
+	// 			// if there are images, check to see if they are all loaded
+	// 			if (hasImages) {
+	// 				images.forEach(function(img) {
+	// 					if (!img.complete) {
+	// 						allLoaded = false;
+	// 					}
+	// 				});
+
+	// 				// if they are not all loaded, wait until they are
+	// 				if (!allLoaded) {
+	// 					// console.log('not all loaded');
+	// 					return;
+	// 				}
+	// 			}
 					
 				
-// 				// Find the tallest block within the list
-// 				const blocks = list.querySelectorAll('.i_slideupblock');
-// 				blocks.forEach(function(block) {
+	// 			// Find the tallest block within the list
+	// 			const blocks = list.querySelectorAll('.i_slideupblock');
+	// 			blocks.forEach(function(block) {
 
-// 					// check to see if the block has a height set
-// 					if (block.style.height) {
-// 						block.style.height = '';
-// 					}
+	// 				// check to see if the block has a height set
+	// 				if (block.style.height) {
+	// 					block.style.height = '';
+	// 				}
 
-// 					const blockHeight = block.offsetHeight;
+	// 				const blockHeight = block.offsetHeight;
 
-// 					// Retrieve the top position of the parent .sticky class
-// 					const stickyParent = block.closest('.sticky');
-// 					stickyTop = parseFloat(window.getComputedStyle(stickyParent).top);
+	// 				// Retrieve the top position of the parent .sticky class
+	// 				const stickyParent = block.closest('.sticky');
+	// 				stickyTop = parseFloat(window.getComputedStyle(stickyParent).top);
 
-// 					if (blockHeight > maxHeight) {
-// 						maxHeight = blockHeight;
-// 					}
-// 				});
+	// 				if (blockHeight > maxHeight) {
+	// 					maxHeight = blockHeight;
+	// 				}
+	// 			});
 
-// 				// Set all blocks within the list to the maxHeight
-// 				blocks.forEach(function(block) {
-// 						block.style.height = `${maxHeight}px`;
-// 				});
+	// 			// Set all blocks within the list to the maxHeight
+	// 			blocks.forEach(function(block) {
+	// 					block.style.height = `${maxHeight}px`;
+	// 			});
 
-// 				const viewportHeight = window.innerHeight;
+	// 			const viewportHeight = window.innerHeight;
 
-// 				if (stickyTop + maxHeight > viewportHeight) {
-// 						list.classList.add('i_slideupblocks__list__unstuck');
-// 				} else {
-// 						list.classList.remove('i_slideupblocks__list__unstuck');
-// 				}
-// 			});
-// 	}
+	// 			if (stickyTop + maxHeight > viewportHeight) {
+	// 					list.classList.add('i_slideupblocks__list__unstuck');
+	// 			} else {
+	// 					list.classList.remove('i_slideupblocks__list__unstuck');
+	// 			}
+	// 		});
+	// }
 
-// 	// Run the function once on page load
-// 	if (window.innerWidth > 991) {
-// 			adjustSlideUpBlocks();
-// 	}
+	// // Run the function once on page load
+	// if (window.innerWidth > 991) {
+	// 		adjustSlideUpBlocks();
+	// }
 
-// 	const images = document.querySelectorAll('.i_slideupblock img[loading="lazy"]');
+	// const images = document.querySelectorAll('.i_slideupblock img[loading="lazy"]');
 	
-// 		images.forEach(img => {
-// 			if (img.complete) {
-// 				// If the image is already loaded (e.g., cached), set heights immediately
-// 				// console.log(img.complete);
-// 				adjustSlideUpBlocks();
-// 			} else {
-// 				// Otherwise, set the height after the image has loaded
-// 				img.addEventListener('load', () => {
-// 					adjustSlideUpBlocks();
-// 				});
-// 			}
-// 		});
+	// 	images.forEach(img => {
+	// 		if (img.complete) {
+	// 			// If the image is already loaded (e.g., cached), set heights immediately
+	// 			// console.log(img.complete);
+	// 			adjustSlideUpBlocks();
+	// 		} else {
+	// 			// Otherwise, set the height after the image has loaded
+	// 			img.addEventListener('load', () => {
+	// 				adjustSlideUpBlocks();
+	// 			});
+	// 		}
+	// 	});
 	
-// 		// Also call setEqualHeights initially in case images are not lazy-loaded
-// 		adjustSlideUpBlocks();
+	// 	// Also call setEqualHeights initially in case images are not lazy-loaded
+	// 	adjustSlideUpBlocks();
 
-// 	// Attach a resize event listener to the window
-// 	window.addEventListener('resize', function() {
-// 			if (window.innerWidth > 991) {
-// 					adjustSlideUpBlocks();
-// 			} else {
-// 					// If the viewport width is 991px or below, remove adjustments
-// 					const slideupLists = document.querySelectorAll('.i_slideupblocks__list');
-// 					slideupLists.forEach(function(list) {
-// 							const blocks = list.querySelectorAll('.i_slideupblock');
-// 							blocks.forEach(function(block) {
-// 									block.style.height = ''; // Reset height
-// 							});
-// 							list.classList.remove('i_slideupblocks__list__unstuck'); // Remove the class
-// 					});
-// 			}
-// 	});
-// });
+	// // Attach a resize event listener to the window
+	// window.addEventListener('resize', function() {
+	// 		if (window.innerWidth > 991) {
+	// 				adjustSlideUpBlocks();
+	// 		} else {
+	// 				// If the viewport width is 991px or below, remove adjustments
+	// 				const slideupLists = document.querySelectorAll('.i_slideupblocks__list');
+	// 				slideupLists.forEach(function(list) {
+	// 						const blocks = list.querySelectorAll('.i_slideupblock');
+	// 						blocks.forEach(function(block) {
+	// 								block.style.height = ''; // Reset height
+	// 						});
+	// 						list.classList.remove('i_slideupblocks__list__unstuck'); // Remove the class
+	// 				});
+	// 		}
+	// });
+});
 
 
 // Stats Section
