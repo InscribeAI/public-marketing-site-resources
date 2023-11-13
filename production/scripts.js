@@ -1,94 +1,120 @@
-console.log('version', 'v1.0.102');
+console.log('version', 'v1.0.103');
 
-document.addEventListener('DOMContentLoaded', function() {
+// document.addEventListener('DOMContentLoaded', function() {
 
-	function adjustSlideUpBlocks(list) {
+// 	function adjustSlideUpBlocks(list) {
 
-			// verify that list is a NodeList
-			if (list && !list.forEach) {
-				list = [list];
-			}
+// 			console.log('running adjust slideup');
+
+// 			// verify that list is a NodeList
+// 			if (list && !list.forEach) {
+// 				list = [list];
+// 			}
 
 
-			// Get a NodeList of all elements with class 'i_slideupblocks__list'
-			const slideupLists = list || document.querySelectorAll('.i_slideupblocks__list');
+// 			// Get a NodeList of all elements with class 'i_slideupblocks__list'
+// 			const slideupLists = list || document.querySelectorAll('.i_slideupblocks__list');
 
-			slideupLists.forEach(function(list) {
-				let maxHeight = 0;
-				let stickyTop = 0;
+// 			slideupLists.forEach(function(list) {
+// 				let maxHeight = 0;
+// 				let stickyTop = 0;
+
+// 				// check to see if this list has any images
+// 				const images = list.querySelectorAll('img');
+// 				const hasImages = images.length > 0;
+// 				let allLoaded = true;
+
+// 				// if there are images, check to see if they are all loaded
+// 				if (hasImages) {
+// 					images.forEach(function(img) {
+// 						if (!img.complete) {
+// 							allLoaded = false;
+// 						}
+// 					});
+
+// 					// if they are not all loaded, wait until they are
+// 					if (!allLoaded) {
+// 						// console.log('not all loaded');
+// 						return;
+// 					}
+// 				}
+					
 				
-				// Find the tallest block within the list
-				const blocks = list.querySelectorAll('.i_slideupblock');
-				blocks.forEach(function(block) {
-						const blockHeight = block.offsetHeight;
+// 				// Find the tallest block within the list
+// 				const blocks = list.querySelectorAll('.i_slideupblock');
+// 				blocks.forEach(function(block) {
 
-						// Retrieve the top position of the parent .sticky class
-						const stickyParent = block.closest('.sticky');
-						stickyTop = parseFloat(window.getComputedStyle(stickyParent).top);
+// 					// check to see if the block has a height set
+// 					if (block.style.height) {
+// 						block.style.height = '';
+// 					}
 
-						if (blockHeight > maxHeight) {
-								maxHeight = blockHeight;
-						}
-				});
+// 					const blockHeight = block.offsetHeight;
 
-				// Set all blocks within the list to the maxHeight
-				blocks.forEach(function(block) {
-						block.style.height = `${maxHeight}px`;
-				});
+// 					// Retrieve the top position of the parent .sticky class
+// 					const stickyParent = block.closest('.sticky');
+// 					stickyTop = parseFloat(window.getComputedStyle(stickyParent).top);
 
-				const viewportHeight = window.innerHeight;
+// 					if (blockHeight > maxHeight) {
+// 						maxHeight = blockHeight;
+// 					}
+// 				});
 
-				if (stickyTop + maxHeight > viewportHeight) {
-						list.classList.add('i_slideupblocks__list__unstuck');
-				} else {
-						list.classList.remove('i_slideupblocks__list__unstuck');
-				}
-			});
-	}
+// 				// Set all blocks within the list to the maxHeight
+// 				blocks.forEach(function(block) {
+// 						block.style.height = `${maxHeight}px`;
+// 				});
 
-	// Run the function once on page load
-	if (window.innerWidth > 991) {
-			adjustSlideUpBlocks();
-	}
+// 				const viewportHeight = window.innerHeight;
 
-	const images = document.querySelectorAll('.i_slideupblock img[loading="lazy"]');
+// 				if (stickyTop + maxHeight > viewportHeight) {
+// 						list.classList.add('i_slideupblocks__list__unstuck');
+// 				} else {
+// 						list.classList.remove('i_slideupblocks__list__unstuck');
+// 				}
+// 			});
+// 	}
+
+// 	// Run the function once on page load
+// 	if (window.innerWidth > 991) {
+// 			adjustSlideUpBlocks();
+// 	}
+
+// 	const images = document.querySelectorAll('.i_slideupblock img[loading="lazy"]');
 	
-		images.forEach(img => {
-			if (img.complete) {
-				// If the image is already loaded (e.g., cached), set heights immediately
-				// console.log(img.complete);
-				adjustSlideUpBlocks();
-			} else {
-				// Otherwise, set the height after the image has loaded
-				img.addEventListener('load', () => {
-					setTimeout(() => {
-						adjustSlideUpBlocks();
-						console.log(img.complete);
-					}, 250);
-				});
-			}
-		});
+// 		images.forEach(img => {
+// 			if (img.complete) {
+// 				// If the image is already loaded (e.g., cached), set heights immediately
+// 				// console.log(img.complete);
+// 				adjustSlideUpBlocks();
+// 			} else {
+// 				// Otherwise, set the height after the image has loaded
+// 				img.addEventListener('load', () => {
+// 					adjustSlideUpBlocks();
+// 				});
+// 			}
+// 		});
 	
-		// Also call setEqualHeights initially in case images are not lazy-loaded
-		adjustSlideUpBlocks();
+// 		// Also call setEqualHeights initially in case images are not lazy-loaded
+// 		adjustSlideUpBlocks();
 
-	// Attach a resize event listener to the window
-	window.addEventListener('resize', function() {
-			if (window.innerWidth > 991) {
-					adjustSlideUpBlocks();
-			} else {
-					// If the viewport width is 991px or below, remove adjustments
-					const slideupLists = document.querySelectorAll('.i_slideupblocks__list');
-					slideupLists.forEach(function(list) {
-							const blocks = list.querySelectorAll('.i_slideupblock');
-							blocks.forEach(function(block) {
-									block.style.height = ''; // Reset height
-							});
-							list.classList.remove('i_slideupblocks__list__unstuck'); // Remove the class
-					});
-			}
-	});
-});
+// 	// Attach a resize event listener to the window
+// 	window.addEventListener('resize', function() {
+// 			if (window.innerWidth > 991) {
+// 					adjustSlideUpBlocks();
+// 			} else {
+// 					// If the viewport width is 991px or below, remove adjustments
+// 					const slideupLists = document.querySelectorAll('.i_slideupblocks__list');
+// 					slideupLists.forEach(function(list) {
+// 							const blocks = list.querySelectorAll('.i_slideupblock');
+// 							blocks.forEach(function(block) {
+// 									block.style.height = ''; // Reset height
+// 							});
+// 							list.classList.remove('i_slideupblocks__list__unstuck'); // Remove the class
+// 					});
+// 			}
+// 	});
+// });
 
 
 // Stats Section
