@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.104";
+  --v: "v1.0.105";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -129,7 +129,12 @@ a {
   width: 100%;
 }
 
+.i_btn--noHover-w .i_btn:hover .i_btn__content,
 .i_navbar-w .i_btn:hover .i_btn__content {
+  transform: none !important;
+}
+.i_btn--noHover-w .i_btn:hover .i_btn__stack__slice,
+.i_navbar-w .i_btn:hover .i_btn__stack__slice {
   transform: none !important;
 }
 

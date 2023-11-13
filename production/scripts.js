@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.104');
+console.log('version', 'v1.0.105');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -37,8 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 			const viewportHeight = window.innerHeight;
 			const spaceNeeded = stickyTop + maxHeight;
-
-			console.log(spaceNeeded);
 
 			if (spaceNeeded > viewportHeight) {
 					list.classList.add('i_slideupblocks__list__unstuck');
