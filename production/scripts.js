@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.113');
+console.log('version', 'v1.0.114');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1239,27 +1239,34 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Patch for link hover fx
-document.addEventListener('DOMContentLoaded', function() {
+
+function setLinkLabels() {
 	// Get a NodeList of all elements with class 'i_link__label'
 	const labels = document.querySelectorAll('.i_link__label');
 
 	labels.forEach(function(label) {
-			// Get computed styles for the label
-			const computedStyles = window.getComputedStyle(label);
-			
-			// Get the parent wrapper with class 'i_link__row'
-			const parentWrapper = label.closest('.i_link__row');
-			if (parentWrapper) {
-					// Set the font properties for the parent wrapper
-					parentWrapper.style.color = computedStyles.color;
-					parentWrapper.style.fontFamily = computedStyles.fontFamily;
-					parentWrapper.style.fontSize = computedStyles.fontSize;
-					parentWrapper.style.fontWeight = computedStyles.fontWeight;
-					parentWrapper.style.fontStyle = computedStyles.fontStyle;
-					parentWrapper.style.textTransform = computedStyles.textTransform;
-					parentWrapper.style.letterSpacing = computedStyles.letterSpacing;
-					parentWrapper.style.fontVariationSettings = computedStyles.fontVariationSettings;
-					// Add any other font properties as needed
-			}
+		// Get computed styles for the label
+		const computedStyles = window.getComputedStyle(label);
+
+		// Get the parent wrapper with class 'i_link__row'
+		const parentWrapper = label.closest('.i_link__row');
+		if (parentWrapper) {
+			// Set the font properties for the parent wrapper
+			parentWrapper.style.color = computedStyles.color;
+			parentWrapper.style.fontFamily = computedStyles.fontFamily;
+			parentWrapper.style.fontSize = computedStyles.fontSize;
+			parentWrapper.style.fontWeight = computedStyles.fontWeight;
+			parentWrapper.style.fontStyle = computedStyles.fontStyle;
+			parentWrapper.style.textTransform = computedStyles.textTransform;
+			parentWrapper.style.letterSpacing = computedStyles.letterSpacing;
+			parentWrapper.style.fontVariationSettings = computedStyles.fontVariationSettings;
+		}
 	});
-});
+}
+document.addEventListener('DOMContentLoaded', setLinkLabels);
+
+// Run the function on window resize
+window.addEventListener('resize', setLinkLabels);
+
+// Run the function on font load
+document.fonts.ready.then(setLinkLabels);

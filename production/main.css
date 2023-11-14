@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.113";
+  --v: "v1.0.114";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -2635,6 +2635,9 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
     user-select: none;
     box-sizing: content-box;
   }
+  .i_usecasessection__list-w .i_icontextblock:last-child {
+    padding-right: 8.6rem;
+  }
   .i_usecasessection__list-w .dot-navigation {
     position: absolute;
     bottom: 0;
@@ -2743,6 +2746,11 @@ section {
   position: absolute;
   left: calc(100% + 4rem);
   bottom: 0;
+}
+@media screen and (max-width: 991px) {
+  .i_customerstorysection__bars > .i_bar:last-child {
+    display: none;
+  }
 }
 .i_customerstorysection__bars:after {
   position: absolute;
