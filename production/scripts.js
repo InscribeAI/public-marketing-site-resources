@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.114');
+console.log('version', 'v1.0.115');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1240,27 +1240,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Patch for link hover fx
 
+function setLinkLabelStyles(label) {
+	
+	// Get the parent wrapper with class 'i_link__row'
+	const parentWrapper = label.closest('.i_link__row');
+	
+	if (parentWrapper) {
+
+		// remove all inline styles from the parent wrapper
+		parentWrapper.removeAttribute('style');
+
+		// Get computed styles for the label
+		const computedStyles = window.getComputedStyle(label);
+
+		// Set the font properties for the parent wrapper
+		parentWrapper.style.color = computedStyles.color;
+		parentWrapper.style.fontFamily = computedStyles.fontFamily;
+		parentWrapper.style.fontSize = computedStyles.fontSize;
+		parentWrapper.style.fontWeight = computedStyles.fontWeight;
+		parentWrapper.style.fontStyle = computedStyles.fontStyle;
+		parentWrapper.style.textTransform = computedStyles.textTransform;
+		parentWrapper.style.letterSpacing = computedStyles.letterSpacing;
+		parentWrapper.style.fontVariationSettings = computedStyles.fontVariationSettings;
+	}
+}
+
 function setLinkLabels() {
 	// Get a NodeList of all elements with class 'i_link__label'
 	const labels = document.querySelectorAll('.i_link__label');
 
-	labels.forEach(function(label) {
-		// Get computed styles for the label
-		const computedStyles = window.getComputedStyle(label);
+	console.log('resizing links');
 
-		// Get the parent wrapper with class 'i_link__row'
-		const parentWrapper = label.closest('.i_link__row');
-		if (parentWrapper) {
-			// Set the font properties for the parent wrapper
-			parentWrapper.style.color = computedStyles.color;
-			parentWrapper.style.fontFamily = computedStyles.fontFamily;
-			parentWrapper.style.fontSize = computedStyles.fontSize;
-			parentWrapper.style.fontWeight = computedStyles.fontWeight;
-			parentWrapper.style.fontStyle = computedStyles.fontStyle;
-			parentWrapper.style.textTransform = computedStyles.textTransform;
-			parentWrapper.style.letterSpacing = computedStyles.letterSpacing;
-			parentWrapper.style.fontVariationSettings = computedStyles.fontVariationSettings;
-		}
+	labels.forEach(label => {
+		setLinkLabelStyles(label);
 	});
 }
 document.addEventListener('DOMContentLoaded', setLinkLabels);
@@ -1270,3 +1282,22 @@ window.addEventListener('resize', setLinkLabels);
 
 // Run the function on font load
 document.fonts.ready.then(setLinkLabels);
+
+
+// when the document is resizing, set a body class to --resizing
+// this is used to stop the link hover fx from running while the document is resizing
+document.addEventListener('DOMContentLoaded', function() {
+	let resizing = false;
+	window.addEventListener('resize', function() {
+		if ( !resizing ) {
+			resizing = true;
+			document.body.classList.add('--resizing');
+		} else {
+			clearTimeout(window.resizingTimeout);
+		}
+		window.resizingTimeout = setTimeout(function() {
+			resizing = false;
+			document.body.classList.remove('--resizing');
+		}, 500);
+	});
+});

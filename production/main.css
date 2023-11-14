@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.114";
+  --v: "v1.0.115";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -29,6 +29,15 @@ html * {
 
 body {
   background-color: var(--natural--100) !important;
+}
+
+body.--resizing * {
+  transition-delay: none !important;
+  transition-duration: 0ms !important;
+  transition-property: none !important;
+  transition-timing-function: none !important;
+  animation-play-state: paused !important;
+  animation-timing-function: none !important;
 }
 
 .i_navbar-w {
