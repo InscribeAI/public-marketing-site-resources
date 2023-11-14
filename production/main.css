@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.110";
+  --v: "v1.0.111";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -86,14 +86,14 @@ a {
   transition: transform 250ms var(--easing);
 }
 
-.i_btn:hover .i_btn__content {
-  transform: translateY(-2rem);
+@media screen and (min-width: 992px) {
+  .i_btn:hover .i_btn__content {
+    transform: translateY(-2rem);
+  }
+  .i_btn:hover .i_btn__stack__slice--middle {
+    transform: translateY(-1rem);
+  }
 }
-
-.i_btn:hover .i_btn__stack__slice--middle {
-  transform: translateY(-1rem);
-}
-
 .i_btn__icon {
   transform-origin: center left;
 }
