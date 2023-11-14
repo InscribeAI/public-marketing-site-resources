@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.115";
+  --v: "v1.0.116";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -3104,6 +3104,12 @@ html:not(.wf-design-mode) .i_circleslideout_math {
 }
 .i_slideupblocks__list__unstuck .i_stackingblock__wrap {
   transform: none !important;
+}
+
+@media screen and (max-width: 991px) {
+  .i_slideupblocks .sticky {
+    top: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
