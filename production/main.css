@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.118";
+  --v: "v1.0.119";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -3109,6 +3109,25 @@ html:not(.wf-design-mode) .i_circleslideout_math {
 @media screen and (max-width: 991px) {
   .i_slideupblocks .sticky {
     top: 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  @keyframes xrayanimation {
+    0% {
+      width: 0%;
+    }
+    33% {
+      width: 0%;
+    }
+    66% {
+      width: 100%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  body .i_xrayslidersection__slider .xrayslider__layer._2 {
+    animation: xrayanimation 2500ms infinite alternate ease-in-out;
   }
 }
 
