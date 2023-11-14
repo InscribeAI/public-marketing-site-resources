@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.111');
+console.log('version', 'v1.0.112');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -204,9 +204,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			if( !countTo )  {
 				countTo = 100;
 			}
-
-
-
 
 			elem.innerHTML = countTemplate.replace('[n]', '0');
 			setTimeout(() => {
@@ -1254,6 +1251,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			const parentWrapper = label.closest('.i_link__row');
 			if (parentWrapper) {
 					// Set the font properties for the parent wrapper
+					parentWrapper.style.color = computedStyles.color;
 					parentWrapper.style.fontFamily = computedStyles.fontFamily;
 					parentWrapper.style.fontSize = computedStyles.fontSize;
 					parentWrapper.style.fontWeight = computedStyles.fontWeight;
