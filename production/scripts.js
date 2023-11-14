@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.117');
+console.log('version', 'v1.0.118');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1303,11 +1303,10 @@ document.addEventListener('DOMContentLoaded', function() {
 // Run Lottie animations after document is loaded
 document.addEventListener('DOMContentLoaded', function() {
 	var lotties = document.querySelectorAll('.lottie-animation');
-	if( window.lottie && lotties.length ) {
+	if( window.lottie ) {
 		
 		// loop through lotties
 		lotties.forEach(element => {
-
 			const animationData = element.getAttribute('data-animation');
 
 			if( !animationData ) return;
