@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.108');
+console.log('version', 'v1.0.109');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1128,12 +1128,10 @@ function adjustStickyTop() {
     // Calculate the difference between the element's height and the viewport height
     const difference = stickElement.offsetHeight - window.innerHeight;
 
-    // Convert difference to rems
-    const differenceInRem = difference / 10;
 
     // If the .stick element's height is greater than the viewport, adjust its top
     if (difference > 0) {
-      stickElement.style.top = `-${differenceInRem}rem`;
+      stickElement.style.top = `-${difference}px`;
     } else {
       stickElement.style.top = '0';
     }
@@ -1146,9 +1144,9 @@ document.addEventListener('DOMContentLoaded', adjustStickyTop);
 // Run the function on window resize
 window.addEventListener('resize', adjustStickyTop);
 
-setTimeout(() => {
-	adjustStickyTop();
-}, 1000);
+// setInterval(() => {
+// 	adjustStickyTop();
+// }, 1000);
 
 
 document.addEventListener('DOMContentLoaded', () => {
