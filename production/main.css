@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.112";
+  --v: "v1.0.113";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -1248,13 +1248,28 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
 .i_bar {
   height: max(1px, 0.1rem) !important;
 }
+@media screen and (max-width: 450px) {
+  .i_bar {
+    height: 1px !important;
+  }
+}
 
 .i_bar--large {
-  height: max(1px, 0.6rem) !important;
+  height: max(6px, 0.6rem) !important;
+}
+@media screen and (max-width: 450px) {
+  .i_bar--large {
+    height: 6px !important;
+  }
 }
 
 .i_bar--medium {
-  height: max(1px, 0.2rem) !important;
+  height: max(2px, 0.2rem) !important;
+}
+@media screen and (max-width: 450px) {
+  .i_bar--medium {
+    height: 2px !important;
+  }
 }
 
 @keyframes carousel {
