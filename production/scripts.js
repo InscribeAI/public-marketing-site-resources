@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.119');
+console.log('version', 'v1.0.120');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -889,6 +889,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	const items = slider.querySelectorAll('.i_icontextblock');
 
+	const isTouchEvent = e => e.type.startsWith('touch');
+
 	function start(e) {
 		cancelAnimationFrame(snapAnimationId);
 		clearInterval(momentumId);
@@ -911,15 +913,22 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (deltaTime === 0) deltaTime = 1;
 		let speed = lastDelta / deltaTime;
 
-		translateSlider(deltaX);
+		if(!isTouchEvent(e)) {
+			translateSlider(deltaX);
+		}
 
 		lastX = currentX;
 		lastTime = now;
 	}
 
-	function end() {
+	function end(e) {
 		isDragging = false;
-		momentumScrolling();
+		const isTouch = isTouchEvent(e);
+		if (!isTouch) {
+			momentumScrolling(e);
+		} else {
+			updateDots();
+		}
 	}
 
 	function translateSlider(deltaX) {
@@ -952,12 +961,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	}
 
+	function updateDots() {
+		let minDistance = Infinity;
+		let closestItem;
+		const center = slider.scrollLeft + (slider.offsetWidth / 2);
+
+		// find the closest item
+		items.forEach((item) => {
+			const itemCenter = item.offsetLeft + (item.offsetWidth / 2);
+			const distance = Math.abs(itemCenter - center);
+			if (distance < minDistance) {
+				minDistance = distance;
+				closestItem = item;
+			}
+		});
+
+		// get the index of the closest item
+		const closestIndex = Array.from(items).indexOf(closestItem);
+
+		// remove active class from all dots
+		dots.forEach(dot => {
+			dot.classList.remove('active');
+		});
+
+		// add active class to the closest dot
+		dots[closestIndex].classList.add('active');
+	}
+
+
 	function momentumScrolling() {
+
 		let speed = lastDelta;
 		momentumId = setInterval(function() {
 			if (Math.abs(speed) < 1) {
 				clearInterval(momentumId);
-
 
 				snapToClosest();
 				return;
@@ -1110,6 +1147,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	slider.addEventListener('touchend', end, {
 		passive: true
 	});
+
+	// set an event for while the slider is being scrolled
+	slider.addEventListener('scroll', updateDots);
 
 });
 
