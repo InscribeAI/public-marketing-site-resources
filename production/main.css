@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.107";
+  --v: "v1.0.108";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -2739,7 +2739,7 @@ section {
   bottom: 0rem;
   width: 100%;
   z-index: 5;
-  margin-top: calc((var(--section-height)) * -1);
+  margin-top: calc((var(--section-height) + 4rem) * -1);
   height: var(--section-height);
 }
 
