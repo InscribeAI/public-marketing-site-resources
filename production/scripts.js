@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.116');
+console.log('version', 'v1.0.117');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1269,8 +1269,6 @@ function setLinkLabels() {
 	// Get a NodeList of all elements with class 'i_link__label'
 	const labels = document.querySelectorAll('.i_link__label');
 
-	console.log('resizing links');
-
 	labels.forEach(label => {
 		setLinkLabelStyles(label);
 	});
@@ -1300,4 +1298,28 @@ document.addEventListener('DOMContentLoaded', function() {
 			document.body.classList.remove('--resizing');
 		}, 500);
 	});
+});
+
+// Run Lottie animations after document is loaded
+document.addEventListener('DOMContentLoaded', function() {
+	var lotties = document.querySelectorAll('.lottie-animation');
+	if( window.lottie && lotties.length ) {
+		
+		// loop through lotties
+		lotties.forEach(element => {
+
+			const animationData = element.getAttribute('data-animation');
+
+			if( !animationData ) return;
+
+			window.lottie.loadAnimation({
+				container: element, // the dom element that will contain the animation
+				renderer: 'svg',
+				loop: true,
+				autoplay: true,
+				path: animationData // the path to the animation json
+			});
+		});
+
+	}
 });
