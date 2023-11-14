@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.109";
+  --v: "v1.0.110";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -292,6 +292,11 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   margin: 0 auto;
   max-width: 100vw;
 }
+@media screen and (max-width: 991px) {
+  .i_testimonialslider__nav__bar {
+    width: 35rem;
+  }
+}
 .i_testimonialslider__nav__bar .i_testimonialslider__nav__bar__main {
   position: absolute;
   left: 0;
@@ -325,6 +330,17 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   padding: 3.15rem 14rem 0;
   padding-right: 12.35rem;
 }
+@media screen and (max-width: 991px) {
+  .i_testimonialslider__nav {
+    padding: 3.2rem 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .i_testimonialslider__nav .i_testimonialslider__nav__item,
+  .i_testimonialslider__nav .i_testimonialslider__nav__item:nth-child(1) {
+    margin-left: 0 !important;
+  }
+}
 
 .i_testimonialslider__nav__item {
   display: block;
@@ -343,6 +359,14 @@ html:not(.wf-design-mode) .i_link:hover .i_link__label {
   border: 0.2rem solid var(--dark--new);
   transition: background-color 250ms var(--easing);
   content: "";
+}
+@media screen and (max-width: 991px) {
+  .i_testimonialslider__nav__item {
+    padding: 1.2rem;
+  }
+  .i_testimonialslider__nav__item:after {
+    width: 1.8rem;
+  }
 }
 
 .i_testimonialslider__nav__item.i--active:after {
