@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.122');
+console.log('version', 'v1.0.123');
 
 document.addEventListener('DOMContentLoaded', function() {
 
