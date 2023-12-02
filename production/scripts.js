@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.127');
+console.log('version', 'v1.0.128');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1364,8 +1364,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
-	const chatRoot = document.querySelector('[data-testid="root"]').shadowRoot.querySelector('.hb_shadow_root')
-	chatRoot.style.setProperty('--chat-font-family', 'Hubotsans Slnt Wdth Wght, sans-serif');
-	chatRoot.style.setProperty('--headerAvatarFill', '#39075B');
-});
+// document.addEventListener('DOMContentLoaded', function() {
+// 	const chatRoot = document.querySelector('[data-testid="root"]').shadowRoot.querySelector('.hb_shadow_root')
+// 	chatRoot.style.setProperty('--chat-font-family', 'Hubotsans Slnt Wdth Wght, sans-serif');
+// 	chatRoot.style.setProperty('--headerAvatarFill', '#39075B');
+// });
