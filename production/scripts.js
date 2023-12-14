@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.135');
+console.log('version', 'v1.0.136');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1378,6 +1378,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	// chatRoot.style.setProperty('--headerAvatarFill', '#39075B');
 
 	const observer = new MutationObserver(mutations => {
+		console.log(mutations);
+
 		for (const mutation of mutations) {
 				if (mutation.addedNodes.length) {
 						for (const node of mutation.addedNodes) {
@@ -1396,8 +1398,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	observer.observe(document.body, { childList: true, subtree: true });
 	
-	function injectStylesIntoShadowRoot(node) {
-		const chatRoot = document.querySelector('[data-testid="root"]').shadowRoot.querySelector('.hb_shadow_root')
+	function injectStylesIntoShadowRoot(chatRoot) {
+		// const chatRoot = document.querySelector('[data-testid="root"]').shadowRoot.querySelector('.hb_shadow_root')
 		chatRoot.style.setProperty('--chat-font-family', 'Hubotsans Slnt Wdth Wght, sans-serif');
 		chatRoot.style.setProperty('--headerAvatarFill', '#39075B');
 	}	
