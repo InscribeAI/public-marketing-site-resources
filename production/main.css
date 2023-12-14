@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.130";
+  --v: "v1.0.131";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -59,7 +59,7 @@ body.state--scrolled .i_navbar-w {
   }
 }
 
-ul {
+[class*=i_] ul {
   list-style: none;
 }
 
@@ -3149,7 +3149,7 @@ html:not(.wf-design-mode) .i_circleslideout_math {
   max-width: 100vw;
 }
 
-.--nav--open .i_navbar-w {
+.--nav--open .navbar__container {
   background-color: var(--white) !important;
 }
 
