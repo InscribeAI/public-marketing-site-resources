@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.132";
+  --v: "v1.0.134";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -2949,7 +2949,7 @@ html:not(.wf-design-mode) .i_circleslideout_math {
 .scroller[data-animated=true] {
   overflow: hidden;
   -webkit-mask: linear-gradient(90deg, transparent, var(--white) 10%, var(--white) 90%, transparent);
-  mask: linear-gradient(90deg, transparent, var(--white) 10%, var(--white) 20%, transparent);
+  mask: linear-gradient(90deg, transparent, var(--white) 10%, var(--white) 90%, transparent);
 }
 
 .scroller[data-animated=true] .scroller__inner {

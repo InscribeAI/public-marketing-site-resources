@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.132');
+console.log('version', 'v1.0.134');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1222,8 +1222,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	labels.forEach(label => {
 			const parentRowInner = label.closest('.i_link__row__inner');
 			if (parentRowInner) {
-					// parentRowInner.setAttribute('data-label', label.innerText.trim());
-					parentRowInner.setAttribute('data-label', label.innerHTML.trim());
+					parentRowInner.setAttribute('data-label', label.innerText.trim());
+					// parentRowInner.setAttribute('data-label', label.innerHTML.trim());
 			}
 	});
 });
