@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.128');
+console.log('version', 'v1.0.130');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1363,6 +1363,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+	var navButton = document.querySelector('.navmenu__button');
+
+	navButton.addEventListener('click', function() {
+			document.body.classList.toggle('--nav--open');
+	});
+});
 
 // document.addEventListener('DOMContentLoaded', function() {
 // 	const chatRoot = document.querySelector('[data-testid="root"]').shadowRoot.querySelector('.hb_shadow_root')
