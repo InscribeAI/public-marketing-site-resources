@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.134');
+console.log('version', 'v1.0.135');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1372,8 +1372,34 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 });
 
-// document.addEventListener('DOMContentLoaded', function() {
-// 	const chatRoot = document.querySelector('[data-testid="root"]').shadowRoot.querySelector('.hb_shadow_root')
-// 	chatRoot.style.setProperty('--chat-font-family', 'Hubotsans Slnt Wdth Wght, sans-serif');
-// 	chatRoot.style.setProperty('--headerAvatarFill', '#39075B');
-// });
+document.addEventListener('DOMContentLoaded', function() {
+	// const chatRoot = document.querySelector('[data-testid="root"]').shadowRoot.querySelector('.hb_shadow_root')
+	// chatRoot.style.setProperty('--chat-font-family', 'Hubotsans Slnt Wdth Wght, sans-serif');
+	// chatRoot.style.setProperty('--headerAvatarFill', '#39075B');
+
+	const observer = new MutationObserver(mutations => {
+		for (const mutation of mutations) {
+				if (mutation.addedNodes.length) {
+						for (const node of mutation.addedNodes) {
+								if (node.matches && node.matches('[data-testid="root"]')) {
+										// Chatbot has been added, insert your styles here
+										injectStylesIntoShadowRoot(node);
+	
+										// Disconnect the observer as its job is done
+										observer.disconnect();
+										return; // Exit the loop and function
+								}
+						}
+				}
+		}
+	});
+	
+	observer.observe(document.body, { childList: true, subtree: true });
+	
+	function injectStylesIntoShadowRoot(node) {
+		const chatRoot = document.querySelector('[data-testid="root"]').shadowRoot.querySelector('.hb_shadow_root')
+		chatRoot.style.setProperty('--chat-font-family', 'Hubotsans Slnt Wdth Wght, sans-serif');
+		chatRoot.style.setProperty('--headerAvatarFill', '#39075B');
+	}	
+});
+
