@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.136');
+console.log('version', 'v1.0.137');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1378,30 +1378,38 @@ document.addEventListener('DOMContentLoaded', function() {
 	// chatRoot.style.setProperty('--headerAvatarFill', '#39075B');
 
 	const observer = new MutationObserver(mutations => {
-		console.log(mutations);
+    mutations.forEach(mutation => {
+        mutation.addedNodes.forEach(node => {
+            if (node.nodeType === 1) { // Check if it's an element node
+                if (isChatbotDiv(node)) {
+                    injectStylesIntoShadowRoot(node);
+                    observer.disconnect();
+                } else {
+                    // Observe the new div for additional changes
+                    const innerObserver = new MutationObserver(innerMutations => {
+                        if (isChatbotDiv(node)) {
+                            injectStylesIntoShadowRoot(node);
+                            innerObserver.disconnect();
+                        }
+                    });
+                    innerObserver.observe(node, { childList: true, subtree: true });
+                }
+            }
+        });
+    });
+});
 
-		for (const mutation of mutations) {
-				if (mutation.addedNodes.length) {
-						for (const node of mutation.addedNodes) {
-								if (node.matches && node.matches('[data-testid="root"]')) {
-										// Chatbot has been added, insert your styles here
-										injectStylesIntoShadowRoot(node);
-	
-										// Disconnect the observer as its job is done
-										observer.disconnect();
-										return; // Exit the loop and function
-								}
-						}
-				}
-		}
-	});
-	
-	observer.observe(document.body, { childList: true, subtree: true });
-	
-	function injectStylesIntoShadowRoot(chatRoot) {
-		// const chatRoot = document.querySelector('[data-testid="root"]').shadowRoot.querySelector('.hb_shadow_root')
-		chatRoot.style.setProperty('--chat-font-family', 'Hubotsans Slnt Wdth Wght, sans-serif');
-		chatRoot.style.setProperty('--headerAvatarFill', '#39075B');
-	}	
+observer.observe(document.body, { childList: true, subtree: true });
+
+function isChatbotDiv(node) {
+	// check to see if it is a div, and has the property of data-testid="root"
+	return node.tagName === 'DIV' && node.getAttribute('data-testid') === 'root';
+}
+
+function injectStylesIntoShadowRoot(node) {
+	node.style.setProperty('--chat-font-family', 'Hubotsans Slnt Wdth Wght, sans-serif');
+	node.style.setProperty('--headerAvatarFill', '#39075B');
+}
+
 });
 
