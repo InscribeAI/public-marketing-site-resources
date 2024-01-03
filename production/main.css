@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.140";
+  --v: "v1.0.141";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -3168,6 +3168,14 @@ html:not(.wf-design-mode) .i_circleslideout_math {
 
 .i_hero__content__video .w-richtext .w-embed.w-iframe {
   max-width: 100%;
+}
+.i_hero__content__video .w-richtext .w-richtext-figure-type-image {
+  max-width: 100%;
+  margin: 0;
+  width: 100%;
+}
+.i_hero__content__video .w-richtext .w-richtext-figure-type-image > div {
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */
