@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.138";
+  --v: "v1.0.139";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -3155,6 +3155,15 @@ html:not(.wf-design-mode) .i_circleslideout_math {
 
 .i_p.w-richtext a {
   color: var(--dark--new);
+}
+.i_p.w-richtext ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.i_p.w-richtext ul li {
+  color: var(--dark--new);
+  margin-bottom: 1em;
+  font-size: inherit;
 }
 
 /*# sourceMappingURL=main.css.map */
