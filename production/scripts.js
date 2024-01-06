@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.143');
+console.log('version', 'v1.0.144');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (_list && !_list.forEach) {
 			_list = [_list];
 		}
-
 
 		// Get a NodeList of all elements with class 'i_slideupblocks__list'
 		const slideupLists = _list || document.querySelectorAll('.i_slideupblocks__list');
