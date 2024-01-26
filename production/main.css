@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.146";
+  --v: "v1.0.149";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -3043,7 +3043,8 @@ html:not(.wf-design-mode) .i_circleslideout_math {
 .i_form .mktoForm select,
 .i_form .mktoForm input[type=email],
 .i_form .mktoForm input[type=tel],
-.i_form .mktoForm input[type=text] {
+.i_form .mktoForm input[type=text],
+.i_form .mktoForm textarea {
   box-shadow: none !important;
   background-color: transparent;
   outline: none;
@@ -3056,6 +3057,13 @@ html:not(.wf-design-mode) .i_circleslideout_math {
   font-family: Monasans Slnt Wdth Wght, sans-serif;
   font-size: 2.4rem !important;
   line-height: 1em;
+}
+.i_form .mktoForm textarea {
+  height: 30rem;
+  border: 0.1rem solid var(--dark--new) !important;
+  margin-top: 2rem !important;
+  background: transparent !important;
+  padding: 1em 1em !important;
 }
 .i_form .mktoForm .mktoFormCol,
 .i_form .mktoForm .mktoFormRow {
@@ -3073,7 +3081,7 @@ html:not(.wf-design-mode) .i_circleslideout_math {
 .i_form .mktoForm label {
   color: var(--dark--new) !important;
   font-family: Monasans Slnt Wdth Wght, sans-serif;
-  font-size: 2.1rem;
+  font-size: 2.1rem !important;
   line-height: 1em;
   display: flex;
   align-items: center;
