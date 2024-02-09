@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.160";
+  --v: "v1.0.161";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -3279,11 +3279,13 @@ body .i_xrayslidersection__slider .xrayslider__layer._2 {
   margin: 0 !important;
   padding: 0 !important;
 }
-.i_newlettersignup .i_form .mktoForm .mktoFormRow:nth-child(3) {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  transform: translateY(2rem);
+@media screen and (min-width: 992px) {
+  .i_newlettersignup .i_form .mktoForm .mktoFormRow:nth-child(3) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(2rem);
+  }
 }
 .i_newlettersignup .i_form .mktoForm .mktoButtonRow {
   margin: 0 !important;
