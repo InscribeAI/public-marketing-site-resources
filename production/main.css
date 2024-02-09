@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.158";
+  --v: "v1.0.159";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -3250,6 +3250,7 @@ body .i_xrayslidersection__slider .xrayslider__layer._2 {
 .i_newlettersignup .i_form .mktoForm .mktoButtonWrap.mktoRound .mktoButton {
   margin: 0 !important;
   width: 100%;
+  font-size: 2.1rem !important;
 }
 .i_newlettersignup .i_form .mktoForm {
   display: flex !important;
@@ -3275,8 +3276,7 @@ body .i_xrayslidersection__slider .xrayslider__layer._2 {
   margin: 0 !important;
 }
 .i_newlettersignup .i_form .mktoForm input[type=email] {
-  max-width: 56rem !important;
-  width: 100%;
+  min-width: 56rem !important;
 }
 
 /*# sourceMappingURL=main.css.map */
