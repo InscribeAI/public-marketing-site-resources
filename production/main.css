@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.161";
+  --v: "v1.0.162";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -3261,6 +3261,7 @@ body .i_xrayslidersection__slider .xrayslider__layer._2 {
 @media screen and (max-width: 991px) {
   .i_newlettersignup .i_form .mktoForm {
     flex-direction: column;
+    padding: 0 !important;
   }
   .i_newlettersignup .i_form .mktoForm .mktoHtmlText a {
     padding: 0 !important;
@@ -3295,7 +3296,7 @@ body .i_xrayslidersection__slider .xrayslider__layer._2 {
 }
 @media screen and (max-width: 991px) {
   .i_newlettersignup .i_form .mktoForm input[type=email] {
-    min-width: 100%;
+    min-width: 100% !important;
   }
 }
 
