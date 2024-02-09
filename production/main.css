@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.157";
+  --v: "v1.0.158";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -3219,6 +3219,28 @@ body .i_xrayslidersection__slider .xrayslider__layer._2 {
   display: block;
 }
 
+.i_p ol {
+  color: inherit !important;
+  font-size: inherit !important;
+  margin-left: 0rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  padding-left: 2.4rem;
+}
+
+.i_p ol li {
+  color: inherit !important;
+  font-size: inherit !important;
+  padding-left: 0rem !important;
+  margin-bottom: 1em !important;
+  padding-left: 1rem !important;
+}
+
+@media screen and (max-width: 991px) {
+  .i_p ol {
+    padding-left: 2rem;
+  }
+}
 .i_newlettersignup .i_form {
   border: none !important;
   max-width: 84rem;
@@ -3227,11 +3249,17 @@ body .i_xrayslidersection__slider .xrayslider__layer._2 {
 }
 .i_newlettersignup .i_form .mktoForm .mktoButtonWrap.mktoRound .mktoButton {
   margin: 0 !important;
+  width: 100%;
 }
 .i_newlettersignup .i_form .mktoForm {
   display: flex !important;
   position: relative !important;
   align-items: center;
+  justify-content: space-between;
+}
+.i_newlettersignup .i_form .mktoForm .mktoFormRow {
+  flex-grow: 1;
+  width: 100%;
 }
 .i_newlettersignup .i_form .mktoForm .mktoFormRow .mktoFormCol {
   margin: 0 !important;
@@ -3241,12 +3269,14 @@ body .i_xrayslidersection__slider .xrayslider__layer._2 {
   position: absolute;
   top: 100%;
   left: 0;
+  transform: translateY(2rem);
 }
 .i_newlettersignup .i_form .mktoForm .mktoButtonRow {
   margin: 0 !important;
 }
 .i_newlettersignup .i_form .mktoForm input[type=email] {
-  width: 56rem !important;
+  max-width: 56rem !important;
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
