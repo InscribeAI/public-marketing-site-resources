@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.154";
+  --v: "v1.0.155";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -3219,12 +3219,12 @@ body .i_xrayslidersection__slider .xrayslider__layer._2 {
   display: block;
 }
 
-.i_newletterSignup .i_form {
+.i_newlettersignup .i_form {
   border: none !important;
   max-width: 84rem;
   padding: 0;
 }
-.i_newletterSignup .i_form .mktoForm .mktoButtonWrap.mktoRound .mktoButton {
+.i_newlettersignup .i_form .mktoForm .mktoButtonWrap.mktoRound .mktoButton {
   margin: 0;
 }
 
