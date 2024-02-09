@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.162";
+  --v: "v1.0.163";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -158,6 +158,10 @@ html:not(.wf-design-mode) .i_link:hover .i_link__row__inner:after {
 html:not(.wf-design-mode) .i_link:hover .i_link__label {
   transform: translateY(-100%);
 }
+html:not(.wf-design-mode) .onblog .i_link .i_link__row__inner:after {
+  display: none !important;
+}
+
 .i_link__row {
   display: flex;
   position: relative;
