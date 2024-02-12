@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.163";
+  --v: "v1.0.164";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -3302,6 +3302,39 @@ body .i_xrayslidersection__slider .xrayslider__layer._2 {
   .i_newlettersignup .i_form .mktoForm input[type=email] {
     min-width: 100% !important;
   }
+}
+
+.i_texttemplate h1, .i_texttemplate h2, .i_texttemplate h3, .i_texttemplate h4, .i_texttemplate h5, .i_texttemplate h6 {
+  font-variation-settings: "wdth" 125 !important;
+  font-weight: 600 !important;
+  color: var(--dark--new) !important;
+}
+.i_texttemplate p {
+  color: var(--dark--new) !important;
+}
+.i_texttemplate h1 {
+  font-size: 13rem;
+  line-height: 0.94em;
+}
+.i_texttemplate h2 {
+  font-size: 9rem;
+  line-height: 1em;
+}
+.i_texttemplate h3 {
+  font-size: 6.7rem;
+  line-height: 1.05em;
+}
+.i_texttemplate h4 {
+  font-size: 5.1rem;
+  line-height: 1em;
+}
+.i_texttemplate h5 {
+  font-size: 3.8rem;
+  line-height: 1.15em;
+}
+.i_texttemplate h6 {
+  font-size: 2.8rem;
+  line-height: 1.21em;
 }
 
 /*# sourceMappingURL=main.css.map */
