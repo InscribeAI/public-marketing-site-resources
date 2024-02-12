@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.167";
+  --v: "v1.0.168";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -3315,7 +3315,7 @@ body .i_xrayslidersection__slider .xrayslider__layer._2 {
   margin-top: 0 !important;
 }
 .i_text_column h1 strong, .i_text_column h2 strong, .i_text_column h3 strong, .i_text_column h4 strong, .i_text_column h5 strong, .i_text_column h6 strong {
-  font-weight: normal !important;
+  font-weight: inherit !important;
 }
 .i_text_column p {
   color: var(--dark--new) !important;
