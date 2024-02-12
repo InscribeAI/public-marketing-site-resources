@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.165";
+  --v: "v1.0.166";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -3308,33 +3308,35 @@ body .i_xrayslidersection__slider .xrayslider__layer._2 {
   font-variation-settings: "wdth" 125 !important;
   font-weight: 600 !important;
   color: var(--dark--new) !important;
+  margin-bottom: 0.5em;
 }
 .i_text_column p {
   color: var(--dark--new) !important;
 }
 .i_text_column h1 {
-  font-size: 13rem;
-  line-height: 0.94em;
+  font-size: 9rem !important;
+  line-height: 1em !important;
 }
 .i_text_column h2 {
-  font-size: 9rem;
-  line-height: 1em;
+  font-size: 6.7rem !important;
+  line-height: 1.05em !important;
 }
 .i_text_column h3 {
-  font-size: 6.7rem;
-  line-height: 1.05em;
+  font-size: 5.1rem !important;
+  line-height: 1em !important;
 }
 .i_text_column h4 {
-  font-size: 5.1rem;
-  line-height: 1em;
+  font-size: 3.8rem !important;
+  line-height: 1.15em !important;
 }
 .i_text_column h5 {
-  font-size: 3.8rem;
-  line-height: 1.15em;
+  font-size: 2.8rem !important;
+  line-height: 1.21em !important;
 }
 .i_text_column h6 {
-  font-size: 2.8rem;
-  line-height: 1.21em;
+  font-size: 2.1rem !important;
+  line-height: 1.28em !important;
+  letter-spacing: 0.02em !important;
 }
 
 /*# sourceMappingURL=main.css.map */
