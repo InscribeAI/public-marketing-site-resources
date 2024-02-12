@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.168";
+  --v: "v1.0.169";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -3310,12 +3310,16 @@ body .i_xrayslidersection__slider .xrayslider__layer._2 {
   color: var(--dark--new) !important;
   margin-bottom: 0.5em !important;
   margin-top: 0.75em !important;
+  font-family: Monasans Slnt Wdth Wght, sans-serif !important;
 }
 .i_text_column h1:first-child, .i_text_column h2:first-child, .i_text_column h3:first-child, .i_text_column h4:first-child, .i_text_column h5:first-child, .i_text_column h6:first-child {
   margin-top: 0 !important;
 }
 .i_text_column h1 strong, .i_text_column h2 strong, .i_text_column h3 strong, .i_text_column h4 strong, .i_text_column h5 strong, .i_text_column h6 strong {
   font-weight: inherit !important;
+}
+.i_text_column h1 a, .i_text_column h2 a, .i_text_column h3 a, .i_text_column h4 a, .i_text_column h5 a, .i_text_column h6 a {
+  text-decoration: underline !important;
 }
 .i_text_column p {
   color: var(--dark--new) !important;
