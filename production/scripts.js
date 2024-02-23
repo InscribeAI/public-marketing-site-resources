@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.186');
+console.log('version', 'v1.0.187');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1433,10 +1433,10 @@ document.addEventListener('DOMContentLoaded', function() {
 			console.log('elementPosition', elementPosition);
 			console.log('offsetPosition', offsetPosition);
 
-			window.scrollTo({
-				top: offsetPosition,
-				behavior: 'smooth'
-			});
+			// window.scrollTo({
+			// 	top: offsetPosition,
+			// 	behavior: 'smooth'
+			// });
 		});
 	});
 });
