@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.187');
+console.log('version', 'v1.0.188');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1413,12 +1413,12 @@ function injectStylesIntoShadowRoot(node) {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	document.querySelectorAll('a[data-href^="#"]').forEach(anchor => {
 		anchor.onclick = null;
 		anchor.addEventListener('click', function (e) {
 			console.log('clicked');
 			e.preventDefault();
-			const targetElement = document.querySelector(this.getAttribute('href'));
+			const targetElement = document.querySelector(this.getAttribute('data-href'));
 	
 			// Get the computed style of the target element
 			const style = window.getComputedStyle(targetElement);
@@ -1433,10 +1433,10 @@ document.addEventListener('DOMContentLoaded', function() {
 			console.log('elementPosition', elementPosition);
 			console.log('offsetPosition', offsetPosition);
 
-			// window.scrollTo({
-			// 	top: offsetPosition,
-			// 	behavior: 'smooth'
-			// });
+			window.scrollTo({
+				top: offsetPosition,
+				behavior: 'smooth'
+			});
 		});
 	});
 });
