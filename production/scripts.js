@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.182');
+console.log('version', 'v1.0.183');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1426,7 +1426,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 			
 			const elementPosition = parseInt(targetElement.getBoundingClientRect().top, 10);
-			const offsetPosition = elementPosition - headerOffset;
+			const offsetPosition = elementPosition + headerOffset;
 			
 			console.log('headerOffset', headerOffset);
 			console.log('elementPosition', elementPosition);
