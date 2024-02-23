@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.175";
+  --v: "v1.0.176";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -3352,7 +3352,14 @@ body .i_xrayslidersection__slider .xrayslider__layer._2 {
 }
 .i_text_column ul {
   list-style: circle;
-  padding-left: 1.1em !important;
+  padding-left: 1.25em !important;
+}
+.i_text_column blockquote {
+  margin-top: 2.4rem !important;
+  margin-bottom: 2.4rem !important;
+  border-left: none !important;
+  font-size: 2.1rem !important;
+  line-height: 1.28em !important;
 }
 
 /*# sourceMappingURL=main.css.map */
