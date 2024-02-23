@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.180');
+console.log('version', 'v1.0.181');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1424,11 +1424,13 @@ document.addEventListener('DOMContentLoaded', function() {
 			// Extract the scroll-margin-top value and parse it into an integer
 			const headerOffset = parseInt(style.getPropertyValue('scroll-margin-top'), 10);
 
-			console.log('headerOffset', headerOffset);
-	
+			
 			const elementPosition = parseInt(targetElement.getBoundingClientRect().top, 10);
-			const offsetPosition = elementPosition + window.scrollY - headerOffset;
-	
+			const offsetPosition = elementPosition - headerOffset;
+			
+			console.log('headerOffset', headerOffset);
+			console.log('elementPosition', elementPosition);
+
 			window.scrollTo({
 				top: offsetPosition,
 				behavior: 'smooth'
