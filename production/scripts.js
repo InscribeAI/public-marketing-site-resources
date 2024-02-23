@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.189');
+console.log('version', 'v1.0.190');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1427,7 +1427,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 			
 			const elementPosition = parseInt(targetElement.getBoundingClientRect().top, 10);
-			const offsetPosition = elementPosition - headerOffset;
+			const offsetPosition = elementPosition + window.scrollY - headerOffset;
 			
 			console.log('headerOffset', headerOffset);
 			console.log('elementPosition', elementPosition);
