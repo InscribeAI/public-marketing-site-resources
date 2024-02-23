@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.178');
+console.log('version', 'v1.0.179');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1415,6 +1415,7 @@ function injectStylesIntoShadowRoot(node) {
 document.addEventListener('DOMContentLoaded', function() {
 	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 		anchor.addEventListener('click', function (e) {
+			console.log('clicked');
 			e.preventDefault();
 			const targetElement = document.querySelector(this.getAttribute('href'));
 	
