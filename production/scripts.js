@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.181');
+console.log('version', 'v1.0.182');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1430,6 +1430,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			
 			console.log('headerOffset', headerOffset);
 			console.log('elementPosition', elementPosition);
+			console.log('offsetPosition', offsetPosition);
 
 			window.scrollTo({
 				top: offsetPosition,
