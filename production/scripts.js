@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.150');
+console.log('version', 'v1.0.178');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -1412,3 +1412,24 @@ function injectStylesIntoShadowRoot(node) {
 
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+		anchor.addEventListener('click', function (e) {
+			e.preventDefault();
+			const targetElement = document.querySelector(this.getAttribute('href'));
+	
+			// Get the computed style of the target element
+			const style = window.getComputedStyle(targetElement);
+			// Extract the scroll-margin-top value and parse it into an integer
+			const headerOffset = parseInt(style.getPropertyValue('scroll-margin-top'), 10);
+	
+			const elementPosition = targetElement.getBoundingClientRect().top;
+			const offsetPosition = elementPosition + window.scrollY - headerOffset;
+	
+			window.scrollTo({
+				top: offsetPosition,
+				behavior: 'smooth'
+			});
+		});
+	});
+});
