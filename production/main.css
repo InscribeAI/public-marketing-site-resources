@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.180";
+  --v: "v1.0.181";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -3361,6 +3361,19 @@ body .i_xrayslidersection__slider .xrayslider__layer._2 {
   border-left: none !important;
   font-size: 2.1rem !important;
   line-height: 1.28em !important;
+}
+.i_text_column .tg td,
+.i_text_column .tg th {
+  border-color: var(--dark--new) !important;
+}
+.i_text_column .tg .tg-1wig {
+  padding: 1rem 1.5rem !important;
+}
+.i_text_column .tg .tg-1wig span {
+  font-family: "Monasans Slnt Wdth Wght", sans-serif !important;
+  color: var(--dark--new) !important;
+  font-size: 2.1rem !important;
+  line-height: 1.42em !important;
 }
 
 /*# sourceMappingURL=main.css.map */
