@@ -1,4 +1,4 @@
-console.log('version', 'v1.0.190');
+console.log('version', 'v1.0.193');
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -853,156 +853,195 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Use Case Slider on Mobile
 document.addEventListener('DOMContentLoaded', function() {
-	let container = document.querySelector('.i_usecasessection__list-w');
-	if (!container) return;
-	let slider = container.querySelector('.i_usecasessection__list');
-	if (!slider) return;
-	let isDragging = false;
-	let startX;
-	let lastX;
-	let currentX;
-	let lastDelta;
-	let lastTime;
-	let momentumId;
-	let initialScrollLeft;
-	let snapAnimationId;
-	const blocks = slider.querySelectorAll('.i_icontextblock');
 
-	// Create dot navigation slider
-	const dotNav = document.createElement('div');
-	dotNav.classList.add('dot-navigation');
-	container.appendChild(dotNav);
+	// Get all containers
+	const containers = document.querySelectorAll('.i_usecasessection__list-w');
 
-	// Generate dots
-	blocks.forEach((block, index) => {
-		const dot = document.createElement('div');
-		dot.classList.add('dot');
-		if (index === 0) dot.classList.add('active'); // Make the first dot active initially
-		dotNav.appendChild(dot);
-		dot.addEventListener('click', function() {
-			scrollToItem(index);
-		});
-	});
+	// Loop through each container
 
-	const dots = container.querySelectorAll('.dot');
-
-	const items = slider.querySelectorAll('.i_icontextblock');
-
-	const isTouchEvent = e => e.type.startsWith('touch');
-
-	function start(e) {
-		cancelAnimationFrame(snapAnimationId);
-		clearInterval(momentumId);
+	containers.forEach(container => {
 		
-    isDragging = true;
-		lastX = startX = e.pageX || e.touches[0].pageX;
-		initialScrollLeft = slider.scrollLeft;
-		lastTime = Date.now();
-	}
 
-	function move(e) {
-		if (!isDragging) return;
-		currentX = e.pageX || e.touches[0].pageX;
-		let deltaX = currentX - startX;
+		// let container = document.querySelector('.i_usecasessection__list-w');
+		if (!container) return;
+		let slider = container.querySelector('.i_usecasessection__list');
+		if (!slider) return;
+		let isDragging = false;
+		let startX;
+		let lastX;
+		let currentX;
+		let lastDelta;
+		let lastTime;
+		let momentumId;
+		let initialScrollLeft;
+		let snapAnimationId;
+		const blocks = slider.querySelectorAll('.i_icontextblock');
 
-		let now = Date.now();
-		lastDelta = currentX - lastX;
-		let deltaTime = now - lastTime;
+		// Create dot navigation slider
+		const dotNav = document.createElement('div');
+		dotNav.classList.add('dot-navigation');
+		container.appendChild(dotNav);
 
-		if (deltaTime === 0) deltaTime = 1;
-		let speed = lastDelta / deltaTime;
-
-		if(!isTouchEvent(e)) {
-			translateSlider(deltaX);
-		}
-
-		lastX = currentX;
-		lastTime = now;
-	}
-
-	function end(e) {
-		isDragging = false;
-		const isTouch = isTouchEvent(e);
-		if (!isTouch) {
-			momentumScrolling(e);
-		} else {
-			updateDots();
-		}
-	}
-
-	function translateSlider(deltaX) {
-		slider.scrollLeft = initialScrollLeft - deltaX;
-
-    // uodate the dots
-    // let minDistance = Infinity;
-    // let closestItem;
-    // const center = slider.scrollLeft + (slider.offsetWidth / 2);
-
-    // items.forEach((item) => {
-    //   const itemCenter = item.offsetLeft + (item.offsetWidth / 2);
-    //   const distance = Math.abs(itemCenter - center);
-    //   if (distance < minDistance) {
-    //     minDistance = distance;
-    //     closestItem = item;
-    //   }
-    // });
-
-    // // get the index of the closest item
-    // const closestIndex = Array.from(items).indexOf(closestItem);
-
-    // // remove active class from all dots
-    // dots.forEach(dot => {
-    //   dot.classList.remove('active');
-    // });
-
-    // // add active class to the closest dot
-    // dots[closestIndex].classList.add('active');
-
-	}
-
-	function updateDots() {
-		let minDistance = Infinity;
-		let closestItem;
-		const center = slider.scrollLeft + (slider.offsetWidth / 2);
-
-		// find the closest item
-		items.forEach((item) => {
-			const itemCenter = item.offsetLeft + (item.offsetWidth / 2);
-			const distance = Math.abs(itemCenter - center);
-			if (distance < minDistance) {
-				minDistance = distance;
-				closestItem = item;
-			}
+		// Generate dots
+		blocks.forEach((block, index) => {
+			const dot = document.createElement('div');
+			dot.classList.add('dot');
+			if (index === 0) dot.classList.add('active'); // Make the first dot active initially
+			dotNav.appendChild(dot);
+			dot.addEventListener('click', function() {
+				scrollToItem(index);
+			});
 		});
 
-		// get the index of the closest item
-		const closestIndex = Array.from(items).indexOf(closestItem);
+		const dots = container.querySelectorAll('.dot');
 
-		// remove active class from all dots
-		dots.forEach(dot => {
-			dot.classList.remove('active');
-		});
+		const items = slider.querySelectorAll('.i_icontextblock');
 
-		// add active class to the closest dot
-		dots[closestIndex].classList.add('active');
-	}
+		const isTouchEvent = e => e.type.startsWith('touch');
 
+		function start(e) {
+			cancelAnimationFrame(snapAnimationId);
+			clearInterval(momentumId);
+			
+			isDragging = true;
+			lastX = startX = e.pageX || e.touches[0].pageX;
+			initialScrollLeft = slider.scrollLeft;
+			lastTime = Date.now();
+		}
 
-	function momentumScrolling() {
+		function move(e) {
+			if (!isDragging) return;
+			currentX = e.pageX || e.touches[0].pageX;
+			let deltaX = currentX - startX;
 
-		let speed = lastDelta;
-		momentumId = setInterval(function() {
-			if (Math.abs(speed) < 1) {
-				clearInterval(momentumId);
+			let now = Date.now();
+			lastDelta = currentX - lastX;
+			let deltaTime = now - lastTime;
 
-				snapToClosest();
-				return;
+			if (deltaTime === 0) deltaTime = 1;
+			let speed = lastDelta / deltaTime;
+
+			if(!isTouchEvent(e)) {
+				translateSlider(deltaX);
 			}
-			slider.scrollLeft -= speed;
-			speed *= 0.95;
 
+			lastX = currentX;
+			lastTime = now;
+		}
+
+		function end(e) {
+			isDragging = false;
+			const isTouch = isTouchEvent(e);
+			if (!isTouch) {
+				momentumScrolling(e);
+			} else {
+				updateDots();
+			}
+		}
+
+		function translateSlider(deltaX) {
+			slider.scrollLeft = initialScrollLeft - deltaX;
+
+			// uodate the dots
+			// let minDistance = Infinity;
+			// let closestItem;
+			// const center = slider.scrollLeft + (slider.offsetWidth / 2);
+
+			// items.forEach((item) => {
+			//   const itemCenter = item.offsetLeft + (item.offsetWidth / 2);
+			//   const distance = Math.abs(itemCenter - center);
+			//   if (distance < minDistance) {
+			//     minDistance = distance;
+			//     closestItem = item;
+			//   }
+			// });
+
+			// // get the index of the closest item
+			// const closestIndex = Array.from(items).indexOf(closestItem);
+
+			// // remove active class from all dots
+			// dots.forEach(dot => {
+			//   dot.classList.remove('active');
+			// });
+
+			// // add active class to the closest dot
+			// dots[closestIndex].classList.add('active');
+
+		}
+
+		function updateDots() {
 			let minDistance = Infinity;
 			let closestItem;
+			const center = slider.scrollLeft + (slider.offsetWidth / 2);
+
+			// find the closest item
+			items.forEach((item) => {
+				const itemCenter = item.offsetLeft + (item.offsetWidth / 2);
+				const distance = Math.abs(itemCenter - center);
+				if (distance < minDistance) {
+					minDistance = distance;
+					closestItem = item;
+				}
+			});
+
+			// get the index of the closest item
+			const closestIndex = Array.from(items).indexOf(closestItem);
+
+			// remove active class from all dots
+			dots.forEach(dot => {
+				dot.classList.remove('active');
+			});
+
+			// add active class to the closest dot
+			dots[closestIndex].classList.add('active');
+		}
+
+
+		function momentumScrolling() {
+
+			let speed = lastDelta;
+			momentumId = setInterval(function() {
+				if (Math.abs(speed) < 1) {
+					clearInterval(momentumId);
+
+					snapToClosest();
+					return;
+				}
+				slider.scrollLeft -= speed;
+				speed *= 0.95;
+
+				let minDistance = Infinity;
+				let closestItem;
+				const center = slider.scrollLeft + (slider.offsetWidth / 2);
+
+				items.forEach((item) => {
+					const itemCenter = item.offsetLeft + (item.offsetWidth / 2);
+					const distance = Math.abs(itemCenter - center);
+					if (distance < minDistance) {
+						minDistance = distance;
+						closestItem = item;
+					}
+				});
+
+				// get the index of the closest item
+				const closestIndex = Array.from(items).indexOf(closestItem);
+
+				// remove active class from all dots
+				dots.forEach(dot => {
+					dot.classList.remove('active');
+				});
+
+				// add active class to the closest dot
+
+				dots[closestIndex].classList.add('active');
+
+			}, 16);
+		}
+
+		function snapToClosest() {
+			let minDistance = Infinity;
+			let closestItem;
+
 			const center = slider.scrollLeft + (slider.offsetWidth / 2);
 
 			items.forEach((item) => {
@@ -1026,130 +1065,100 @@ document.addEventListener('DOMContentLoaded', function() {
 
 			dots[closestIndex].classList.add('active');
 
-		}, 16);
-	}
+			const targetScrollPosition = closestItem.offsetLeft;
+			animateSnap(targetScrollPosition);
+		}
 
-	function snapToClosest() {
-		let minDistance = Infinity;
-		let closestItem;
+		function animateSnap(target) {
+			const start = slider.scrollLeft;
+			const change = target - start;
+			const baseTime = 350; // Adjust as needed
+			const multiplier = 0.5; // Adjust as needed
+			const duration = baseTime + (multiplier * Math.abs(change));
+			let startTime = null;
 
-		const center = slider.scrollLeft + (slider.offsetWidth / 2);
+			function animate(time) {
+				if (!startTime) startTime = time;
 
-		items.forEach((item) => {
-			const itemCenter = item.offsetLeft + (item.offsetWidth / 2);
-			const distance = Math.abs(itemCenter - center);
-			if (distance < minDistance) {
-				minDistance = distance;
-				closestItem = item;
+				const elapsed = time - startTime;
+				const t = easeInOutCubic(elapsed, 0, 1, duration);
+
+				slider.scrollLeft = start + change * t;
+
+				if (elapsed < duration) {
+					snapAnimationId = requestAnimationFrame(animate);
+				}
 			}
-		});
 
-		// get the index of the closest item
-		const closestIndex = Array.from(items).indexOf(closestItem);
-
-		// remove active class from all dots
-		dots.forEach(dot => {
-			dot.classList.remove('active');
-		});
-
-		// add active class to the closest dot
-
-		dots[closestIndex].classList.add('active');
-
-		const targetScrollPosition = closestItem.offsetLeft;
-		animateSnap(targetScrollPosition);
-	}
-
-	function animateSnap(target) {
-		const start = slider.scrollLeft;
-		const change = target - start;
-		const baseTime = 350; // Adjust as needed
-		const multiplier = 0.5; // Adjust as needed
-		const duration = baseTime + (multiplier * Math.abs(change));
-		let startTime = null;
-
-		function animate(time) {
-			if (!startTime) startTime = time;
-
-			const elapsed = time - startTime;
-			const t = easeInOutCubic(elapsed, 0, 1, duration);
-
-			slider.scrollLeft = start + change * t;
-
-			if (elapsed < duration) {
-				snapAnimationId = requestAnimationFrame(animate);
+			function easeInOutCubic(t, b, c, d) {
+				t /= d / 2;
+				if (t < 1) return c / 2 * t * t * t + b;
+				t -= 2;
+				return c / 2 * (t * t * t + 2) + b;
 			}
+
+			snapAnimationId = requestAnimationFrame(animate);
 		}
 
-		function easeInOutCubic(t, b, c, d) {
-			t /= d / 2;
-			if (t < 1) return c / 2 * t * t * t + b;
-			t -= 2;
-			return c / 2 * (t * t * t + 2) + b;
+		function scrollToItem(index) {
+			const targetItem = items[index];
+			const targetScrollPosition = targetItem.offsetLeft;
+
+			// remove active class from all dots
+			dots.forEach(dot => {
+				dot.classList.remove('active');
+			});
+
+			// add active class to the closest dot
+			dots[index].classList.add('active');
+
+			animateScroll(slider, targetScrollPosition, 1000);
 		}
 
-		snapAnimationId = requestAnimationFrame(animate);
-	}
+		const speed = 1000; // pixels per second, adjust to desired speed
 
-	function scrollToItem(index) {
-		const targetItem = items[index];
-		const targetScrollPosition = targetItem.offsetLeft;
+		function animateScroll(element, to, duration) {
+			let start = element.scrollLeft,
+				change = to - start,
+				startTime = performance.now(),
+				val,
+				now;
 
-		// remove active class from all dots
-		dots.forEach(dot => {
-			dot.classList.remove('active');
+			function animateScrollStep(timestamp) {
+				if (!now) now = timestamp;
+				let timeElapsed = timestamp - now;
+				val = easeInOutCubic(timeElapsed, start, change, duration);
+				element.scrollLeft = val;
+				if (timeElapsed < duration) requestAnimationFrame(animateScrollStep);
+			}
+
+			function easeInOutCubic(t, b, c, d) {
+				t /= d / 2;
+				if (t < 1) return c / 2 * t * t * t + b;
+				t -= 2;
+				return c / 2 * (t * t * t + 2) + b;
+			}
+
+			requestAnimationFrame(animateScrollStep);
+		}
+
+		slider.addEventListener('mousedown', start);
+		slider.addEventListener('mousemove', move);
+		slider.addEventListener('mouseup', end);
+
+		slider.addEventListener('touchstart', start, {
+			passive: true
+		});
+		slider.addEventListener('touchmove', move, {
+			passive: true
+		});
+		slider.addEventListener('touchend', end, {
+			passive: true
 		});
 
-		// add active class to the closest dot
-		dots[index].classList.add('active');
-
-		animateScroll(slider, targetScrollPosition, 1000);
-	}
-
-	const speed = 1000; // pixels per second, adjust to desired speed
-
-	function animateScroll(element, to, duration) {
-		let start = element.scrollLeft,
-			change = to - start,
-			startTime = performance.now(),
-			val,
-			now;
-
-		function animateScrollStep(timestamp) {
-			if (!now) now = timestamp;
-			let timeElapsed = timestamp - now;
-			val = easeInOutCubic(timeElapsed, start, change, duration);
-			element.scrollLeft = val;
-			if (timeElapsed < duration) requestAnimationFrame(animateScrollStep);
-		}
-
-		function easeInOutCubic(t, b, c, d) {
-			t /= d / 2;
-			if (t < 1) return c / 2 * t * t * t + b;
-			t -= 2;
-			return c / 2 * (t * t * t + 2) + b;
-		}
-
-		requestAnimationFrame(animateScrollStep);
-	}
-
-	slider.addEventListener('mousedown', start);
-	slider.addEventListener('mousemove', move);
-	slider.addEventListener('mouseup', end);
-
-	slider.addEventListener('touchstart', start, {
-		passive: true
+		// set an event for while the slider is being scrolled
+		slider.addEventListener('scroll', updateDots);
 	});
-	slider.addEventListener('touchmove', move, {
-		passive: true
-	});
-	slider.addEventListener('touchend', end, {
-		passive: true
-	});
-
-	// set an event for while the slider is being scrolled
-	slider.addEventListener('scroll', updateDots);
-
 });
 
 function adjustStickyTop() {
