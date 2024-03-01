@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.191";
+  --v: "v1.0.192";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -3123,6 +3123,7 @@ html:not(.wf-design-mode) .i_circleslideout_math {
   justify-content: center;
   transform-origin: center left;
   background-color: var(--dark--new) !important;
+  color: var(--white) !important;
   border-radius: 0.4rem !important;
   font-family: Monasans Slnt Wdth Wght, sans-serif;
   font-variation-settings: "wdth" 125, "slnt" 0, "wght" 625;
