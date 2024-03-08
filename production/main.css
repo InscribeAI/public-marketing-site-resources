@@ -1,5 +1,5 @@
 :root {
-  --v: "v1.0.193";
+  --v: "v1.0.194";
   font-size: 0.5208333333vw;
   --dark--new: #39075B;
   --light: #fdfbf6;
@@ -3375,6 +3375,35 @@ body .i_xrayslidersection__slider .xrayslider__layer._2 {
   color: var(--dark--new) !important;
   font-size: 2.1rem !important;
   line-height: 1.42em !important;
+}
+@media screen and (max-wdith: 991px) {
+  .i_text_column h1 {
+    font-size: 5.1rem !important;
+    line-height: 1em !important;
+  }
+  .i_text_column h2 {
+    font-size: 3.8rem !important;
+    line-height: 1.15em !important;
+  }
+  .i_text_column h3 {
+    font-size: 2.8rem !important;
+    line-height: 1.21em !important;
+  }
+  .i_text_column h4 {
+    font-size: 2.1rem !important;
+    line-height: 1.28em !important;
+    letter-spacing: 0.02em !important;
+  }
+  .i_text_column h5 {
+    font-size: 1.6rem !important;
+    line-height: 1.25em !important;
+    letter-spacing: 0.03em !important;
+  }
+  .i_text_column h6 {
+    font-size: 1.6rem !important;
+    line-height: 1.25em !important;
+    letter-spacing: 0.03em !important;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
